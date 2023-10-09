@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/anolilab/unplugin-favicons/compare/v1.0.1...v1.0.2) (2023-10-09)
+
+
+### Bug Fixes
+
+* updated readme ([f595e83](https://github.com/anolilab/unplugin-favicons/commit/f595e8372617f78ddaec6f8e31fa79aa1a665688))
+
 ## [1.0.1](https://github.com/anolilab/unplugin-favicons/compare/v1.0.0...v1.0.1) (2023-10-09)
 
 
