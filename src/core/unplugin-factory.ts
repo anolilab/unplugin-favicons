@@ -34,7 +34,7 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
     };
 
     let base = "";
-    let frontendFramework: "astro" | "sveltekit" | undefined;
+    let frontendFramework: "astro" | "sveltekit" | "vike" | undefined;
     let parsedHtml: HtmlTagDescriptor[] = [];
 
     // eslint-disable-next-line unicorn/no-negated-condition
@@ -207,11 +207,13 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                         config.outputPath = "_app/immutable/assets/";
                     } else if (frontendFramework === undefined && plugin.name.includes("astro")) {
                         frontendFramework = "astro";
+                    } else if (frontendFramework === undefined && plugin.name.includes("vike")) {
+                        frontendFramework = "vike";
+                        config.outputPath = "assets";
                     }
                 });
             },
             generateBundle(_, bundle) {
-                consola.info(frontendFramework);
                 // @see https://github.com/withastro/astro/issues/7695
                 if (frontendFramework === "astro") {
                     Object.keys(bundle).forEach((key) => {
