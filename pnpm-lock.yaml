@@ -393,7 +393,17 @@ importers:
         specifier: ^4.4.2
         version: 4.4.11(@types/node@20.8.3)
 
-  examples/vike-app:
+  examples/vite:
+    dependencies:
+      '@anolilab/unplugin-favicons':
+        specifier: workspace:*
+        version: link:../..
+    devDependencies:
+      vite:
+        specifier: ^4.4.11
+        version: 4.4.11(@types/node@20.8.3)
+
+  examples/vite-vike:
     dependencies:
       '@anolilab/unplugin-favicons':
         specifier: workspace:*
@@ -439,16 +449,6 @@ importers:
         version: 0.4.143(vite@4.4.11)
       vite:
         specifier: ^4.4.9
-        version: 4.4.11(@types/node@20.8.3)
-
-  examples/vite:
-    dependencies:
-      '@anolilab/unplugin-favicons':
-        specifier: workspace:*
-        version: link:../..
-    devDependencies:
-      vite:
-        specifier: ^4.4.11
         version: 4.4.11(@types/node@20.8.3)
 
   examples/webpack:
