@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>A Favicons Vite Plugin</h1>
+<h1>A Favicons Plugin</h1>
 
 Create and manage favicons with Vite, Rollup, Webpack, Rspack, Nuxt, Vue CLI, Svelte, esbuild and Astro on top of
 [itgalaxy/favicons](https://github.com/itgalaxy/favicons)
