@@ -1,3 +1,15 @@
+## [1.0.1](https://github.com/anolilab/unplugin-favicons/compare/v1.0.0...v1.0.1) (2023-10-09)
+
+
+### Bug Fixes
+
+* removed console log and added vike assets path ([a452ad9](https://github.com/anolilab/unplugin-favicons/commit/a452ad9429b898ad353c69c159f70e5cb8e0e11c))
+
+
+### Miscellaneous Chores
+
+* added vike to the examples ([b975d1f](https://github.com/anolilab/unplugin-favicons/commit/b975d1f17e51c54da2ff3fcb57c0a5f8c565babe))
+
 ## 1.0.0 (2023-10-09)
 
 
