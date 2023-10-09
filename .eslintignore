@@ -4,6 +4,7 @@ vitest.config.ts
 _meta.*.json
 .eslintrc.cjs
 commitlint.config.cjs
+.secretlintrc.cjs
 
 coverage
 __fixtures__

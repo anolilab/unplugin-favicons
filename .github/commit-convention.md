@@ -1,6 +1,6 @@
 ## Git Commit Message Convention
 
-> This is adapted from [Angular's commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular).
+> This is adapted from [Angular’s commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular).
 
 #### TL;DR:
 
@@ -45,7 +45,7 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 
 ### Full Message Format
 
-A commit message consists of a **header**, **body** and **footer**. The header has a **type**, **scope** and **subject**:
+A commit message consists of a **header**, **body** and **footer**. The header has a **type**, **scope** and **subject:**
 
 ```
 <type>(<scope>): <subject>
@@ -75,13 +75,13 @@ The scope could be anything specifying the place of the commit change. For examp
 
 The subject contains a succinct description of the change:
 
--   use the imperative, present tense: "change" not "changed" nor "changes"
--   don't capitalize the first letter
--   no dot (.) at the end
+-   Use the imperative, present tense: "change" not "changed" nor "changes"
+-   Don’t capitalize the first letter
+-   No dot (.) at the end
 
 ### Body
 
-Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
+As in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
 The body should include the motivation for the change and contrast this with previous behavior.
 
 ### Footer

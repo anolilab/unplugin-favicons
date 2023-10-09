@@ -321,11 +321,11 @@ rules:
 -   If `/path/to/logo` is absolute, there is nothing to resolve and the path
     specified is used as is.
 
--   If `./path/to/logo` is relative, it's resolved with respect to `process.cwd()`.
+-   If `./path/to/logo` is relative, it’s resolved with respect to `process.cwd()`.
 
 ### HTML Injection
 
-In combination with [Vite's html plugin hooks](https://vitejs.dev/guide/api-plugin.html#transformindexhtml) it will also inject the necessary html for you:
+In combination with [Vite’s html plugin hooks](https://vitejs.dev/guide/api-plugin.html#transformindexhtml) it will also inject the necessary html for you:
 
 ```html
 <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png" />
@@ -423,15 +423,15 @@ In combination with [Vite's html plugin hooks](https://vitejs.dev/guide/api-plug
 ```
 
 To fine tune what icons/metadata is generated, refer to
-[favicons' documentation](https://github.com/haydenbleasel/favicons#usage).
+[favicons’ documentation](https://github.com/itgalaxy/favicons#usage).
 
 The options specified under `favicons:` are handed over as is to [favicons],
 except that if `appName`, `appDescription`, `version`, `developerName` or
 `developerURL` are left `undefined`, they will be automatically inferred
 respectively from `name`, `description`, `version`, `author.name` and
 `author.url` as defined in the nearest `package.json` if available.
-And if there's no `author` it will use the first in the `contributors`.
-To disable automatically retrieving metadata from `package.json`, simply set
+And if there’s no `author` it will use the first in the `contributors`.
+To disable automatically retrieving metadata from `package.json`, set
 to `null` the properties you want to omit.
 
 ### Examples
@@ -457,7 +457,7 @@ faviconsPlugin({
 ```
 
 To fine tune what icons/metadata is generated, refer to
-[favicons' documentation](https://github.com/haydenbleasel/favicons#usage).
+[favicons’ documentation](https://github.com/itgalaxy/favicons#usage).
 
 #### Handling Multiple HTML Files
 
@@ -469,7 +469,7 @@ Take a look at the [CHANGELOG.md](https://github.com/anolilab/unplugin-favicons/
 
 ## Contribution
 
-You're free to contribute to this project by submitting [issues](https://github.com/anolilab/unplugin-favicons/issues) and/or [pull requests](https://github.com/anolilab/unplugin-favicons/pulls).
+You’re free to contribute to this project by submitting [issues](https://github.com/anolilab/unplugin-favicons/issues) and/or [pull requests](https://github.com/anolilab/unplugin-favicons/pulls).
 
 Please keep in mind that every change and feature should be covered by
 tests.
@@ -477,8 +477,6 @@ tests.
 ## License
 
 This project is licensed under [MIT](https://github.com/anolilab/unplugin-favicons/blob/main/LICENSE.md).
-
-[favicons]: https://github.com/haydenbleasel/favicons
 
 ## Supported Node.js Versions
 
@@ -499,11 +497,11 @@ If you would like to help take a look at the [list of issues](https://github.com
 
 ## License
 
-The anolilab vite-plugin-favicon is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
+The anolilab vite-plugin-favicon is open-sourced software licensed under the [MIT license](https://opensource.org/license/mit/)
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 [typescript-url]: "typescript"
 [license-image]: https://img.shields.io/npm/l/@anolilab/unplugin-favicons?color=blueviolet&style=for-the-badge
 [license-url]: LICENSE.md "license"
 [npm-image]: https://img.shields.io/npm/v/@anolilab/unplugin-favicons/latest.svg?style=for-the-badge&logo=npm
-[npm-url]: https://www.npmjs.com/package/@anolilab/unplugin-favicons/v/latest "npm"
+[npm-url]: https://www.npmjs.com/login?next=%2Fpackage%2F%40anolilab%2Funplugin-favicons%2Fv%2Flatest "npm"
