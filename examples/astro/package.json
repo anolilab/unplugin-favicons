@@ -1,0 +1,16 @@
+{
+    "name": "astro",
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "astro": "astro",
+        "build": "astro build",
+        "dev": "astro dev",
+        "preview": "astro preview",
+        "start": "astro dev"
+    },
+    "dependencies": {
+        "@anolilab/unplugin-favicons": "workspace:*",
+        "astro": "^3.2.3"
+    }
+}

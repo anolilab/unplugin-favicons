@@ -1,0 +1,21 @@
+{
+    "name": "openapi_example_esbuild",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "clean": "rimraf node_modules dist",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview"
+    },
+    "dependencies": {
+        "@anolilab/unplugin-favicons": "workspace:*"
+    },
+    "devDependencies": {
+        "nuxt": "^3.7.4",
+        "rimraf": "^5.0.5",
+        "typescript": "^5.2.2"
+    }
+}

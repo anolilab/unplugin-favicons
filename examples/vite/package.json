@@ -1,0 +1,21 @@
+{
+    "name": "vite-example",
+    "private": true,
+    "description": "vite example",
+    "author": {
+        "name": "Joshua Hemphill",
+        "email": "jhemphill@tecnicocorp.com",
+        "url": "https://joshuahemphill.com"
+    },
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "dependencies": {
+        "@anolilab/unplugin-favicons": "workspace:*"
+    },
+    "devDependencies": {
+        "vite": "^4.4.11"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "openapi_example_webpack",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "webpack --mode=development --progress --color",
+        "clean": "rimraf node_modules dist"
+    },
+    "dependencies": {
+        "@anolilab/unplugin-favicons": "workspace:*"
+    },
+    "devDependencies": {
+        "html-webpack-plugin": "^5.5.3",
+        "rimraf": "^5.0.5",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4"
+    }
+}

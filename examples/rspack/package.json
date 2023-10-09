@@ -1,0 +1,21 @@
+{
+    "name": "example_rspack",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "rspack build --config rspack.config.js",
+        "build:rspack-html": "rspack build --config rspack-rspack-html-plugin.config.js",
+        "build:webpack-html": "rspack build --config rspack-webpack-html-plugin.config.js",
+        "clean": "rimraf node_modules dist"
+    },
+    "dependencies": {
+        "@anolilab/unplugin-favicons": "workspace:*"
+    },
+    "devDependencies": {
+        "@rspack/cli": "^0.3.6",
+        "@rspack/plugin-html": "^0.3.6",
+        "html-webpack-plugin": "^5.5.3",
+        "rimraf": "^5.0.5"
+    }
+}

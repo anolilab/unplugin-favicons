@@ -1,0 +1,17 @@
+node_modules
+vitest.config.ts
+.prettierrc.cjs
+_meta.*.json
+.eslintrc.cjs
+commitlint.config.cjs
+
+coverage
+__fixtures__
+examples
+dist
+
+README.md
+
+.github/ISSUE_TEMPLATE
+
+verify-node-version.cjs

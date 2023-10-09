@@ -1,0 +1,19 @@
+{
+    "name": "example_rollup",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "build:html": "rollup -c rollup-html.config.js",
+        "clean": "rimraf node_modules dist"
+    },
+    "dependencies": {
+        "@anolilab/unplugin-favicons": "workspace:*"
+    },
+    "devDependencies": {
+        "@rollup/plugin-html": "^1.0.3",
+        "rimraf": "^5.0.5",
+        "rollup": "^4.0.2"
+    }
+}

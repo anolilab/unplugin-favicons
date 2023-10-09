@@ -1,0 +1,9 @@
+{
+    "root": true,
+    "extends": "next/core-web-vitals",
+    "settings": {
+        "next": {
+            "rootDir": "examples/nextra"
+        }
+    }
+}
