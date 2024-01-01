@@ -158,7 +158,7 @@
         "commitlint": "^17.7.2",
         "cross-env": "^7.0.3",
         "cz-conventional-changelog": "^3.3.0",
-        "eslint": "^8.51.0",
+        "eslint": "^8.56.0",
         "eslint-plugin-deprecation": "^2.0.0",
         "eslint-plugin-editorconfig": "^4.0.3",
         "eslint-plugin-import": "npm:eslint-plugin-i@2.28.1",
