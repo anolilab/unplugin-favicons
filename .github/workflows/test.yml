@@ -26,7 +26,7 @@ jobs:
             packages: "${{ steps.changes.outputs.packages }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895" # v2.6.1
               with:
                   egress-policy: "audit"
 
@@ -56,7 +56,7 @@ jobs:
         runs-on: "${{ matrix.os }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895" # v2.6.1
               with:
                   egress-policy: "audit"
 
@@ -72,7 +72,7 @@ jobs:
                   run_install: false
 
             - name: "Set node version to ${{ matrix.node_version }}"
-              uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
+              uses: "actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8" # v4.0.1
               with:
                   node-version: "${{ matrix.node_version }}"
                   cache: "pnpm"
@@ -106,7 +106,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895" # v2.6.1
               with:
                   egress-policy: "audit"
 
