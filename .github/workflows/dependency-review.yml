@@ -32,4 +32,4 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Dependency Review"
-              uses: "actions/dependency-review-action@f6fff72a3217f580d5afd49a46826795305b63c7" # v3.0.8
+              uses: "actions/dependency-review-action@4901385134134e04cec5fbe5ddfe3b2c5bd5d976" # v4.0.0
