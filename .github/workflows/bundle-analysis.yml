@@ -68,7 +68,7 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - uses: "pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d" # v3.0.0
+            - uses: "pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2" # v4.0.0
 
             - name: "Set node version to 18"
               uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
