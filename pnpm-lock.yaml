@@ -53,10 +53,10 @@ importers:
         version: 14.0.19(@babel/core@7.23.0)(eslint-plugin-editorconfig@4.0.3)(eslint-plugin-i@2.28.1)(eslint@8.51.0)(typescript@5.2.2)
       '@anolilab/lint-staged-config':
         specifier: ^2.1.1
-        version: 2.1.1(eslint@8.51.0)(husky@8.0.3)(lint-staged@14.0.1)(prettier@3.0.3)(secretlint@7.0.7)(vite@4.4.11)
+        version: 2.1.1(eslint@8.51.0)(husky@8.0.3)(lint-staged@14.0.1)(prettier@3.3.3)(secretlint@7.0.7)(vite@4.4.11)
       '@anolilab/prettier-config':
         specifier: ^5.0.11
-        version: 5.0.11(prettier@3.0.3)
+        version: 5.0.11(prettier@3.3.3)
       '@anolilab/semantic-release-preset':
         specifier: ^8.0.0
         version: 8.0.0(semantic-release@22.0.5)
@@ -178,8 +178,8 @@ importers:
         specifier: ^14.0.1
         version: 14.0.1
       prettier:
-        specifier: ^3.0.3
-        version: 3.0.3
+        specifier: ^3.3.3
+        version: 3.3.3
       read-pkg:
         specifier: 8.1.0
         version: 8.1.0
@@ -657,7 +657,7 @@ packages:
       - vue-eslint-parser
     dev: true
 
-  /@anolilab/lint-staged-config@2.1.1(eslint@8.51.0)(husky@8.0.3)(lint-staged@14.0.1)(prettier@3.0.3)(secretlint@7.0.7)(vite@4.4.11):
+  /@anolilab/lint-staged-config@2.1.1(eslint@8.51.0)(husky@8.0.3)(lint-staged@14.0.1)(prettier@3.3.3)(secretlint@7.0.7)(vite@4.4.11):
     resolution: {integrity: sha512-CHpF2E0cmdt2RRHXrSSBkXzSX0JSyjiLVl7a/oTspYlR/llmwL7fKi2gnWldLEcAwqdfzeW2BEucSryiwT9r1g==}
     engines: {node: '>=18'}
     requiresBuild: true
@@ -689,7 +689,7 @@ packages:
       find-up: 5.0.0
       husky: 8.0.3
       lint-staged: 14.0.1
-      prettier: 3.0.3
+      prettier: 3.3.3
       secretlint: 7.0.7
       shell-quote: 1.8.1
       vite: 4.4.11(@types/node@20.8.3)
@@ -703,7 +703,7 @@ packages:
       read-pkg-up: 7.0.1
     dev: true
 
-  /@anolilab/prettier-config@5.0.11(prettier@3.0.3):
+  /@anolilab/prettier-config@5.0.11(prettier@3.3.3):
     resolution: {integrity: sha512-/qEd3TpRpjHUpT5E0frRhqe7T+SD657Gb6fmJHl/p3V0rN16I8Vflmgi7qbj1AHvqoYpF0uBLE/UZoiLnFGlow==}
     engines: {node: '>=18'}
     requiresBuild: true
@@ -711,7 +711,7 @@ packages:
       prettier: 2.x || 3.x
     dependencies:
       '@anolilab/package-json-utils': 3.0.7
-      prettier: 3.0.3
+      prettier: 3.3.3
     dev: true
 
   /@anolilab/semantic-release-preset@8.0.0(semantic-release@22.0.5):
@@ -6025,6 +6025,7 @@ packages:
 
   /buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
+    requiresBuild: true
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
@@ -14177,8 +14178,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  /prettier@3.0.3:
-    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
+  /prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
