@@ -101,8 +101,7 @@
         "test": "vitest run",
         "test:bench": "vitest bench",
         "test:coverage": "vitest run --coverage",
-        "test:watch": "vitest",
-        "validate:package": "pnpx publint"
+        "test:watch": "vitest"
     },
     "dependencies": {
         "cacache": "^18.0.4",

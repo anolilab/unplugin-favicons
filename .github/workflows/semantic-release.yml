@@ -18,6 +18,7 @@ permissions:
 jobs:
     semantic-release:
         name: "Semantic Release"
+        if: "github.repository == 'anolilab/unplugin-favicons'"
         runs-on: "ubuntu-latest"
         permissions:
             contents: "write" # to be able to publish a GitHub release
@@ -27,12 +28,12 @@ jobs:
 
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
                   egress-policy: "audit"
 
             - name: "Wait for tests to succeed"
-              uses: "lewagon/wait-on-check-action@e106e5c43e8ca1edea6383a39a01c5ca495fd812" # v1.3.1
+              uses: "lewagon/wait-on-check-action@595dabb3acf442d47e29c9ec9ba44db0c6bdd18f" # v1.3.3
               timeout-minutes: 20
               with:
                   ref: "${{ github.event.pull_request.head.sha || github.sha }}"
@@ -51,41 +52,24 @@ jobs:
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - uses: "pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d" # v3.0.0
+            - name: "Setup resources and environment"
+              id: "setup"
+              uses: "anolilab/workflows/step/setup@main"
               with:
-                  run_install: false
+                  node-version: "18.x"
+                  cache-prefix: "semantic-release"
 
-            - name: "Use Node.js 20.6.1"
-              uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
-              with:
-                  node-version: "20.6.1"
-                  cache: "pnpm"
-
-            # @see: npm install -g npm@latest is necessary to make provenance available. More info: https://docs.npmjs.com/generating-provenance-statements
-            - name: "Upgrade npm to latest version"
-              run: "npm install --global npm@9.6.x"
-              env:
-                  SKIP_CHECK: "true"
-
-            - name: "Check npm version"
-              run: "npm -v"
-              env:
-                  SKIP_CHECK: "true"
-
-            - name: "Install packages"
-              run: "pnpm install --frozen-lockfile"
-
-            - name: "Verify the integrity of provenance attestations and registry signatures for installed dependencies"
-              run: "pnpm audit signatures"
-
-            - name: "npm v8.5+ requires workspaces-update to be set to false"
-              run: "echo 'workspaces-update=false' >> .npmrc"
-
-            - name: "Build package"
+            - name: "Build Production"
               run: "pnpm run build:prod"
 
-            - name: "Validate package.json"
-              run: "pnpm run validate:package"
+            - name: "test and coverage"
+              run: "pnpm run test:coverage"
+
+            - name: "Upload code coverage to codecov"
+              uses: "anolilab/workflows/step/codecov@main"
+              with:
+                  run-lint: "false"
+                  codecov-token: "${{ secrets.CODECOV_TOKEN }}"
 
             - name: "Semantic Release"
               if: "success()"
@@ -97,43 +81,3 @@ jobs:
                   GIT_COMMITTER_NAME: "github-actions-shell"
                   GIT_COMMITTER_EMAIL: "github-actions[bot]@users.noreply.github.com"
               run: "pnpm exec semantic-release"
-
-    pnpm-lock-update:
-        needs: "semantic-release"
-        name: "pnpm-lock.yaml update"
-        runs-on: "ubuntu-latest"
-        permissions:
-            contents: "write" # to be able to publish
-        steps:
-            - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
-              with:
-                  egress-policy: "audit"
-
-            - name: "Git checkout"
-              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
-              with:
-                  fetch-depth: 2
-              env:
-                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
-                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
-                  EMAIL: "github-actions[bot]@users.noreply.github.com"
-
-            - uses: "pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d" # v3.0.0
-
-            - name: "Use Node.js 20.6.1"
-              uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
-              with:
-                  node-version: "20.6.1"
-
-            - name: "Update pnpm lock"
-              run: "pnpm install --no-frozen-lockfile"
-
-            - name: "Commit modified files"
-              uses: "stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d" # v5.0.0
-              with:
-                  commit_message: "chore: updated pnpm-lock.yaml"
-                  commit_author: "prisis <d.bannert@anolilab.de>"
-                  commit_user_email: "d.bannert@anolilab.de"
-                  commit_user_name: "prisis"
-                  branch: "${{ github.head_ref }}"

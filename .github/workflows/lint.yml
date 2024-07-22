@@ -3,22 +3,28 @@
 name: "Lint"
 
 on: # yamllint disable-line rule:truthy
-    push:
-        branches:
-            - "main"
     # eslint-disable-next-line yml/no-empty-mapping-value
     pull_request: # yamllint disable-line rule:empty-values
+        types: ["opened", "synchronize"]
+    merge_group: # yamllint disable-line rule:empty-values
 
 concurrency:
-    group: "ci-lint-${{ github.ref }}-1"
+    group: "${{ github.workflow }}-${{ github.ref }}"
     cancel-in-progress: true
 
 permissions:
     contents: "read" # to fetch code (actions/checkout)
 
+env:
+    NX_BRANCH: "${{ github.event.number }}"
+    NX_RUN_GROUP: "${{ github.run_id }}"
+    HEAD_REF: "${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}"
+    HEAD_REPOSITORY: "${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name || github.repository }}"
+
 jobs:
     files-changed:
         name: "Detect what files changed"
+        if: "github.repository == 'anolilab/unplugin-favicons'"
         runs-on: "ubuntu-22.04"
         timeout-minutes: 3
         # Map a step output to a job output
@@ -26,9 +32,10 @@ jobs:
             frontend_lintable: "${{ steps.changes.outputs.frontend_lintable }}"
             markdown_lintable: "${{ steps.changes.outputs.markdown_lintable }}"
             yaml_lintable: "${{ steps.changes.outputs.yaml_lintable }}"
+            package_json_lintable: "${{ steps.changes.outputs.package_json_lintable }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
                   egress-policy: "audit"
 
@@ -40,7 +47,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Check for file changes"
-              uses: "dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50" # v2.11.1
+              uses: "dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36" # v3.0.2
               id: "changes"
               with:
                   token: "${{ github.token }}"
@@ -53,37 +60,103 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
                   egress-policy: "audit"
 
-            - name: "Git checkout"
+            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
               uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
-              with:
-                  fetch-depth: 2
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
-
-            - uses: "pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d" # v3.0.0
               with:
-                  run_install: false
+                  # Number of commits to fetch. 0 indicates all history for all branches and tags.
+                  # Pulls all commits (needed for NX)
+                  fetch-depth: 0
 
-            - name: "Use Node.js 20.6.1"
-              uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
+            - name: "Setup resources and environment"
+              id: "setup"
+              uses: "anolilab/workflows/step/setup@main"
               with:
-                  node-version: "20.6.1"
-                  cache: "pnpm"
+                  enable-nx-cache: false
+                  cache-prefix: "lint"
 
-            - name: "Install packages"
-              run: "pnpm install --frozen-lockfile"
+            - name: "Build"
+              run: "pnpm run build"
 
-            - name: "Verify the integrity of provenance attestations and registry signatures for installed dependencies"
-              run: "pnpm audit signatures"
-
-            - name: "lint"
+            - name: "lint eslint"
               run: "pnpm run lint:eslint"
+
+    package-json-lint:
+        if: "needs.files-changed.outputs.package_json_lintable == 'true'"
+        needs: "files-changed"
+        name: "Lint (package.json)"
+        runs-on: "ubuntu-latest"
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              with:
+                  egress-policy: "audit"
+
+            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
+              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+              with:
+                  # Number of commits to fetch. 0 indicates all history for all branches and tags.
+                  # Pulls all commits (needed for NX)
+                  fetch-depth: 0
+
+            - name: "Setup resources and environment"
+              id: "setup"
+              uses: "anolilab/workflows/step/setup@main"
+              with:
+                  enable-nx-cache: false
+                  cache-prefix: "lint"
+
+            - name: "Build"
+              run: "pnpm run build"
+
+            - name: "lint package.json"
+              run: "pnpm run lint:package-json"
+
+    types-lint:
+        if: "needs.files-changed.outputs.frontend_lintable == 'true'"
+        needs: "files-changed"
+        name: "Lint (Typescript types)"
+        runs-on: "ubuntu-latest"
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              with:
+                  egress-policy: "audit"
+
+            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
+              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+              with:
+                  # Number of commits to fetch. 0 indicates all history for all branches and tags.
+                  # Pulls all commits (needed for NX)
+                  fetch-depth: 0
+
+            - name: "Setup resources and environment"
+              id: "setup"
+              uses: "anolilab/workflows/step/setup@main"
+              with:
+                  enable-nx-cache: false
+                  cache-prefix: "lint"
+
+            - name: "Build"
+              run: "pnpm run build"
+
+            - name: "lint typescript files"
+              run: "pnpm run lint:types"
 
     yaml-lint:
         if: "needs.files-changed.outputs.yaml_lintable == 'true'"
@@ -92,14 +165,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
                   egress-policy: "audit"
 
-            - name: "Git checkout"
+            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
               uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
-              with:
-                  fetch-depth: 2
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
@@ -112,6 +183,30 @@ jobs:
                   file_or_dir: "."
                   strict: true
 
+    lint-workflows:
+        if: "needs.files-changed.outputs.yaml_lintable == 'true'"
+        needs: "files-changed"
+        runs-on: "ubuntu-latest"
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              with:
+                  egress-policy: "audit"
+
+            - name: "Git checkout"
+              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            # From https://github.com/rhysd/actionlint/main/docs/usage.md#use-actionlint-on-github-actions
+            - name: "Lint github workflows"
+              run: |
+                  bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+                  # The -ignore flag is used to ignore a specific error for a working solution in test.yml
+                  ./actionlint -color -shellcheck=""
+
     markdown-lint:
         if: "needs.files-changed.outputs.markdown_lintable == 'true'"
         needs: "files-changed"
@@ -119,14 +214,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
                   egress-policy: "audit"
 
-            - name: "Git checkout"
+            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
               uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
-              with:
-                  fetch-depth: 2
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
@@ -136,19 +229,20 @@ jobs:
               with:
                   run_install: false
 
-            - name: "Use Node.js 20.6.1"
-              uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
+            - name: "Use Node.js 18.x"
+              uses: "actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8" # v4.0.2
               with:
-                  node-version: "20.6.1"
+                  node-version: "18.x"
                   cache: "pnpm"
 
-            - name: "Install packages"
-              run: "pnpm install --frozen-lockfile"
-              env:
-                  SKIP_CHECK: "true"
-
             - name: "Verify the integrity of provenance attestations and registry signatures for installed dependencies"
-              run: "pnpm audit signatures"
+              run: "pnpm dlx audit-ci@^6 --config ./audit-ci.jsonc --report-type=summary"
+
+            - name: "Install packages"
+              run: "pnpm install --frozen-lockfile --prefer-offline"
+              env:
+                  "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": 1
+                  SKIP_CHECK: "true"
 
             - name: "lint"
               run: "pnpm run lint:text"
@@ -158,10 +252,10 @@ jobs:
               run: "exit 0"
 
     # This check runs once all dependant jobs have passed
-    # It symbolizes that all required Frontend checks have succesfully passed (Or skipped)
-    # This check is the only required Github check
+    # It symbolizes that all required checks have successfully passed (Or skipped)
+    # This check is the only required GitHub check
     test-required-check:
-        needs: ["files-changed", "eslint", "yaml-lint"] # TODO add "markdown-lint"
+        needs: ["files-changed", "eslint", "yaml-lint", "package-json-lint"] # TODO add "markdown-lint"
         name: "Check Lint Run"
         # This is necessary since a failed/skipped dependent job would cause this job to be skipped
         if: "always()"
@@ -170,7 +264,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
                   egress-policy: "audit"
 
