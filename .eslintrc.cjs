@@ -51,6 +51,13 @@ module.exports = defineConfig({
             },
         },
         {
+            files: ["**/*.yml"],
+            rules: {
+                // @TODO: use only one tool to lint yaml files
+                "yml/no-empty-mapping-value": "off"
+            }
+        },
+        {
             files: ["**/*.mdx"],
             rules: {
                 "jsx-a11y/anchor-has-content": "off",
