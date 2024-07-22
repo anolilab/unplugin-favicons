@@ -8,6 +8,6 @@
         "exactOptionalPropertyTypes": false,
         "types": ["vite/client", "node"]
     },
-    "include": ["src/**/*", "__tests__/**/*", "tsup.config.ts"],
+    "include": ["src/**/*", "__tests__/**/*", "packem.config.ts"],
     "exclude": ["**/dist", "**/node_modules", "examples/**"]
 }

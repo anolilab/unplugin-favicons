@@ -24,6 +24,8 @@ describe("oracle", () => {
     });
 
     it("should guess app name from package.json", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: { name: "my-app" } });
 
         const oracle = new Oracle();
@@ -33,6 +35,8 @@ describe("oracle", () => {
     });
 
     it("should return undefined if no app name in package.json", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: {} });
 
         const oracle = new Oracle();
@@ -42,6 +46,8 @@ describe("oracle", () => {
     });
 
     it("should guess description from package.json", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: { description: "A sample app" } });
 
         const oracle = new Oracle();
@@ -51,6 +57,8 @@ describe("oracle", () => {
     });
 
     it("should return undefined if no description in package.json", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: {} });
 
         const oracle = new Oracle();
@@ -60,6 +68,8 @@ describe("oracle", () => {
     });
 
     it("should guess developer from package.json when author is a string", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: { author: "John Doe <john@example.com> (http://example.com)" } });
 
         const oracle = new Oracle();
@@ -73,6 +83,8 @@ describe("oracle", () => {
     });
 
     it("should guess developer from package.json when author is an object", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: { author: { email: "john@example.com", name: "John Doe", url: "http://example.com" } } });
 
         const oracle = new Oracle();
@@ -86,6 +98,8 @@ describe("oracle", () => {
     });
 
     it("should guess developer from package.json when maintainers are present", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({
             packageJson: { maintainers: [{ email: "jane@example.com", name: "Jane Doe", url: "http://example.com/jane" }] },
         });
@@ -101,6 +115,8 @@ describe("oracle", () => {
     });
 
     it("should return undefined for developer if no author or maintainers in package.json", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: {} });
 
         const oracle = new Oracle();
@@ -114,6 +130,8 @@ describe("oracle", () => {
     });
 
     it("should guess version from package.json", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: { version: "1.0.0" } });
 
         const oracle = new Oracle();
@@ -123,6 +141,8 @@ describe("oracle", () => {
     });
 
     it("should return undefined if no version in package.json", () => {
+        expect.assertions(1);
+
         readPackageUpSync.mockReturnValueOnce({ packageJson: {} });
 
         const oracle = new Oracle();

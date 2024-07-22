@@ -58,6 +58,12 @@ module.exports = defineConfig({
                 "jsx-a11y/heading-has-content": "off",
             },
         },
+        {
+            files: ["**/*.d.ts"],
+            rules: {
+                "perfectionist/sort-intersection-types": "off"
+            }
+        }
     ],
     parserOptions: {
         ecmaVersion: 2021,

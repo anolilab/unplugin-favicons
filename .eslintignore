@@ -16,3 +16,5 @@ README.md
 .github/ISSUE_TEMPLATE
 
 verify-node-version.cjs
+
+packem.config.ts

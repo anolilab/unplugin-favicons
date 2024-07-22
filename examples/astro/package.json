@@ -11,6 +11,6 @@
     },
     "dependencies": {
         "@anolilab/unplugin-favicons": "workspace:*",
-        "astro": "^3.2.3"
+        "astro": "^4.12.2"
     }
 }
