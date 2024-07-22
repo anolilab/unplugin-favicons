@@ -64,12 +64,12 @@ jobs:
 
             - name: "test and coverage"
               run: "pnpm run test:coverage"
-
-            - name: "Upload code coverage to codecov"
-              uses: "anolilab/workflows/step/codecov@main"
-              with:
-                  run-lint: "false"
-                  codecov-token: "${{ secrets.CODECOV_TOKEN }}"
+# @TODO: Enable it later
+#            - name: "Upload code coverage to codecov"
+#              uses: "anolilab/workflows/step/codecov@main"
+#              with:
+#                  run-lint: "false"
+#                  codecov-token: "${{ secrets.CODECOV_TOKEN }}"
 
             - name: "Semantic Release"
               if: "success()"

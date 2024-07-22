@@ -138,8 +138,8 @@ importers:
         specifier: ^2.0.4
         version: 2.0.4(vitest@2.0.4(@types/node@20.14.11)(less@4.2.0)(sass@1.77.6)(terser@5.31.3))
       audit-ci:
-        specifier: ^6.6.1
-        version: 6.6.1
+        specifier: ^7.1.0
+        version: 7.1.0
       caniuse-lite:
         specifier: ^1.0.30001643
         version: 1.0.30001643
@@ -4947,9 +4947,9 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
 
-  audit-ci@6.6.1:
-    resolution: {integrity: sha512-zqZEoYfEC4QwX5yBkDNa0h7YhZC63HWtKtP19BVq+RS0dxRBInfmHogxe4VUeOzoADQjuTLZUI7zp3Pjyl+a5g==}
-    engines: {node: '>=12.9.0'}
+  audit-ci@7.1.0:
+    resolution: {integrity: sha512-PjjEejlST57S/aDbeWLic0glJ8CNl/ekY3kfGFPMrPkmuaYaDKcMH0F9x9yS9Vp6URhuefSCubl/G0Y2r6oP0g==}
+    engines: {node: '>=16'}
     hasBin: true
 
   author-regex@1.0.0:
@@ -8273,6 +8273,11 @@ packages:
   jsonparse@1.3.1:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
+
+  jsonstream-next@3.0.0:
+    resolution: {integrity: sha512-aAi6oPhdt7BKyQn1SrIIGZBt0ukKuOUE1qV6kJ3GgioSOYzsRc8z9Hfr1BVmacA/jLe9nARfmgMGgn68BqIAgg==}
+    engines: {node: '>=10'}
+    hasBin: true
 
   jsx-ast-utils@3.3.5:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
@@ -18655,15 +18660,16 @@ snapshots:
 
   at-least-node@1.0.0: {}
 
-  audit-ci@6.6.1:
+  audit-ci@7.1.0:
     dependencies:
-      JSONStream: 1.3.5
       cross-spawn: 7.0.3
       escape-string-regexp: 4.0.0
       event-stream: 4.0.1
       jju: 1.4.0
+      jsonstream-next: 3.0.0
       readline-transform: 1.0.0
       semver: 7.6.3
+      tslib: 2.6.3
       yargs: 17.7.2
 
   author-regex@1.0.0: {}
@@ -22722,6 +22728,11 @@ snapshots:
       graceful-fs: 4.2.11
 
   jsonparse@1.3.1: {}
+
+  jsonstream-next@3.0.0:
+    dependencies:
+      jsonparse: 1.3.1
+      through2: 4.0.2
 
   jsx-ast-utils@3.3.5:
     dependencies:

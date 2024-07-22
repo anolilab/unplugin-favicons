@@ -146,7 +146,7 @@
         "@types/ssri": "^7.1.5",
         "@visulima/packem": "^1.0.0-alpha.55",
         "@vitest/coverage-v8": "^2.0.4",
-        "audit-ci": "^6.6.1",
+        "audit-ci": "^7.1.0",
         "caniuse-lite": "^1.0.30001643",
         "commitizen": "^4.3.0",
         "commitlint": "^19.3.0",
