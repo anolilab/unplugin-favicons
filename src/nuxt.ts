@@ -18,3 +18,4 @@ export default defineNuxtModule<ModuleOptions>({
         addWebpackPlugin(() => webpack(options));
     },
 }) as NuxtModule<ModuleOptions>;
+export type { FaviconsIconsPluginOptions, FaviconsLogoPluginOptions } from "./types";

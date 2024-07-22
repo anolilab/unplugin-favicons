@@ -61,9 +61,9 @@ module.exports = defineConfig({
         {
             files: ["**/*.d.ts"],
             rules: {
-                "perfectionist/sort-intersection-types": "off"
-            }
-        }
+                "perfectionist/sort-intersection-types": "off",
+            },
+        },
     ],
     parserOptions: {
         ecmaVersion: 2021,

@@ -7,7 +7,7 @@ import type { OutputAsset, OutputChunk } from "rollup";
 import type { UnpluginBuildContext, UnpluginFactory } from "unplugin";
 import type { Compilation as WebpackCompilation } from "webpack";
 
-import type { EmittedFile, FaviconsIconsPluginOptions, FaviconsLogoPluginOptions, HtmlTagDescriptor } from "../types.d";
+import type { EmittedFile, FaviconsIconsPluginOptions, FaviconsLogoPluginOptions, HtmlTagDescriptor } from "../types";
 import { PLUGIN_NAME } from "./const";
 import generateFavicons from "./generate-favicons";
 import parseHtml from "./parse-html";
