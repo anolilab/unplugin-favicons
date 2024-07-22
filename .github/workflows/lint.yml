@@ -28,19 +28,19 @@ jobs:
             yaml_lintable: "${{ steps.changes.outputs.yaml_lintable }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c" # v2.9.0
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Check for file changes"
-              uses: "dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50" # v2.11.1
+              uses: "dorny/paths-filter@7267a8516b6f92bdb098633497bad573efdbf271" # v2.12.0
               id: "changes"
               with:
                   token: "${{ github.token }}"
@@ -53,12 +53,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c" # v2.9.0
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               with:
                   fetch-depth: 2
               env:
@@ -71,7 +71,7 @@ jobs:
                   run_install: false
 
             - name: "Use Node.js 20.6.1"
-              uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
+              uses: "actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b" # v4.0.3
               with:
                   node-version: "20.6.1"
                   cache: "pnpm"
@@ -92,12 +92,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c" # v2.9.0
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               with:
                   fetch-depth: 2
               env:
@@ -119,12 +119,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c" # v2.9.0
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               with:
                   fetch-depth: 2
               env:
@@ -137,7 +137,7 @@ jobs:
                   run_install: false
 
             - name: "Use Node.js 20.6.1"
-              uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
+              uses: "actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b" # v4.0.3
               with:
                   node-version: "20.6.1"
                   cache: "pnpm"
@@ -170,7 +170,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c" # v2.9.0
               with:
                   egress-policy: "audit"
 

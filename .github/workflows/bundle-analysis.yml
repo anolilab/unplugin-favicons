@@ -32,19 +32,19 @@ jobs:
 
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c" # v2.9.0
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Check for file changes"
-              uses: "dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50" # v2.11.1
+              uses: "dorny/paths-filter@7267a8516b6f92bdb098633497bad573efdbf271" # v2.12.0
               id: "changes"
               with:
                   token: "${{ github.token }}"
@@ -57,12 +57,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c" # v2.9.0
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
@@ -71,7 +71,7 @@ jobs:
             - uses: "pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d" # v3.0.0
 
             - name: "Set node version to 18"
-              uses: "actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65" # v4.0.0
+              uses: "actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b" # v4.0.3
               with:
                   node-version: "18"
                   cache: "pnpm"
@@ -82,7 +82,7 @@ jobs:
                   SKIP_CHECK: "true"
 
             - name: "Restore Next.js Build"
-              uses: "actions/cache@13aacd865c20de90d75de3b17ebe84f7a17d57d2" # v4.0.0
+              uses: "actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9" # v4.0.2
               id: "restore-build-cache"
               env:
                   cache-name: "cache-next-build"
@@ -106,13 +106,13 @@ jobs:
               run: "cd examples/nextra && npx -p nextjs-bundle-analysis@0.5.0 report"
 
             - name: "Upload Bundle"
-              uses: "actions/upload-artifact@c7d193f32edcb7bfad88892161225aeda64e9392" # v4.0.0
+              uses: "actions/upload-artifact@0b2256b8c012f0828dc542b3febcab082c67f72b" # v4.3.4
               with:
                   name: "bundle"
                   path: "examples/nextra/.next/analyze/__bundle_analysis.json"
 
             - name: "Download Base Branch Bundle Stats"
-              uses: "dawidd6/action-download-artifact@e7466d1a7587ed14867642c2ca74b5bcc1e19a2d" # v3.0.0
+              uses: "dawidd6/action-download-artifact@09f2f74827fd3a8607589e5ad7f9398816f540fe" # v3.1.4
               if: "success() && github.event.number"
               with:
                   workflow: "nextjs-bundle-analysis.yml"
@@ -153,7 +153,7 @@ jobs:
                   echo 'EOF' >> $GITHUB_OUTPUT
 
             - name: "Comment"
-              uses: "marocchino/sticky-pull-request-comment@efaaab3fd41a9c3de579aba759d2552635e590fd" # v2.8.0
+              uses: "marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31" # v2.9.0
               if: "success() && github.event.number"
               with:
                   header: "next-bundle-analysis"
@@ -175,7 +175,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@0d381219ddf674d61a7572ddd19d7941e271515c" # v2.9.0
               with:
                   egress-policy: "audit"
 
