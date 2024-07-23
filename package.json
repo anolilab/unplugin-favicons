@@ -85,24 +85,26 @@
         "README.md"
     ],
     "scripts": {
+        "audit": "audit-ci --config ./audit-ci.jsonc",
         "build": "cross-env NODE_ENV=development packem build",
         "build:prod": "cross-env NODE_ENV=production packem build",
         "lint:eslint": "eslint . --ext js,cjs,mjs,jsx,ts,tsx,json,yaml,yml,md,mdx --max-warnings=0 --config .eslintrc.cjs",
         "lint:eslint:fix": "pnpm run lint:eslint --fix",
+        "lint:package-json": "publint",
         "lint:prettier": "prettier --config=.prettierrc.cjs --check .",
         "lint:prettier:fix": "prettier --config=.prettierrc.cjs --write .",
+        "lint:secrets": "secretlint **/*",
         "lint:staged": "lint-staged --verbose --concurrent false --debug",
         "lint:text": "textlint ./.github/ ./README.md ./UPGRADE.md --parallel --experimental --cache --dry-run",
         "lint:text:fix": "textlint ./.github/ ./README.md ./UPGRADE.md --parallel --experimental --fix",
-        "lint:package-json": "publint",
+        "lint:types": "tsc --noEmit",
         "prepare": "is-ci || (node verify-node-version.cjs && pnpx only-allow pnpm && husky)",
         "run:example": "cd example && pnpm exec vite build",
         "sort-package-json": "sort-package-json ./package.json examples/**/package.json",
         "test": "vitest run",
         "test:bench": "vitest bench",
         "test:coverage": "vitest run --coverage",
-        "test:watch": "vitest",
-        "validate:package": "pnpx publint"
+        "test:watch": "vitest"
     },
     "dependencies": {
         "cacache": "^18.0.4",
@@ -129,7 +131,6 @@
         "@nuxt/kit": "^3.12.4",
         "@nuxt/schema": "^3.12.4",
         "@rspack/core": "^0.7.5",
-        "publint": "^0.2.9",
         "@rspack/plugin-html": "^0.5.8",
         "@secretlint/secretlint-rule-preset-recommend": "^8.2.4",
         "@total-typescript/ts-reset": "^0.5.1",
@@ -145,6 +146,7 @@
         "@types/ssri": "^7.1.5",
         "@visulima/packem": "^1.0.0-alpha.55",
         "@vitest/coverage-v8": "^2.0.4",
+        "audit-ci": "^7.1.0",
         "caniuse-lite": "^1.0.30001643",
         "commitizen": "^4.3.0",
         "commitlint": "^19.3.0",
@@ -165,6 +167,7 @@
         "is-ci": "^3.0.1",
         "lint-staged": "^15.2.7",
         "prettier": "^3.3.3",
+        "publint": "^0.2.9",
         "read-pkg": "9.0.1",
         "rimraf": "^6.0.1",
         "rollup": "^4.19.0",
@@ -211,7 +214,7 @@
             "optional": true
         }
     },
-    "packageManager": "pnpm@8.8.0",
+    "packageManager": "pnpm@9.5.0",
     "engines": {
         "node": ">=18.0.0"
     },
@@ -227,7 +230,15 @@
             "load-tsconfig": "^0.2.5",
             "trim@<0.0.3": ">=0.0.3",
             "tsconfig-paths": "^4.2.0",
-            "zod@<=3.22.2": ">=3.22.3"
+            "zod@<=3.22.2": ">=3.22.3",
+            "follow-redirects@<1.15.4": ">=1.15.4",
+            "webpack-dev-middleware@<=5.3.3": ">=5.3.4",
+            "follow-redirects@<=1.15.5": ">=1.15.6",
+            "@babel/traverse@<7.23.2": ">=7.23.2",
+            "tar@<6.2.1": ">=6.2.1",
+            "ws@>=8.0.0 <8.17.1": ">=8.17.1",
+            "ws@>=7.0.0 <7.5.10": ">=7.5.10",
+            "braces@<3.0.3": ">=3.0.3"
         }
     },
     "anolilab": {
@@ -248,16 +259,5 @@
                 ]
             }
         }
-    },
-    "sources": [
-        "src/index.ts",
-        "src/cli/index.ts",
-        "src/cli/commander/index.ts",
-        "src/esbuild.ts",
-        "src/rollup.ts",
-        "src/vite.ts",
-        "src/nuxt.ts",
-        "src/rspack.ts",
-        "src/webpack.ts"
-    ]
+    }
 }

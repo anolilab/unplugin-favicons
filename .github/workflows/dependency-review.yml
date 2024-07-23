@@ -11,6 +11,7 @@ name: "Dependency Review"
 on: # yamllint disable-line rule:truthy
     # eslint-disable-next-line yml/no-empty-mapping-value
     pull_request: # yamllint disable-line rule:empty-values
+    merge_group: # yamllint disable-line rule:empty-values
 
 permissions:
     contents: "read"
@@ -20,7 +21,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
               with:
                   egress-policy: "audit"
 
@@ -32,4 +33,4 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Dependency Review"
-              uses: "actions/dependency-review-action@4901385134134e04cec5fbe5ddfe3b2c5bd5d976" # v4.0.0
+              uses: "actions/dependency-review-action@733dd5d4a5203f238c33806593ec0f5fc5343d8c" # v4.2.4

@@ -3,9 +3,9 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "build": "ng build",
         "ng": "ng",
-        "start": "ng serve",
-        "build": "ng build"
+        "start": "ng serve"
     },
     "dependencies": {
         "@angular/animations": "^18.0.0",
