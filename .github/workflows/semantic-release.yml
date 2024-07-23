@@ -34,7 +34,7 @@ jobs:
                   ref: "${{ github.event.pull_request.head.sha || github.sha }}"
                   repo-token: "${{ secrets.GITHUB_TOKEN }}"
                   wait-interval: 60 # seconds
-                  running-workflow-name: "Semantic Release" # wait for all other checks to complete
+                  running-workflow-name: "Build Package" # wait for all other checks to complete
                   allowed-conclusions: "success,skipped" # all other checks must pass, being skipped or cancelled is not sufficient
 
             - name: "Git checkout"
@@ -59,12 +59,12 @@ jobs:
 
             - name: "test and coverage"
               run: "pnpm run test:coverage"
-# @TODO: Enable it later
-#            - name: "Upload code coverage to codecov"
-#              uses: "anolilab/workflows/step/codecov@main"
-#              with:
-#                  run-lint: "false"
-#                  codecov-token: "${{ secrets.CODECOV_TOKEN }}"
+            # @TODO: Enable it later
+            #            - name: "Upload code coverage to codecov"
+            #              uses: "anolilab/workflows/step/codecov@main"
+            #              with:
+            #                  run-lint: "false"
+            #                  codecov-token: "${{ secrets.CODECOV_TOKEN }}"
 
             - name: "Publish Build Artifacts"
               uses: "actions/upload-artifact@0b2256b8c012f0828dc542b3febcab082c67f72b" # v4.3.4
