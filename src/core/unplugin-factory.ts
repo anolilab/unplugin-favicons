@@ -3,6 +3,9 @@ import { join } from "node:path";
 import type { Compilation as RspackCompilation } from "@rspack/core";
 import { colorize } from "consola/utils";
 import type { FaviconResponse } from "favicons";
+import { genString } from "knitwork";
+import MagicString from "magic-string";
+import { findStaticImports, parseStaticImport } from "mlly";
 import type { OutputAsset, OutputChunk } from "rollup";
 import type { UnpluginBuildContext, UnpluginFactory } from "unplugin";
 import type { Compilation as WebpackCompilation } from "webpack";
@@ -23,6 +26,8 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
     const config = { cache: true, inject: true, ...options } as FaviconsIconsPluginOptions | FaviconsLogoPluginOptions;
     const oracle = new Oracle(config?.projectRoot);
     const developer = oracle.guessDeveloper();
+
+    const packageName = `@anolilab/unplugin-favicons`;
 
     config.favicons = {
         appDescription: oracle.guessDescription(),
@@ -196,6 +201,41 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                     }
                 }
             });
+        },
+        transform(code, id) {
+            const runtimePackageName = `${packageName}/runtime`;
+            if (!code.includes(runtimePackageName)) {
+                return undefined;
+            }
+
+            const s = new MagicString(code);
+
+            const statements = findStaticImports(code).filter((index) => index.specifier === runtimePackageName);
+            if (statements.length === 0) {
+                return undefined;
+            }
+
+            statements.forEach((index) => {
+                const im = parseStaticImport(index);
+                const html = parsedHtml.map((tag) => tag.fragment).join("");
+                const generatedCode = `const ${im.defaultImport ?? im.imports} = ${genString(html)};`;
+                s.overwrite(im.start, im.end, generatedCode);
+            });
+
+            if (!s.hasChanged()) {
+                return undefined;
+            }
+
+            return {
+                code: s.toString(),
+                map: s.generateMap({
+                    includeContent: true,
+                    source: id,
+                }),
+            };
+        },
+        transformInclude(id) {
+            return id.match(/\.((c|m)?j|t)sx?$/u);
         },
         vite: {
             configResolved(viteConfig) {

@@ -37,6 +37,15 @@ importers:
       find-cache-dir:
         specifier: ^5.0.0
         version: 5.0.0
+      knitwork:
+        specifier: 1.1.0
+        version: 1.1.0
+      magic-string:
+        specifier: 0.30.10
+        version: 0.30.10
+      mlly:
+        specifier: 1.7.1
+        version: 1.7.1
       parse-author:
         specifier: ^2.0.0
         version: 2.0.0
@@ -20357,8 +20366,8 @@ snapshots:
 
   eslint-mdx@2.2.0(eslint@8.57.0):
     dependencies:
-      acorn: 8.10.0
-      acorn-jsx: 5.3.2(acorn@8.10.0)
+      acorn: 8.12.1
+      acorn-jsx: 5.3.2(acorn@8.12.1)
       eslint: 8.57.0
       espree: 9.6.1
       estree-util-visit: 1.2.1
@@ -22713,7 +22722,7 @@ snapshots:
 
   jsonc-eslint-parser@2.4.0:
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.12.1
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
       semver: 7.5.4
@@ -23926,8 +23935,8 @@ snapshots:
 
   micromark-extension-mdxjs@1.0.1:
     dependencies:
-      acorn: 8.10.0
-      acorn-jsx: 5.3.2(acorn@8.10.0)
+      acorn: 8.12.1
+      acorn-jsx: 5.3.2(acorn@8.12.1)
       micromark-extension-mdx-expression: 1.0.8
       micromark-extension-mdx-jsx: 1.0.5
       micromark-extension-mdx-md: 1.0.1
