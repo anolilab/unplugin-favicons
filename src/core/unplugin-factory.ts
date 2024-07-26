@@ -250,7 +250,7 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                 viteConfig.plugins.forEach((plugin) => {
                     if (frontendFramework === undefined && plugin.name.includes("sveltekit")) {
                         frontendFramework = "sveltekit";
-                        config.outputPath = "_app/immutable/assets/";
+                        config.outputPath = "_app/immutable/assets/unplugin-favicons";
                     } else if (frontendFramework === undefined && plugin.name.includes("astro")) {
                         frontendFramework = "astro";
                     } else if (frontendFramework === undefined && plugin.name.includes("vike")) {
