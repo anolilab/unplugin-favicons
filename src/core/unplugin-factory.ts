@@ -150,7 +150,13 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
         async buildStart(this: UnpluginBuildContext) {
             const startTime = Date.now();
 
-            const response = await generateFavicons(config);
+            const response = await generateFavicons({
+                ...config,
+                favicons: {
+                    ...config.favicons,
+                    path: config?.favicons?.path ?? config.outputPath,
+                },
+            });
 
             consola.info(`Generated assets in ${formatDuration(Date.now() - startTime)}.`);
 
