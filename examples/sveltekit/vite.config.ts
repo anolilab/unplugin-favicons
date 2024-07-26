@@ -3,5 +3,10 @@ import { defineConfig } from "vite";
 import faviconsPlugin from "@anolilab/unplugin-favicons/vite";
 
 export default defineConfig({
-    plugins: [sveltekit(), faviconsPlugin()],
+    plugins: [
+        sveltekit(),
+        faviconsPlugin({
+            logo: "./static/favicon.png",
+        }),
+    ],
 });
