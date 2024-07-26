@@ -199,7 +199,7 @@ See [the Nuxt example](examples/nuxt) for a working example project.
 <br></details>
 
 <details>
-<summary>SvelteKit (No Supported for now, see <a href="https://github.com/sveltejs/kit/issues/5346">Vite Plugin</a>)</summary><br>
+<summary>SvelteKit
 
 The `@anolilab/unplugin-favicons` plugin should be configured in the `vite.config.js` configuration file:
 
@@ -217,6 +217,20 @@ export default defineConfig({
         }),
     ],
 });
+```
+
+Then add `src/hooks.server.ts` to rewrite the head tag with [`hooks`](https://kit.svelte.dev/docs/hooks):
+
+```ts
+import head from "@anolilab/unplugin-favicons/runtime"; // use default import
+import type { Handle } from "@sveltejs/kit";
+
+export const handle: Handle = async ({ event, resolve }) => {
+    const response = await resolve(event, {
+        transformPageChunk: ({ html }) => html.replace("</head>", `${head}</head>`),
+    });
+    return response;
+};
 ```
 
 Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
