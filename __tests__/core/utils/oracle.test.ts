@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-unused-modules
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import Oracle from "../../src/core/utils/oracle"; // You'll need a mocking library to mock the imports
+import Oracle from "../../../src/core/utils/oracle"; // You'll need a mocking library to mock the imports
 
 const { readPackageUpSync } = vi.hoisted(() => {
     return { readPackageUpSync: vi.fn() };
