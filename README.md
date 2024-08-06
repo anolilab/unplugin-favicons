@@ -42,7 +42,7 @@ Add your base logo as `logo.png` file to your assets folder.
 ## Only declared icons generation
 
 ```ts
-faviconsPlugin({
+unpluginFavicons({
     /**
      * Specify each icon type to render. Unlike `favicons`, this plugin is
      * opt-in, meaning only the icon types you declare here will be rendered.
@@ -72,11 +72,11 @@ faviconsPlugin({
 
 ```ts
 // vite.config.ts
-import faviconsPlugin from "@anolilab/unplugin-favicons/vite";
+import unpluginFavicons from "@anolilab/unplugin-favicons/vite";
 
 export default defineConfig({
     plugins: [
-        faviconsPlugin({
+        unpluginFavicons({
             /* options */
         }),
     ],
@@ -90,14 +90,14 @@ export default defineConfig({
 
 ```ts
 // rollup.config.js
-import faviconsPlugin from "@anolilab/unplugin-favicons/rollup";
+import unpluginFavicons from "@anolilab/unplugin-favicons/rollup";
 // To use the auto inject
 import html from "@rollup/plugin-html";
 
 export default {
     plugins: [
         // html(), // optional
-        faviconsPlugin({
+        unpluginFavicons({
             /* options */
         }),
     ],
@@ -160,7 +160,7 @@ module.exports = {
 <br></details>
 
 <details>
-<summary>Nuxt (Untested)</summary><br>
+<summary>Nuxt</summary><br>
 
 Nuxt 2 and [Nuxt Bridge](https://github.com/nuxt/bridge)
 
@@ -207,12 +207,12 @@ The `@anolilab/unplugin-favicons` plugin should be configured in the `vite.confi
 // vite.config.js
 import { defineConfig } from "vite";
 import { sveltekit } from "@sveltejs/kit/vite";
-import faviconsPlugin from "@anolilab/unplugin-favicons/vite";
+import unpluginFavicons from "@anolilab/unplugin-favicons/vite";
 
 export default defineConfig({
     plugins: [
         sveltekit(),
-        faviconsPlugin({
+        unpluginFavicons({
             /* options */
         }),
     ],
@@ -240,12 +240,12 @@ The `@anolilab/unplugin-favicons` plugin should be configured in the `vite.confi
 // vite.config.js
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
-import faviconsPlugin from "@anolilab/unplugin-favicons/vite";
+import unpluginFavicons from "@anolilab/unplugin-favicons/vite";
 
 export default defineConfig({
     plugins: [
         svelte(),
-        faviconsPlugin({
+        unpluginFavicons({
             /* options */
         }),
     ],
@@ -291,13 +291,13 @@ See [the Next.js example](examples/next) for a working example project.
 ```ts
 // astro.config.mjs
 import { defineConfig } from "astro/config";
-import faviconsPlugin from "@anolilab/unplugin-favicons/vite";
+import unpluginFavicons from "@anolilab/unplugin-favicons/vite";
 
 // https://astro.build/config
 export default defineConfig({
     vite: {
         plugins: [
-            faviconsPlugin({
+            unpluginFavicons({
                 /* options */
             }),
         ],
@@ -409,7 +409,7 @@ In combination with [Vite’s html plugin hooks](https://vitejs.dev/guide/api-pl
 ## Advanced Usage
 
 ```javascript
-  faviconsPlugin({
+  unpluginFavicons({
     /** Your source logo (Will default to ) */
     logo?: "assets/logo.png",
     /** Inject html links/metadata. */
@@ -439,7 +439,7 @@ to `null` the properties you want to omit.
 #### Basic
 
 ```javascript
-faviconsPlugin({
+unpluginFavicons({
     logo: "./src/logo.png", // svg works too!
     favicons: {
         appName: "my-app",
