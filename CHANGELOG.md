@@ -1,3 +1,14 @@
+## [1.0.4](https://github.com/anolilab/unplugin-favicons/compare/v1.0.3...v1.0.4) (2024-08-06)
+
+### Bug Fixes
+
+* fixed name of nuxt plugin ([#51](https://github.com/anolilab/unplugin-favicons/issues/51)) ([686502b](https://github.com/anolilab/unplugin-favicons/commit/686502b9ff4cfafe942a40f99621c4734ddaf068))
+
+### Miscellaneous Chores
+
+* migrate to SvelteKit2 ([#49](https://github.com/anolilab/unplugin-favicons/issues/49)) ([a90d778](https://github.com/anolilab/unplugin-favicons/commit/a90d778dfcca5c326ff09ef8ade4823e432d3085))
+* updated readme with changed name ([d101d49](https://github.com/anolilab/unplugin-favicons/commit/d101d49917353dd8c3eebd3894b50a134b60f5ca))
+
 ## [1.0.3](https://github.com/anolilab/unplugin-favicons/compare/v1.0.2...v1.0.3) (2024-07-23)
 
 ### Bug Fixes
