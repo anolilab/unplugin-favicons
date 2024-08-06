@@ -8,6 +8,6 @@
         // Is used only in the examples
         // GHSA-35jh-r3h4-6jhm|. > @rspack/plugin-html@0.5.8 > lodash.template@4.5.0
         // GHSA-35jh-r3h4-6jhm|examples/rspack > @rspack/plugin-html@0.5.8 > lodash.template@4.5.0
-        "GHSA-35jh-r3h4-6jhm"
-    ]
+        "GHSA-35jh-r3h4-6jhm",
+    ],
 }

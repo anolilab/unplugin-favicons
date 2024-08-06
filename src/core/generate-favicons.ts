@@ -213,7 +213,7 @@ const generateFavicons = async (options: FaviconsIconsPluginOptions | FaviconsLo
     // incoming configuration into a list of jobs we will need to run.
     const jobConfigs: JobConfig[] = [];
 
-    if ((options as FaviconsIconsPluginOptions).icons) {
+    if ((options as FaviconsIconsPluginOptions).icons && !(options as FaviconsLogoPluginOptions).logo) {
         jobConfigs.push(...mapOptionsToJobs(options as FaviconsIconsPluginOptions));
     } else {
         const config: ReadonlyDeep<FaviconOptions> = {
@@ -232,12 +232,12 @@ const generateFavicons = async (options: FaviconsIconsPluginOptions | FaviconsLo
     }
 
     const jobs = jobConfigs.map(async (jobConfig) => {
-        const { config, iconType, source } = jobConfig;
         // N.B. Favicons modifies the `config` object in-place, so we need to
         // generate a key now to ensure that our cache get/put functions use the
         // same one.
         const cacheKeyForJob = await generateCacheKeyForJob(jobConfig);
 
+        const { config, iconType, source } = jobConfig;
         const sourceFileName = basename(source);
 
         if (options.cache) {
