@@ -1,6 +1,5 @@
 {
-    "name": "astro",
-    "version": "0.0.1",
+    "name": "unplugin-favicons-astro-example",
     "type": "module",
     "scripts": {
         "astro": "astro",

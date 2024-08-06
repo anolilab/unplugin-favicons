@@ -1,4 +1,6 @@
 {
+    "name": "unplugin-favicons-vite-vike-example",
+    "private": true,
     "type": "module",
     "scripts": {
         "build": "vite build",

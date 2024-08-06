@@ -1,6 +1,5 @@
 {
-    "name": "openapi_example_webpack",
-    "version": "1.0.0",
+    "name": "unplugin-favicons-webpack-example",
     "private": true,
     "type": "module",
     "scripts": {
