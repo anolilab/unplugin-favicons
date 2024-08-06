@@ -1,6 +1,6 @@
+import type { NormalizedPackageJson } from "@visulima/package";
+import { findPackageJsonSync } from "@visulima/package";
 import parseAuthor from "parse-author";
-import type { NormalizedPackageJson } from "read-pkg-up";
-import { readPackageUpSync } from "read-pkg-up";
 
 type StringOrUndefined = string | undefined;
 
@@ -9,7 +9,7 @@ export default class Oracle {
 
     public constructor(startingPath?: string) {
         try {
-            const readPackage = readPackageUpSync({ cwd: startingPath });
+            const readPackage = findPackageJsonSync(startingPath);
 
             this.packageJson = readPackage?.packageJson;
         } catch {
