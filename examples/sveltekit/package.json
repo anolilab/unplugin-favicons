@@ -1,6 +1,6 @@
 {
-    "name": "sveltekit",
-    "version": "0.0.1",
+    "name": "unplugin-favicons-sveltekit-example",
+    "private": true,
     "type": "module",
     "scripts": {
         "build": "vite build",

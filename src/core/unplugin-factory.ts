@@ -9,7 +9,7 @@ import type { Compilation as WebpackCompilation } from "webpack";
 
 import type { EmittedFile, FaviconsIconsPluginOptions, FaviconsLogoPluginOptions, HtmlTagDescriptor } from "../types";
 import { PLUGIN_NAME } from "./const";
-import generateFavicons from "./generate-favicons";
+import generateFavicons from "./generate/generate-favicons";
 import parseHtml from "./parse-html";
 import updateManifest from "./update-manifest";
 import consola from "./utils/consola";

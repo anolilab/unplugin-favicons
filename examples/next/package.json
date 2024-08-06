@@ -1,6 +1,5 @@
 {
-    "name": "example_next",
-    "version": "0.1.0",
+    "name": "unplugin-favicons-next-example",
     "private": true,
     "type": "module",
     "scripts": {

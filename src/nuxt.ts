@@ -1,7 +1,7 @@
 import { addVitePlugin, addWebpackPlugin, defineNuxtModule } from "@nuxt/kit";
 import type { NuxtModule } from "@nuxt/schema";
 
-import type { FaviconsIconsPluginOptions, FaviconsLogoPluginOptions } from "./types.d";
+import type { FaviconsIconsPluginOptions, FaviconsLogoPluginOptions } from "./types";
 import vite from "./vite";
 import webpack from "./webpack";
 
@@ -10,8 +10,8 @@ type ModuleOptions = FaviconsIconsPluginOptions | FaviconsLogoPluginOptions;
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
 export default defineNuxtModule<ModuleOptions>({
     meta: {
-        configKey: "openapi-jsdoc-compiler",
-        name: "nuxt-openapi-jsdoc-compiler",
+        configKey: "unpluginFavicons",
+        name: "nuxt-unplugin-favicons",
     },
     setup(options) {
         addVitePlugin(() => vite(options));

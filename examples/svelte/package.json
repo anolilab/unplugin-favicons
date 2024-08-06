@@ -1,4 +1,5 @@
 {
+    "name": "unplugin-favicons-svelte-example",
     "private": true,
     "type": "module",
     "scripts": {

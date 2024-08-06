@@ -1,0 +1,61 @@
+name: "Preview Release"
+
+on: # yamllint disable-line rule:truthy
+    # eslint-disable-next-line yml/no-empty-mapping-value
+    pull_request: # yamllint disable-line rule:empty-values
+    push:
+        branches:
+            - "**"
+        tags:
+            - "!**"
+
+permissions:
+    contents: "read" # to fetch code (actions/checkout)
+
+env:
+    HEAD_REF: "${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}"
+    HEAD_REPOSITORY: "${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name || github.repository }}"
+
+jobs:
+    preview:
+        name: "Preview Release"
+        if: "github.repository == 'anolilab/unplugin-favicons'"
+        runs-on: "ubuntu-latest"
+        permissions:
+            contents: "write"
+            issues: "write"
+            checks: "write"
+            pull-requests: "write"
+
+        steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6" # v2.8.1
+              with:
+                  egress-policy: "audit"
+
+            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
+              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+              with:
+                  # Number of commits to fetch. 0 indicates all history for all branches and tags.
+                  # Pulls all commits (needed for NX)
+                  fetch-depth: 0
+
+            - name: "Setup resources and environment"
+              id: "setup"
+              uses: "anolilab/workflows/step/setup@main"
+              with:
+                  enable-nx-cache: false
+                  node-version: "18.x"
+                  cache-prefix: "preview-release"
+
+            - name: "Build"
+              shell: "bash"
+              run: "pnpm run build"
+
+            - name: "Preview Release"
+              shell: "bash"
+              run: "pnpm exec pkg-pr-new publish --comment='update' --pnpm --template './examples/*'"

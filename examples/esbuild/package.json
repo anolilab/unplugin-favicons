@@ -1,6 +1,5 @@
 {
-    "name": "openapi_example_esbuild",
-    "version": "1.0.0",
+    "name": "unplugin-favicons-esbuild-example",
     "private": true,
     "type": "module",
     "scripts": {

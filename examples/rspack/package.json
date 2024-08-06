@@ -1,6 +1,5 @@
 {
-    "name": "example_rspack",
-    "version": "1.0.0",
+    "name": "unplugin-favicons-rspack-example",
     "private": true,
     "type": "module",
     "scripts": {

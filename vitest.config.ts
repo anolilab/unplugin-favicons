@@ -8,22 +8,22 @@ console.log("VITEST_SEQUENCE_SEED", VITEST_SEQUENCE_SEED);
 // https://vitejs.dev/config/
 export default defineConfig({
     test: {
-            ...configDefaults,
-            coverage: {
-                ...coverageConfigDefaults,
-                provider: "v8",
-                reporter: ["clover", "cobertura", "lcov", "text"],
-                include: ["src"],
-                exclude: ["__fixtures__/**", "__bench__/**", "scripts/**"],
-            },
-            environment: "node",
-            reporters: process.env["CI_PREFLIGHT"] ? ["basic", "github-actions"] : ["basic"],
-            sequence: {
-                seed: VITEST_SEQUENCE_SEED,
-            },
-            typecheck: {
-                enabled: false,
-            },
-            exclude: [...configDefaults.exclude, "__fixtures__/**"],
+        ...configDefaults,
+        coverage: {
+            ...coverageConfigDefaults,
+            provider: "v8",
+            reporter: ["clover", "cobertura", "lcov", "text"],
+            include: ["src"],
+            exclude: ["__fixtures__/**", "__bench__/**", "scripts/**"],
         },
+        environment: "node",
+        reporters: process.env["CI_PREFLIGHT"] ? ["basic", "github-actions"] : ["basic"],
+        sequence: {
+            seed: VITEST_SEQUENCE_SEED,
+        },
+        typecheck: {
+            enabled: false,
+        },
+        exclude: [...configDefaults.exclude, "__fixtures__/**"],
+    },
 });
