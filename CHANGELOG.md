@@ -1,3 +1,9 @@
+## [1.0.5-alpha.1](https://github.com/anolilab/unplugin-favicons/compare/v1.0.4...v1.0.5-alpha.1) (2024-08-06)
+
+### Bug Fixes
+
+* changed find-cache-dir & read-pkg-up to [@visulima](https://github.com/visulima) alternative ([#52](https://github.com/anolilab/unplugin-favicons/issues/52)) ([0da3949](https://github.com/anolilab/unplugin-favicons/commit/0da39499aca4a0b21a16514a500c3d8d3670ac14))
+
 ## [1.0.4](https://github.com/anolilab/unplugin-favicons/compare/v1.0.3...v1.0.4) (2024-08-06)
 
 ### Bug Fixes
