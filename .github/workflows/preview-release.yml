@@ -5,8 +5,9 @@ on: # yamllint disable-line rule:truthy
     pull_request: # yamllint disable-line rule:empty-values
     push:
         branches:
-            - "**"
-        tags: # yamllint disable-line rule:empty-values
+            - '**'
+        tags:
+            - '!**'
 
 permissions:
     contents: "read" # to fetch code (actions/checkout)
