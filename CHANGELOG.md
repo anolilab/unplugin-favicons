@@ -1,3 +1,15 @@
+## [1.0.5-alpha.2](https://github.com/anolilab/unplugin-favicons/compare/v1.0.5-alpha.1...v1.0.5-alpha.2) (2024-08-22)
+
+### Bug Fixes
+
+* **deps:** update dependencies ([7acab86](https://github.com/anolilab/unplugin-favicons/commit/7acab86ecf81476172873904729ce2cb94635818))
+* fixed depracation warning on unplugin, fixed injection of html code for astro ([54eab40](https://github.com/anolilab/unplugin-favicons/commit/54eab407903ad69c41132e685e5ff3e23dae79c3))
+
+### Continuous Integration
+
+* added neutral to allowed ([4a266cd](https://github.com/anolilab/unplugin-favicons/commit/4a266cde8d858f4b7f588c278e8bf2672281a249))
+* cs fixes, added audit message GHSA-952p-6rrq-rcjv to ignore ([0b909bf](https://github.com/anolilab/unplugin-favicons/commit/0b909bf22eb8ca43f2ac2ac29d50ce57d33eea35))
+
 ## [1.0.5-alpha.1](https://github.com/anolilab/unplugin-favicons/compare/v1.0.4...v1.0.5-alpha.1) (2024-08-06)
 
 ### Bug Fixes
