@@ -13,6 +13,6 @@
     "devDependencies": {
         "@rollup/plugin-html": "^1.0.3",
         "rimraf": "^6.0.1",
-        "rollup": "^4.19.0"
+        "rollup": "^4.21.0"
     }
 }
