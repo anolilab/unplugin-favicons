@@ -7,9 +7,9 @@ export default defineConfig({
         "eslint",
         "eslint-plugin-vitest",
     ],
+    ignorePaths: ["node_modules"],
+    mode: "latest",
+    recursive: true,
     // write to package.json
     write: true,
-    ignorePaths: ["node_modules"],
-    recursive: true,
-    mode: "latest",
 });
