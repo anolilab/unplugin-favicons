@@ -18,13 +18,13 @@
         "eslint": "^9.7.0",
         "eslint-plugin-react": "^7.35.0",
         "eslint-plugin-react-hooks": "^4.6.2",
-        "eslint-plugin-react-refresh": "^0.4.9",
+        "eslint-plugin-react-refresh": "^0.4.10",
         "express": "^4.19.2",
         "prop-types": "15.8.1",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "sirv": "^2.0.4",
-        "vike": "^0.4.181",
-        "vite": "^5.3.4"
+        "vike": "^0.4.191",
+        "vite": "^5.4.2"
     }
 }

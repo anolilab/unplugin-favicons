@@ -57,7 +57,7 @@ body:
       id: "environment-info"
       attributes:
           label: "Environment Info"
-          description: "Output of `npx envinfo --system --binaries --browsers --monorepos --npmPackages '{semantic-release*,@semantic-release/*}'`"
+          description: "Output of `npx envinfo --system --binaries --browsers --monorepos --npmPackages '{@anolilab/*,@visulima/*}'`"
           render: "shell"
           placeholder: |
               System:

@@ -19,3 +19,4 @@ README.md
 verify-node-version.cjs
 
 packem.config.ts
+taze.config.js

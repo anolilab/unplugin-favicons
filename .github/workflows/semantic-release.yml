@@ -35,7 +35,7 @@ jobs:
                   repo-token: "${{ secrets.GITHUB_TOKEN }}"
                   wait-interval: 60 # seconds
                   running-workflow-name: "Build Package" # wait for all other checks to complete
-                  allowed-conclusions: "success,skipped" # all other checks must pass, being skipped or cancelled is not sufficient
+                  allowed-conclusions: "success,neutral,skipped" # all other checks must pass, being skipped or cancelled is not sufficient
 
             - name: "Git checkout"
               uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1

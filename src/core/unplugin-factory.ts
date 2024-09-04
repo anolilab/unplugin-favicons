@@ -161,8 +161,8 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                 });
             }
         },
-        enforce: "post",
         name: PLUGIN_NAME,
+        order: "post",
         rollup: {
             generateBundle(_, bundle) {
                 if (injectionStatus === "ENABLED" && bundle["index.html"] && typeof (bundle["index.html"] as OutputAsset)["source"] === "string") {
@@ -219,7 +219,7 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                     Object.keys(bundle).forEach((key) => {
                         const asset = bundle[key] as OutputChunk;
 
-                        if (asset?.facadeModuleId?.includes(".astro")) {
+                        if (asset?.fileName?.includes(".astro")) {
                             asset.code = asset.code.replaceAll(/<link rel="icon".*?>/gu, "");
                             asset.code = asset.code.replace("</head>", `${parsedHtml.map((tag) => tag.fragment).join("")}</head>`);
                         }
@@ -227,8 +227,7 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                 }
             },
             transformIndexHtml: {
-                enforce: "post",
-                transform(html) {
+                handler(html) {
                     if (injectionStatus === "ENABLED") {
                         // eslint-disable-next-line no-param-reassign
                         html = html.replaceAll(/<link rel="icon".*?>/gu, "");
@@ -240,6 +239,7 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
 
                     return html;
                 },
+                order: "post",
             },
         },
         webpack(compiler) {

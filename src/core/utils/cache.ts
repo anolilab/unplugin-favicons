@@ -1,6 +1,6 @@
+import { findCacheDirSync } from "@visulima/find-cache-dir";
 import { get as cacheGet, put as cachePut } from "cacache";
 import { colorize } from "consola/utils";
-import findCacheDir from "find-cache-dir";
 import { fromData } from "ssri";
 
 import { PLUGIN_NAME } from "../const";
@@ -9,7 +9,7 @@ import consola from "./consola";
 /**
  * Cache subdirectory in node_modules/.cache.
  */
-const cachePath = findCacheDir({ name: PLUGIN_NAME });
+const cachePath: string | undefined = findCacheDirSync(PLUGIN_NAME);
 
 type SsriData = Buffer | DataView | NodeJS.TypedArray | string;
 
