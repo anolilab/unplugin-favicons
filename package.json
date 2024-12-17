@@ -53,18 +53,6 @@
             "types": "./dist/index.d.mts",
             "default": "./dist/index.mjs"
         },
-        "./vite": {
-            "types": "./dist/vite.d.mts",
-            "default": "./dist/vite.mjs"
-        },
-        "./webpack": {
-            "types": "./dist/webpack.d.mts",
-            "default": "./dist/webpack.mjs"
-        },
-        "./rollup": {
-            "types": "./dist/rollup.d.mts",
-            "default": "./dist/rollup.mjs"
-        },
         "./esbuild": {
             "types": "./dist/esbuild.d.mts",
             "default": "./dist/esbuild.mjs"
@@ -72,6 +60,22 @@
         "./nuxt": {
             "types": "./dist/nuxt.d.mts",
             "default": "./dist/nuxt.mjs"
+        },
+        "./rollup": {
+            "types": "./dist/rollup.d.mts",
+            "default": "./dist/rollup.mjs"
+        },
+        "./rspack": {
+            "types": "./dist/rspack.d.mts",
+            "default": "./dist/rspack.mjs"
+        },
+        "./vite": {
+            "types": "./dist/vite.d.mts",
+            "default": "./dist/vite.mjs"
+        },
+        "./webpack": {
+            "types": "./dist/webpack.d.mts",
+            "default": "./dist/webpack.mjs"
         },
         "./package.json": "./package.json"
     },
@@ -86,8 +90,8 @@
     ],
     "scripts": {
         "audit": "audit-ci --config ./audit-ci.jsonc",
-        "build": "cross-env NODE_ENV=development packem build",
-        "build:prod": "cross-env NODE_ENV=production packem build",
+        "build": "packem build --development",
+        "build:prod": "packem build --production",
         "lint:eslint": "eslint . --ext js,cjs,mjs,jsx,ts,tsx,json,yaml,yml,md,mdx --max-warnings=0 --config .eslintrc.cjs",
         "lint:eslint:fix": "pnpm run lint:eslint --fix",
         "lint:package-json": "publint",
@@ -108,80 +112,79 @@
         "update:deps": "taze"
     },
     "dependencies": {
-        "@visulima/find-cache-dir": "^1.0.6",
-        "@visulima/package": "^3.0.7",
-        "cacache": "^18.0.4",
+        "@visulima/find-cache-dir": "^1.0.16",
+        "@visulima/package": "^3.2.0",
+        "cacache": "^19.0.1",
         "consola": "3.2.3",
         "fast-json-stable-stringify": "^2.1.0",
         "parse-author": "^2.0.0",
-        "parse5": "^7.1.2",
-        "ssri": "^10.0.6",
-        "unplugin": "^1.12.2"
+        "parse5": "^7.2.1",
+        "ssri": "^12.0.0",
+        "unplugin": "^2.1.0"
     },
     "devDependencies": {
         "@anolilab/commitlint-config": "^5.0.3",
         "@anolilab/eslint-config": "^15.0.3",
         "@anolilab/lint-staged-config": "^2.1.7",
         "@anolilab/prettier-config": "^5.0.14",
-        "@anolilab/semantic-release-preset": "^9.0.0",
+        "@anolilab/semantic-release-preset": "^9.0.3",
         "@anolilab/textlint-config": "^8.0.16",
-        "@babel/core": "^7.25.2",
-        "@babel/eslint-parser": "7.25.1",
-        "@commitlint/cli": "^19.4.0",
-        "@commitlint/config-conventional": "^19.2.2",
-        "@nuxt/kit": "^3.12.4",
-        "@nuxt/schema": "^3.12.4",
-        "@rspack/core": "^0.7.5",
+        "@babel/core": "^7.26.0",
+        "@babel/eslint-parser": "7.25.9",
+        "@commitlint/cli": "^19.6.1",
+        "@commitlint/config-conventional": "^19.6.0",
+        "@nuxt/kit": "^3.14.1592",
+        "@nuxt/schema": "^3.14.1592",
+        "@rspack/core": "^1.1.6",
         "@rspack/plugin-html": "^0.5.8",
-        "@secretlint/secretlint-rule-preset-recommend": "^8.2.4",
-        "@total-typescript/ts-reset": "^0.5.1",
+        "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
+        "@total-typescript/ts-reset": "^0.6.1",
         "@tsconfig/esm": "^1.0.5",
         "@tsconfig/node18": "^18.2.4",
         "@tsconfig/strictest": "^2.0.5",
         "@types/cacache": "^17.0.2",
-        "@types/node": "^22.1.0",
+        "@types/node": "18.19.68",
         "@types/parse-author": "^2.0.3",
         "@types/parse5": "^7.0.0",
         "@types/ssri": "^7.1.5",
-        "@visulima/packem": "^1.0.0-alpha.81",
-        "@vitest/coverage-v8": "^2.0.5",
+        "@visulima/packem": "^1.10.0",
+        "@vitest/coverage-v8": "^2.1.8",
         "audit-ci": "^7.1.0",
-        "caniuse-lite": "^1.0.30001651",
-        "commitizen": "^4.3.0",
-        "commitlint": "^19.4.0",
+        "caniuse-lite": "^1.0.30001689",
+        "commitizen": "^4.3.1",
+        "commitlint": "^19.6.1",
         "conventional-changelog-conventionalcommits": "8.0.0",
-        "cross-env": "^7.0.3",
         "cz-conventional-changelog": "^3.3.0",
-        "esbuild": "^0.23.1",
+        "esbuild": "^0.24.0",
         "eslint": "8.57.0",
         "eslint-plugin-deprecation": "^3.0.0",
         "eslint-plugin-editorconfig": "^4.0.3",
         "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1",
         "eslint-plugin-mdx": "^3.1.5",
-        "eslint-plugin-n": "^17.10.2",
-        "eslint-plugin-vitest": "0.4.1",
+        "eslint-plugin-n": "^17.15.0",
+        "eslint-plugin-vitest": "0.5.4",
         "eslint-plugin-vitest-globals": "^1.5.0",
         "favicons": "^7.2.0",
-        "html-webpack-plugin": "^5.6.0",
-        "husky": "^9.1.5",
-        "is-ci": "^3.0.1",
-        "lint-staged": "^15.2.9",
-        "pkg-pr-new": "^0.0.20",
-        "prettier": "^3.3.3",
-        "publint": "^0.2.10",
+        "html-webpack-plugin": "^5.6.3",
+        "husky": "^9.1.7",
+        "is-ci": "^4.1.0",
+        "lint-staged": "^15.2.11",
+        "pkg-pr-new": "^0.0.39",
+        "prettier": "^3.4.2",
+        "publint": "^0.2.12",
         "read-pkg": "9.0.1",
         "rimraf": "^6.0.1",
-        "rollup": "^4.21.0",
-        "secretlint": "8.2.4",
-        "semantic-release": "^24.1.0",
-        "sort-package-json": "^2.10.0",
-        "taze": "^0.16.6",
-        "textlint": "^14.2.0",
-        "type-fest": "^4.25.0",
-        "typescript": "^5.5.4",
-        "vite": "^5.4.2",
-        "vitest": "^2.0.5",
-        "webpack": "^5.93.0"
+        "rollup": "^4.28.1",
+        "secretlint": "9.0.0",
+        "semantic-release": "^24.2.0",
+        "sort-package-json": "^2.12.0",
+        "taze": "^0.18.0",
+        "textlint": "^14.4.0",
+        "type-fest": "^4.30.2",
+        "typescript": "^5.7.2",
+        "vite": "^6.0.3",
+        "vitest": "^2.1.8",
+        "webpack": "^5.97.1"
     },
     "peerDependencies": {
         "@nuxt/kit": "^3",
@@ -216,7 +219,7 @@
             "optional": true
         }
     },
-    "packageManager": "pnpm@9.7.1",
+    "packageManager": "pnpm@9.15.0",
     "engines": {
         "node": ">=18.0.0"
     },
