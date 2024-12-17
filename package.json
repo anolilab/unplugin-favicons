@@ -1,6 +1,6 @@
 {
     "name": "@anolilab/unplugin-favicons",
-    "version": "1.0.5",
+    "version": "1.0.6-alpha.1",
     "description": "Generate favicons for your project with caching for blazing fast rebuilds.",
     "keywords": [
         "plugin",

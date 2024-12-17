@@ -1,3 +1,9 @@
+## [1.0.6-alpha.1](https://github.com/anolilab/unplugin-favicons/compare/v1.0.5...v1.0.6-alpha.1) (2024-12-17)
+
+### Bug Fixes
+
+* added missing rspack export, updated @visulima/find-cache-dir, @visulima/package, cacache, parse5, ssri, unplugin ([fd34350](https://github.com/anolilab/unplugin-favicons/commit/fd34350b50f170ea5939f25e89aba6c1192b8340))
+
 ## [1.0.5](https://github.com/anolilab/unplugin-favicons/compare/v1.0.4...v1.0.5) (2024-09-04)
 
 ### Bug Fixes
