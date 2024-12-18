@@ -4,27 +4,21 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "npm run server:dev",
+        "dev": "vite",
         "lint": "eslint . --max-warnings 0",
-        "prod": "npm run lint && npm run build && npm run server:prod",
-        "server:dev": "node ./server",
-        "server:prod": "cross-env NODE_ENV=production node ./server"
+        "prod": "npm run lint && npm run build"
     },
     "dependencies": {
         "@anolilab/unplugin-favicons": "workspace:*",
-        "@vitejs/plugin-react": "^4.3.1",
-        "compression": "^1.7.4",
-        "cross-env": "^7.0.3",
-        "eslint": "^9.7.0",
-        "eslint-plugin-react": "^7.35.0",
-        "eslint-plugin-react-hooks": "^4.6.2",
-        "eslint-plugin-react-refresh": "^0.4.10",
-        "express": "^4.19.2",
-        "prop-types": "15.8.1",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "sirv": "^2.0.4",
-        "vike": "^0.4.191",
-        "vite": "^5.4.2"
+        "@vitejs/plugin-react": "^4.3.4",
+        "vike-react": "^0.5.10",
+        "eslint": "^9.17.0",
+        "eslint-plugin-react": "^7.37.2",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-refresh": "^0.4.16",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "vike": "^0.4.210",
+        "vite": "^6.0.3"
     }
 }
