@@ -77,6 +77,12 @@
             "types": "./dist/webpack.d.mts",
             "default": "./dist/webpack.mjs"
         },
+        "./runtime": {
+            "import": {
+                "types": "./dist/runtime.d.mts",
+                "default": "./dist/runtime.mjs"
+            }
+        },
         "./package.json": "./package.json"
     },
     "module": "dist/index.mjs",
@@ -117,7 +123,11 @@
         "cacache": "^19.0.1",
         "consola": "3.2.3",
         "fast-json-stable-stringify": "^2.1.0",
+        "knitwork": "1.1.0",
+        "magic-string": "0.30.10",
+        "mlly": "1.7.1",
         "parse-author": "^2.0.0",
+        "mime": "^4.0.6",
         "parse5": "^7.2.1",
         "ssri": "^12.0.0",
         "unplugin": "^2.1.0"
@@ -138,6 +148,7 @@
         "@rspack/core": "^1.1.6",
         "@rspack/plugin-html": "^0.5.8",
         "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
+        "@sveltejs/kit": "^2.12.1",
         "@total-typescript/ts-reset": "^0.6.1",
         "@tsconfig/esm": "^1.0.5",
         "@tsconfig/node18": "^18.2.4",
@@ -204,6 +215,9 @@
             "optional": true
         },
         "@rspack/cli": {
+            "optional": true
+        },
+        "@sveltejs/kit": {
             "optional": true
         },
         "esbuild": {

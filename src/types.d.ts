@@ -135,3 +135,9 @@ export interface HtmlTagDescriptor {
     injectTo?: "body-prepend" | "body" | "head-prepend" | "head";
     tag: string;
 }
+
+export type Runtime = {
+    images: EmittedFile[];
+    files: EmittedFile[];
+    metadata: string;
+};
