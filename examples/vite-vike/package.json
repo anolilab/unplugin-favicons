@@ -11,7 +11,6 @@
     "dependencies": {
         "@anolilab/unplugin-favicons": "workspace:*",
         "@vitejs/plugin-react": "^4.3.4",
-        "vike-react": "^0.5.10",
         "eslint": "^9.17.0",
         "eslint-plugin-react": "^7.37.2",
         "eslint-plugin-react-hooks": "^5.1.0",
@@ -19,6 +18,7 @@
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "vike": "^0.4.210",
+        "vike-react": "^0.5.10",
         "vite": "^6.0.3"
     }
 }
