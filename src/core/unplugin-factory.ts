@@ -6,7 +6,6 @@ import type { FaviconResponse } from "favicons";
 import type { OutputAsset, OutputChunk } from "rollup";
 import type { UnpluginBuildContext, UnpluginFactory, UnpluginOptions } from "unplugin";
 import type { Compilation as WebpackCompilation } from "webpack";
-import { genString } from "knitwork";
 import MagicString from "magic-string";
 import { findStaticImports, parseStaticImport } from "mlly";
 import mime from "mime/lite";
