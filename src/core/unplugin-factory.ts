@@ -368,10 +368,10 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
 
                             if (serveMap.has(url)) {
                                 const source = serveMap.get(url);
-                                const extention = url.split(".").pop();
+                                const extension = url.split(".").pop();
 
                                 if (source instanceof Buffer) {
-                                    res.setHeader("Content-Type", extention ? (mime.getType(extention) as string) : "application/octet-stream");
+                                    res.setHeader("Content-Type", extension ? (mime.getType(extension) as string) : "application/octet-stream");
                                 }
 
                                 res.end(source);
