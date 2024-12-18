@@ -477,6 +477,16 @@ To fine tune what icons/metadata is generated, refer to
 
 Vite calls the HTML transform hook for each HTML file template file you have configured in Vite, so this works automatically.
 
+### Runtime
+
+The `@anolilab/unplugin-favicons` plugin also exports a runtime module that can be used to inject the generated metadata into your HTML files or access the `files` and `images` used in the metadata.
+
+```ts
+import { metadata, images, files } from "@anolilab/unplugin-favicons/runtime";
+
+console.log(metadata, images, files);
+```
+
 ## Changelog
 
 Take a look at the [CHANGELOG.md](https://github.com/anolilab/unplugin-favicons/blob/main/CHANGELOG.md).
