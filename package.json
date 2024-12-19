@@ -199,7 +199,7 @@
     "peerDependencies": {
         "@nuxt/kit": "^3",
         "@nuxt/schema": "^3",
-        "@rspack/cli": "^0.3.6",
+        "@rspack/cli": "^0.7.5",
         "esbuild": "*",
         "favicons": "^7.0.1",
         "rollup": "^3",
