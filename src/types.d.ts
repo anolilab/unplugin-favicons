@@ -136,8 +136,8 @@ export interface HtmlTagDescriptor {
     tag: string;
 }
 
-export type Runtime = {
-    images: EmittedFile[];
+export interface Runtime {
     files: EmittedFile[];
+    images: EmittedFile[];
     metadata: string;
-};
+}

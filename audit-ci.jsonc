@@ -124,6 +124,6 @@
         // GHSA-952p-6rrq-rcjv|examples/rspack > @rspack/cli@0.7.5 > @rspack/dev-server@0.7.5 > http-proxy-middleware@2.0.6 > micromatch@4.0.5
         // GHSA-952p-6rrq-rcjv|examples/rspack > @rspack/cli@0.7.5 > @rspack/dev-server@0.7.5 > webpack-dev-server@4.13.1 > http-proxy-middleware@2.0.6 > micromatch@4.0.5
         // GHSA-952p-6rrq-rcjv|examples/vite-vike > vike@0.4.191 > fast-glob@3.3.2 > micromatch@4.0.7
-        "GHSA-952p-6rrq-rcjv"
-    ]
+        "GHSA-952p-6rrq-rcjv",
+    ],
 }

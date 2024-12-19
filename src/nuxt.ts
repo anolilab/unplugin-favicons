@@ -7,7 +7,6 @@ import webpack from "./webpack";
 
 type ModuleOptions = FaviconsIconsPluginOptions | FaviconsLogoPluginOptions;
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
 export default defineNuxtModule<ModuleOptions>({
     meta: {
         configKey: "unpluginFavicons",

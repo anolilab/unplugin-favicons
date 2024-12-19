@@ -4,9 +4,5 @@ import vike from "vike/plugin";
 import faviconsPlugin from "@anolilab/unplugin-favicons/vite";
 
 export default {
-    plugins: [
-        react(),
-        vike(),
-        faviconsPlugin(),
-    ],
+    plugins: [react(), vike(), faviconsPlugin()],
 };

@@ -33,11 +33,13 @@ const findHtmlWebpackPlugin = (compilation: RspackCompilation | WebpackCompilati
     }
 
     compilation.errors.push(
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         new compiler.webpack.WebpackError(
             `${
                 "This @anolilab/unplugin-favicons version is not compatible with your current HtmlWebpackPlugin version.\n" +
                 "Please upgrade to HtmlWebpackPlugin >= 5\n"
             }${getHtmlWebpackPluginVersion()}`,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ) as any,
     );
 

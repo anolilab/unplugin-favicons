@@ -3,12 +3,13 @@ import { join } from "node:path";
 import type { Compilation as RspackCompilation } from "@rspack/core";
 import { colorize } from "consola/utils";
 import type { FaviconResponse } from "favicons";
+import MagicString from "magic-string";
+import mime from "mime/lite";
+import { findStaticImports, parseStaticImport } from "mlly";
 import type { OutputAsset, OutputChunk } from "rollup";
 import type { UnpluginBuildContext, UnpluginFactory, UnpluginOptions } from "unplugin";
+import type { ConfigEnv, UserConfig } from "vite";
 import type { Compilation as WebpackCompilation } from "webpack";
-import MagicString from "magic-string";
-import { findStaticImports, parseStaticImport } from "mlly";
-import mime from "mime/lite";
 
 import type { EmittedFile, FaviconsIconsPluginOptions, FaviconsLogoPluginOptions, HtmlTagDescriptor, Runtime } from "../types";
 import { PLUGIN_NAME } from "./const";
@@ -20,7 +21,6 @@ import findHtmlRspackPlugin from "./utils/find-html-rspack-plugin";
 import findHtmlWebpackPlugin from "./utils/find-html-webpack-plugin";
 import formatDuration from "./utils/format-duration";
 import Oracle from "./utils/oracle";
-import type { ConfigEnv, UserConfig } from "vite";
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
 const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogoPluginOptions | undefined, false> = (options, meta): UnpluginOptions => {
@@ -43,7 +43,6 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
     let parsedHtml: HtmlTagDescriptor[] = [];
     let runtimeExports: Runtime | undefined;
 
-    // eslint-disable-next-line unicorn/no-negated-condition
     let injectionStatus: "DISABLED" | "ENABLED" | "NOT_SUPPORTED" = "ENABLED";
 
     if (config.inject !== true) {
@@ -108,8 +107,8 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
         parsedHtml = parseHtml([...emittedFiles, ...emittedImages], html, base);
 
         runtimeExports = {
-            images: emittedImages,
             files: emittedFiles,
+            images: emittedImages,
             metadata: parsedHtml.map((tag) => tag.fragment).join(""),
         };
     };
@@ -159,8 +158,8 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
         parsedHtml = parseHtml([...servedFiles, ...servedImages], html, base);
 
         runtimeExports = {
-            images: servedImages,
             files: servedFiles,
+            images: servedImages,
             metadata: parsedHtml.map((tag) => tag.fragment).join(""),
         };
     };
@@ -207,9 +206,9 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
         }
     };
 
-    return <UnpluginOptions>{
-        apply: (_: UserConfig, env: ConfigEnv) => {
-            viteCommand = env.command;
+    return {
+        apply: (_: UserConfig, environment: ConfigEnv) => {
+            viteCommand = environment.command;
 
             return true;
         },
@@ -255,8 +254,28 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                 }
             },
         },
-        transformInclude(id) {
-            return id.match(/\.((c|m)?j|t)sx?$/u);
+        rspack(compiler) {
+            base = "/";
+
+            compiler.hooks.make.tapPromise(PLUGIN_NAME, async (compilation) => {
+                if (injectionStatus === "ENABLED") {
+                    const rspackPlugin = findHtmlRspackPlugin(compilation);
+                    const htmlWebpackPlugin = findHtmlWebpackPlugin(compilation);
+
+                    if (rspackPlugin) {
+                        // Hook into the html-webpack-plugin processing and add the html
+                        injectHtmlPlugin(compilation, rspackPlugin);
+                    } else if (htmlWebpackPlugin) {
+                        // Hook into the html-webpack-plugin processing and add the html
+                        injectHtmlPlugin(compilation, htmlWebpackPlugin);
+                    } else {
+                        consola.warn(
+                            `No "@rspack/plugin-html" or "html-webpack-plugin" plugin was found, injection was disabled, currently the builtin html is not supported.`,
+                        );
+                        injectionStatus = "NOT_SUPPORTED";
+                    }
+                }
+            });
         },
         transform(code, id) {
             const runtimePackageName = `${PLUGIN_NAME}/runtime`;
@@ -292,28 +311,8 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                 }),
             };
         },
-        rspack(compiler) {
-            base = "/";
-
-            compiler.hooks.make.tapPromise(PLUGIN_NAME, async (compilation) => {
-                if (injectionStatus === "ENABLED") {
-                    const rspackPlugin = findHtmlRspackPlugin(compilation);
-                    const htmlWebpackPlugin = findHtmlWebpackPlugin(compilation);
-
-                    if (rspackPlugin) {
-                        // Hook into the html-webpack-plugin processing and add the html
-                        injectHtmlPlugin(compilation, rspackPlugin);
-                    } else if (htmlWebpackPlugin) {
-                        // Hook into the html-webpack-plugin processing and add the html
-                        injectHtmlPlugin(compilation, htmlWebpackPlugin);
-                    } else {
-                        consola.warn(
-                            `No "@rspack/plugin-html" or "html-webpack-plugin" plugin was found, injection was disabled, currently the builtin html is not supported.`,
-                        );
-                        injectionStatus = "NOT_SUPPORTED";
-                    }
-                }
-            });
+        transformInclude(id) {
+            return id.match(/\.((c|m)?j|t)sx?$/u);
         },
         vite: {
             configResolved(viteConfig) {
@@ -330,6 +329,30 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                         config.outputPath = "assets/static";
                     }
                 });
+            },
+            configureServer(server) {
+                if (viteCommand === "serve") {
+                    return () => {
+                        server.middlewares.use((request, response, next) => {
+                            const url = request.url?.slice(1) as string;
+
+                            if (serveMap.has(url)) {
+                                const source = serveMap.get(url);
+                                const extension = url.split(".").pop();
+
+                                if (source instanceof Buffer) {
+                                    response.setHeader("Content-Type", extension ? (mime.getType(extension) as string) : "application/octet-stream");
+                                }
+
+                                response.end(source);
+                            } else {
+                                next();
+                            }
+                        });
+                    };
+                }
+
+                return () => {};
             },
             generateBundle(_, bundle) {
                 // @see https://github.com/withastro/astro/issues/7695
@@ -359,32 +382,6 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                 },
                 order: "post",
             },
-            configureServer(server) {
-                if (viteCommand === "serve") {
-                    return () => {
-                        server.middlewares.use((req, res, next) => {
-                            const url = req.url?.slice(1) as string;
-
-                            if (serveMap.has(url)) {
-                                const source = serveMap.get(url);
-                                const extension = url.split(".").pop();
-
-                                if (source instanceof Buffer) {
-                                    res.setHeader("Content-Type", extension ? (mime.getType(extension) as string) : "application/octet-stream");
-                                }
-
-                                res.end(source);
-
-                                return;
-                            } else {
-                                next();
-                            }
-                        });
-                    };
-                }
-
-                return () => {};
-            },
         },
         webpack(compiler) {
             if (compiler.options.output.path?.includes(".next")) {
@@ -402,7 +399,7 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                 }
             });
         },
-    };
+    } as UnpluginOptions;
 };
 
 export default unpluginFactory;

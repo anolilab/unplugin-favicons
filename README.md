@@ -332,10 +332,10 @@ The default configuration will automatically generate webapp manifest files alon
 Under the hood, Vite/Rollup resolve the paths to the logo and favicons according to the following
 rules:
 
--   If `/path/to/logo` is absolute, there is nothing to resolve and the path
-    specified is used as is.
+- If `/path/to/logo` is absolute, there is nothing to resolve and the path
+  specified is used as is.
 
--   If `./path/to/logo` is relative, it’s resolved with respect to `process.cwd()`.
+- If `./path/to/logo` is relative, it’s resolved with respect to `process.cwd()`.
 
 ### HTML Injection
 
@@ -516,8 +516,8 @@ If you would like to help take a look at the [list of issues](https://github.com
 
 ## Credits
 
--   [Daniel Bannert](https://github.com/prisis)
--   [All Contributors](https://github.com/anolilab/vite-plugin-favicon/graphs/contributors)
+- [Daniel Bannert](https://github.com/prisis)
+- [All Contributors](https://github.com/anolilab/vite-plugin-favicon/graphs/contributors)
 
 ## License
 
