@@ -2,7 +2,7 @@ import Module from "node:module";
 
 import type { Compilation as RspackCompilation } from "@rspack/core";
 import type HtmlWebpackPlugin from "html-webpack-plugin";
-import type { Compilation as WebpackCompilation, WebpackError } from "webpack";
+import type { Compilation as WebpackCompilation } from "webpack";
 
 const require = Module.createRequire(import.meta.url);
 
@@ -33,12 +33,14 @@ const findHtmlWebpackPlugin = (compilation: RspackCompilation | WebpackCompilati
     }
 
     compilation.errors.push(
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         new compiler.webpack.WebpackError(
             `${
                 "This @anolilab/unplugin-favicons version is not compatible with your current HtmlWebpackPlugin version.\n" +
                 "Please upgrade to HtmlWebpackPlugin >= 5\n"
             }${getHtmlWebpackPluginVersion()}`,
-        ) as WebpackError,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ) as any,
     );
 
     return undefined;

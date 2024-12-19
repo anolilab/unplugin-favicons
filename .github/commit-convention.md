@@ -75,9 +75,9 @@ The scope could be anything specifying the place of the commit change. For examp
 
 The subject contains a succinct description of the change:
 
--   Use the imperative, present tense: "change" not "changed" nor "changes"
--   Don’t capitalize the first letter
--   No dot (.) at the end
+- Use the imperative, present tense: "change" not "changed" nor "changes"
+- Don’t capitalize the first letter
+- No dot (.) at the end
 
 ### Body
 

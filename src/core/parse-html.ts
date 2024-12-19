@@ -16,7 +16,7 @@ import findEmittedFile from "./utils/find-emitted-file";
  */
 const parseHtml = (emittedFiles: EmittedFile[], fragments: string[], base = "/"): HtmlTagDescriptor[] =>
     fragments.flatMap((fragment) => {
-        const orginalFragment = fragment;
+        const originalFragment = fragment;
         const parsedFragment = parseFragment(fragment);
 
         // Map over each child node in the fragment
@@ -53,7 +53,7 @@ const parseHtml = (emittedFiles: EmittedFile[], fragments: string[], base = "/")
                 return {
                     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                     attrs: Object.fromEntries(mappedAttributes),
-                    fragment: orginalFragment,
+                    fragment: originalFragment,
                     injectTo: "head",
                     tag: childNode.nodeName,
                 } as HtmlTagDescriptor;

@@ -12,8 +12,5 @@ a {
 }
 
 .navitem {
-    padding: 3px 10px;
-}
-.navitem.is-active {
-    background-color: #eee;
+    padding: 3px;
 }

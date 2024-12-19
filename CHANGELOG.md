@@ -1,3 +1,31 @@
+## [1.1.0-alpha.1](https://github.com/anolilab/unplugin-favicons/compare/v1.0.6-alpha.1...v1.1.0-alpha.1) (2024-12-19)
+
+### Features
+
+* added new runtime exports, added support for vite dev runtime ([7d09ae7](https://github.com/anolilab/unplugin-favicons/commit/7d09ae7ee59a31d3a487dd010cfe51d211b11e10))
+
+### Bug Fixes
+
+* changed type of webpack error to any ([1856841](https://github.com/anolilab/unplugin-favicons/commit/1856841e8a8eb65435a17f223d0e298ee14d1e26))
+* removed knitwork and updated dependencies ([5233a3f](https://github.com/anolilab/unplugin-favicons/commit/5233a3f43e880b5078152f58de083cab5d4fdd6f))
+
+### Styles
+
+* cs fixes ([859fd22](https://github.com/anolilab/unplugin-favicons/commit/859fd22b3f9180f8d359e79167d3e873989846e2))
+
+### Miscellaneous Chores
+
+* fixed misspelling in a variable name ([48ed559](https://github.com/anolilab/unplugin-favicons/commit/48ed55948d8f4fef997ff489dec9518a96c2ec73))
+* updated example dependencies ([c96b87a](https://github.com/anolilab/unplugin-favicons/commit/c96b87aa12969a0d02b0d532b804fc5b11ed12a4))
+* updated examples ([a1ca808](https://github.com/anolilab/unplugin-favicons/commit/a1ca8083b77a124680853c82fc2cd0930b1e8ce6))
+* updated readme with runtime export ([039d875](https://github.com/anolilab/unplugin-favicons/commit/039d875e597f0432fbd0ab7b14af37b70db8dd64))
+
+## [1.0.6-alpha.1](https://github.com/anolilab/unplugin-favicons/compare/v1.0.5...v1.0.6-alpha.1) (2024-12-17)
+
+### Bug Fixes
+
+* added missing rspack export, updated @visulima/find-cache-dir, @visulima/package, cacache, parse5, ssri, unplugin ([fd34350](https://github.com/anolilab/unplugin-favicons/commit/fd34350b50f170ea5939f25e89aba6c1192b8340))
+
 ## [1.0.5](https://github.com/anolilab/unplugin-favicons/compare/v1.0.4...v1.0.5) (2024-09-04)
 
 ### Bug Fixes

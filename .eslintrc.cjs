@@ -24,7 +24,7 @@ module.exports = defineConfig({
             rules: {},
         },
         {
-            files: ["esbuild.ts", "index.ts", "rollup.ts", "rspack.ts", "vite.ts", "webpack.ts", "nuxt.ts"],
+            files: ["esbuild.ts", "index.ts", "rollup.ts", "rspack.ts", "vite.ts", "webpack.ts", "nuxt.ts", "runtime.ts"],
             rules: {
                 "import/no-unused-modules": "off",
             },

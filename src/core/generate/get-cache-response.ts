@@ -1,4 +1,3 @@
-
 import type { FaviconResponse } from "favicons";
 
 import { get as cacheGet } from "../utils/cache";

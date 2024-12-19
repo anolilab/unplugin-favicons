@@ -199,7 +199,7 @@ See [the Nuxt example](examples/nuxt) for a working example project.
 <br></details>
 
 <details>
-<summary>SvelteKit (No Supported for now, see <a href="https://github.com/sveltejs/kit/issues/5346">Vite Plugin</a>)</summary><br>
+<summary>SvelteKit</summary><br>
 
 The `@anolilab/unplugin-favicons` plugin should be configured in the `vite.config.js` configuration file:
 
@@ -217,6 +217,20 @@ export default defineConfig({
         }),
     ],
 });
+```
+
+Then add `src/hooks.server.ts` to rewrite the head tag with [`hooks`](https://kit.svelte.dev/docs/hooks):
+
+```ts
+import { metadata } from "@anolilab/unplugin-favicons/runtime"; // use default import
+import type { Handle } from "@sveltejs/kit";
+
+export const handle: Handle = async ({ event, resolve }) => {
+    const response = await resolve(event, {
+        transformPageChunk: ({ html }) => html.replace("</head>", `${metadata}</head>`),
+    });
+    return response;
+};
 ```
 
 Check instructions in the `Frameworks -> Svelte` section below if you faced module import errors.
@@ -318,10 +332,10 @@ The default configuration will automatically generate webapp manifest files alon
 Under the hood, Vite/Rollup resolve the paths to the logo and favicons according to the following
 rules:
 
--   If `/path/to/logo` is absolute, there is nothing to resolve and the path
-    specified is used as is.
+- If `/path/to/logo` is absolute, there is nothing to resolve and the path
+  specified is used as is.
 
--   If `./path/to/logo` is relative, it’s resolved with respect to `process.cwd()`.
+- If `./path/to/logo` is relative, it’s resolved with respect to `process.cwd()`.
 
 ### HTML Injection
 
@@ -463,6 +477,16 @@ To fine tune what icons/metadata is generated, refer to
 
 Vite calls the HTML transform hook for each HTML file template file you have configured in Vite, so this works automatically.
 
+### Runtime
+
+The `@anolilab/unplugin-favicons` plugin also exports a runtime module that can be used to inject the generated metadata into your HTML files or access the `files` and `images` used in the metadata.
+
+```ts
+import { metadata, images, files } from "@anolilab/unplugin-favicons/runtime";
+
+console.log(metadata, images, files);
+```
+
 ## Changelog
 
 Take a look at the [CHANGELOG.md](https://github.com/anolilab/unplugin-favicons/blob/main/CHANGELOG.md).
@@ -492,8 +516,8 @@ If you would like to help take a look at the [list of issues](https://github.com
 
 ## Credits
 
--   [Daniel Bannert](https://github.com/prisis)
--   [All Contributors](https://github.com/anolilab/vite-plugin-favicon/graphs/contributors)
+- [Daniel Bannert](https://github.com/prisis)
+- [All Contributors](https://github.com/anolilab/vite-plugin-favicon/graphs/contributors)
 
 ## License
 
