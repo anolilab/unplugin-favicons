@@ -118,8 +118,8 @@
         "update:deps": "taze"
     },
     "dependencies": {
-        "@visulima/find-cache-dir": "^1.0.16",
-        "@visulima/package": "^3.2.0",
+        "@visulima/find-cache-dir": "^1.0.18",
+        "@visulima/package": "^3.2.2",
         "cacache": "^19.0.1",
         "consola": "3.2.3",
         "fast-json-stable-stringify": "^2.1.0",
@@ -129,7 +129,7 @@
         "parse-author": "^2.0.0",
         "parse5": "^7.2.1",
         "ssri": "^12.0.0",
-        "unplugin": "^2.1.0"
+        "unplugin": "^2.1.2"
     },
     "devDependencies": {
         "@anolilab/commitlint-config": "^5.0.3",
@@ -147,25 +147,25 @@
         "@rspack/core": "^1.1.6",
         "@rspack/plugin-html": "^0.5.8",
         "@secretlint/secretlint-rule-preset-recommend": "^9.0.0",
-        "@sveltejs/kit": "^2.12.1",
+        "@sveltejs/kit": "^2.12.2",
         "@total-typescript/ts-reset": "^0.6.1",
         "@tsconfig/esm": "^1.0.5",
         "@tsconfig/node18": "^18.2.4",
         "@tsconfig/strictest": "^2.0.5",
         "@types/cacache": "^17.0.2",
-        "@types/node": "18.19.68",
+        "@types/node": "18.19.70",
         "@types/parse-author": "^2.0.3",
         "@types/parse5": "^7.0.0",
         "@types/ssri": "^7.1.5",
-        "@visulima/packem": "^1.10.0",
+        "@visulima/packem": "^1.10.4",
         "@vitest/coverage-v8": "^2.1.8",
         "audit-ci": "^7.1.0",
-        "caniuse-lite": "^1.0.30001689",
+        "caniuse-lite": "^1.0.30001690",
         "commitizen": "^4.3.1",
         "commitlint": "^19.6.1",
         "conventional-changelog-conventionalcommits": "8.0.0",
         "cz-conventional-changelog": "^3.3.0",
-        "esbuild": "^0.24.0",
+        "esbuild": "^0.24.2",
         "eslint": "8.57.0",
         "eslint-plugin-deprecation": "^3.0.0",
         "eslint-plugin-editorconfig": "^4.0.3",
@@ -192,7 +192,7 @@
         "textlint": "^14.4.0",
         "type-fest": "^4.30.2",
         "typescript": "^5.7.2",
-        "vite": "^6.0.3",
+        "vite": "^6.0.7",
         "vitest": "^2.1.8",
         "webpack": "^5.97.1"
     },
@@ -201,8 +201,8 @@
         "@nuxt/schema": "^3",
         "@rspack/cli": "^0.3.6",
         "esbuild": "*",
-        "favicons": "^7.0.1",
-        "rollup": "^3",
+        "favicons": "^7.0.2",
+        "rollup": "^3.0.1",
         "vite": "^3 || ^4 || ^5 || ^6",
         "webpack": "^4 || ^5"
     },
@@ -232,7 +232,7 @@
             "optional": true
         }
     },
-    "packageManager": "pnpm@9.15.0",
+    "packageManager": "pnpm@9.15.3",
     "engines": {
         "node": ">=18.0.0"
     },
