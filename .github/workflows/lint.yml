@@ -33,7 +33,7 @@ jobs:
             package_json_lintable: "${{ steps.changes.outputs.package_json_lintable }}"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
               with:
                   egress-policy: "audit"
 
@@ -58,7 +58,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
               with:
                   egress-policy: "audit"
 
@@ -93,7 +93,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
               with:
                   egress-policy: "audit"
 
@@ -128,7 +128,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
               with:
                   egress-policy: "audit"
 
@@ -163,7 +163,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
               with:
                   egress-policy: "audit"
 
@@ -187,7 +187,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
               with:
                   egress-policy: "audit"
 
@@ -212,7 +212,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
               with:
                   egress-policy: "audit"
 
@@ -228,7 +228,7 @@ jobs:
                   run_install: false
 
             - name: "Use Node.js 18.x"
-              uses: "actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8" # v4.0.2
+              uses: "actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af" # v4.1.0
               with:
                   node-version: "18.x"
                   cache: "pnpm"
@@ -262,7 +262,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142" # v2.7.0
+              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
               with:
                   egress-policy: "audit"
 
