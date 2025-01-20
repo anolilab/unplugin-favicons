@@ -245,7 +245,7 @@
             "@babel/traverse@<7.23.2": ">=7.25.3",
             "braces@<3.0.3": ">=3.0.3",
             "chrono-node@<2.2.4": ">=2.2.4",
-            "cosmiconfig-typescript-loader": "^5.0.0",
+            "cosmiconfig-typescript-loader": "^6.1.0",
             "follow-redirects@<1.15.4": ">=1.15.6",
             "follow-redirects@<=1.15.5": ">=1.15.6",
             "got@<11.8.5": ">=14.4.2",
