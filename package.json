@@ -165,7 +165,7 @@
         "commitlint": "^19.6.1",
         "conventional-changelog-conventionalcommits": "8.0.0",
         "cz-conventional-changelog": "^3.3.0",
-        "esbuild": "^0.24.2",
+        "esbuild": "^0.25.0",
         "eslint": "8.57.0",
         "eslint-plugin-deprecation": "^3.0.0",
         "eslint-plugin-editorconfig": "^4.0.3",
