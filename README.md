@@ -24,7 +24,7 @@ Create and manage favicons with Vite, Rollup, Webpack, Rspack, Nuxt, Vue CLI, Sv
 ## Install
 
 ```bash
-npm install --dev-save @anolilab/unplugin-favicons favicons
+npm i -D @anolilab/unplugin-favicons favicons
 ```
 
 ```sh
