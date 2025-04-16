@@ -28,7 +28,7 @@ overrides:
   vite@>=5.4.0 <=5.4.5: '>=5.4.6'
   rollup@>=4.0.0 <4.22.4: '>=4.22.4'
   cookie@<0.7.0: '>=0.7.0'
-  http-proxy-middleware@>=3.0.0 <3.0.3: '>=3.0.3'
+  http-proxy-middleware@>=3.0.0 <3.0.3: '>=3.0.5'
   http-proxy-middleware@<2.0.7: '>=2.0.7'
   send@<0.19.0: '>=0.19.0'
   serve-static@<1.16.0: '>=1.16.0'
@@ -7892,6 +7892,7 @@ packages:
   eslint-define-config@1.24.1:
     resolution: {integrity: sha512-o36vBhPSWyIQlHoMqGhhcGmOOm2A2ccBVIdLTG/AWdm9YmjpsLpf+5ntf9LlHR6dduLREgxtGwvwPwSt7vnXJg==}
     engines: {node: '>=18.0.0', npm: '>=9.0.0', pnpm: '>= 8.6.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
@@ -8002,6 +8003,7 @@ packages:
   eslint-plugin-i@2.29.1:
     resolution: {integrity: sha512-ORizX37MelIWLbMyqI7hi8VJMf7A0CskMmYkB+lkCX3aF4pkGV7kwx5bSEb4qx7Yce2rAf9s34HqDRPjGRZPNQ==}
     engines: {node: '>=12'}
+    deprecated: Please migrate to the brand new `eslint-plugin-import-x` instead
     peerDependencies:
       eslint: ^7.2.0 || ^8
 
@@ -9117,6 +9119,10 @@ packages:
     resolution: {integrity: sha512-usY0HG5nyDUwtqpiZdETNbmKtw3QQ1jwYFZ9wi5iHzX2BcILwQKtYDJPo7XHTsu5Z0B2Hj3W9NNnbd+AjFWjqg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
+  http-proxy-middleware@3.0.5:
+    resolution: {integrity: sha512-GLZZm1X38BPY4lkXA01jhwxvDoOkkXqjgVyUzVxiEK4iuRu03PZoYHhHRwxnfhQMDuaxi3vVri0YgSro/1oWqg==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
   http-proxy@1.18.1:
     resolution: {integrity: sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==}
     engines: {node: '>=8.0.0'}
@@ -10132,6 +10138,7 @@ packages:
 
   lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    deprecated: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
 
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
@@ -10168,6 +10175,7 @@ packages:
 
   lodash.template@4.5.0:
     resolution: {integrity: sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==}
+    deprecated: This package is deprecated. Use https://socket.dev/npm/package/eta instead.
 
   lodash.templatesettings@4.2.0:
     resolution: {integrity: sha512-stgLz+i3Aa9mZgnjr/O+v9ruKZsPsndy7qPZOchbqk2cnTU1ZaldKK+v7m54WoKIyxiuMZTKT2H81F8BeAc3ZQ==}
@@ -15228,7 +15236,7 @@ snapshots:
       css-loader: 7.1.2(@rspack/core@1.1.6(@swc/helpers@0.5.15))(webpack@5.97.1(esbuild@0.24.2))
       esbuild-wasm: 0.23.0
       fast-glob: 3.3.2
-      http-proxy-middleware: 3.0.3
+      http-proxy-middleware: 3.0.5
       https-proxy-agent: 7.0.5(supports-color@9.4.0)
       istanbul-lib-instrument: 6.0.3
       jsonc-parser: 3.3.1
@@ -15850,7 +15858,7 @@ snapshots:
       '@babel/traverse': 7.26.4
       '@babel/types': 7.26.3
       convert-source-map: 2.0.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -17395,7 +17403,7 @@ snapshots:
       '@babel/parser': 7.26.3
       '@babel/template': 7.25.9
       '@babel/types': 7.26.3
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -20067,7 +20075,7 @@ snapshots:
       conventional-changelog-writer: 8.0.0
       conventional-commits-filter: 5.0.0
       conventional-commits-parser: 6.0.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       import-from-esm: 1.3.4
       lodash-es: 4.17.21
       micromatch: 4.0.8
@@ -20083,7 +20091,7 @@ snapshots:
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       execa: 5.1.1
       lodash: 4.17.21
       parse-json: 5.2.0
@@ -20095,7 +20103,7 @@ snapshots:
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       dir-glob: 3.0.1
       execa: 5.1.1
       lodash: 4.17.21
@@ -20113,7 +20121,7 @@ snapshots:
       '@octokit/plugin-throttling': 9.3.1(@octokit/core@6.1.2)
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       dir-glob: 3.0.1
       globby: 14.0.2
       http-proxy-agent: 7.0.0
@@ -20150,7 +20158,7 @@ snapshots:
       conventional-changelog-writer: 8.0.0
       conventional-commits-filter: 5.0.0
       conventional-commits-parser: 6.0.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       get-stream: 7.0.1
       import-from-esm: 1.3.4
       into-stream: 7.0.0
@@ -20459,7 +20467,7 @@ snapshots:
   '@textlint/ast-tester@14.4.0':
     dependencies:
       '@textlint/ast-node-types': 14.4.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -20478,7 +20486,7 @@ snapshots:
       '@textlint/resolver': 14.4.0
       '@textlint/types': 14.4.0
       '@textlint/utils': 14.4.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       rc-config-loader: 4.1.3
     transitivePeerDependencies:
       - supports-color
@@ -20493,7 +20501,7 @@ snapshots:
       '@textlint/resolver': 14.4.0
       '@textlint/types': 14.4.0
       chalk: 4.1.2
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       diff: 5.2.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
@@ -20525,7 +20533,7 @@ snapshots:
       '@textlint/source-code-fixer': 14.4.0
       '@textlint/types': 14.4.0
       '@textlint/utils': 14.4.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       fast-equals: 4.0.3
       structured-source: 4.0.0
     transitivePeerDependencies:
@@ -20539,7 +20547,7 @@ snapshots:
       '@textlint/resolver': 14.4.0
       '@textlint/types': 14.4.0
       chalk: 4.1.2
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       js-yaml: 3.14.1
       lodash: 4.17.21
       pluralize: 2.0.0
@@ -20567,7 +20575,7 @@ snapshots:
   '@textlint/markdown-to-ast@14.4.0':
     dependencies:
       '@textlint/ast-node-types': 14.4.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       mdast-util-gfm-autolink-literal: 0.1.3
       neotraverse: 0.6.18
       remark-footnotes: 3.0.0
@@ -20601,7 +20609,7 @@ snapshots:
   '@textlint/source-code-fixer@14.4.0':
     dependencies:
       '@textlint/types': 14.4.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -21003,7 +21011,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 7.16.1(typescript@5.7.2)
       '@typescript-eslint/utils': 7.16.1(eslint@8.57.0)(typescript@5.7.2)
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       eslint: 8.57.0
       ts-api-utils: 1.3.0(typescript@5.7.2)
     optionalDependencies:
@@ -21015,7 +21023,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 7.16.1(typescript@5.7.2)
       '@typescript-eslint/utils': 7.16.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       eslint: 9.17.0(jiti@2.4.2)
       ts-api-utils: 1.3.0(typescript@5.7.2)
     optionalDependencies:
@@ -21049,7 +21057,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/visitor-keys': 6.21.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
@@ -21064,7 +21072,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.16.1
       '@typescript-eslint/visitor-keys': 7.16.1
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -21736,7 +21744,7 @@ snapshots:
 
   agent-base@7.1.1(supports-color@9.4.0):
     dependencies:
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -23201,11 +23209,9 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
-  debug@4.3.6(supports-color@9.4.0):
+  debug@4.3.6:
     dependencies:
       ms: 2.1.2
-    optionalDependencies:
-      supports-color: 9.4.0
 
   debug@4.4.0(supports-color@9.4.0):
     dependencies:
@@ -25710,11 +25716,22 @@ snapshots:
   http-proxy-agent@7.0.0:
     dependencies:
       agent-base: 7.1.1(supports-color@9.4.0)
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
   http-proxy-middleware@3.0.3:
+    dependencies:
+      '@types/http-proxy': 1.17.15
+      debug: 4.4.0(supports-color@9.4.0)
+      http-proxy: 1.18.1(debug@4.4.0)
+      is-glob: 4.0.3
+      is-plain-object: 5.0.0
+      micromatch: 4.0.8
+    transitivePeerDependencies:
+      - supports-color
+
+  http-proxy-middleware@3.0.5:
     dependencies:
       '@types/http-proxy': 1.17.15
       debug: 4.4.0(supports-color@9.4.0)
@@ -25809,7 +25826,7 @@ snapshots:
 
   import-from-esm@1.3.4:
     dependencies:
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       import-meta-resolve: 4.1.0
     transitivePeerDependencies:
       - supports-color
@@ -27939,7 +27956,7 @@ snapshots:
 
   micromark@2.11.4:
     dependencies:
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
       parse-entities: 2.0.0
     transitivePeerDependencies:
       - supports-color
@@ -29686,7 +29703,7 @@ snapshots:
 
   rc-config-loader@4.1.3:
     dependencies:
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       js-yaml: 4.1.0
       json5: 2.2.3
       require-from-string: 2.0.2
@@ -30617,7 +30634,7 @@ snapshots:
       '@semantic-release/release-notes-generator': 14.0.1(semantic-release@24.2.0(typescript@5.7.2))
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.0(typescript@5.7.2)
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       env-ci: 11.0.0
       execa: 9.3.0
       figures: 6.1.0
@@ -31678,7 +31695,7 @@ snapshots:
       '@textlint/textlint-plugin-text': 14.4.0
       '@textlint/types': 14.4.0
       '@textlint/utils': 14.4.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.3.6
       file-entry-cache: 5.0.1
       get-stdin: 5.0.1
       glob: 10.4.5
@@ -32120,7 +32137,7 @@ snapshots:
       '@types/node': 18.19.70
       '@types/unist': 2.0.8
       concat-stream: 2.0.0
-      debug: 4.3.6(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
       fault: 2.0.1
       glob: 8.1.0
       ignore: 5.2.4
@@ -33084,7 +33101,7 @@ snapshots:
       express: 4.21.2
       graceful-fs: 4.2.11
       html-entities: 2.4.0
-      http-proxy-middleware: 3.0.3
+      http-proxy-middleware: 3.0.5
       ipaddr.js: 2.1.0
       launch-editor: 2.8.0
       open: 10.1.0
