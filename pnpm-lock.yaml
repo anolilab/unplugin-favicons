@@ -13,7 +13,7 @@ overrides:
   follow-redirects@<=1.15.5: '>=1.15.11'
   got@<11.8.5: '>=14.4.9'
   load-tsconfig: ^0.2.5
-  tar@<6.2.1: '>=7.5.2'
+  tar@<6.2.1: '>=7.4.4'
   trim@<0.0.3: '>=1.0.1'
   tsconfig-paths: ^4.2.0
   webpack-dev-middleware@<=5.3.3: '>=7.4.5'
@@ -29,7 +29,7 @@ overrides:
   rollup@>=4.0.0 <4.22.4: '>=4.22.4'
   cookie@<0.7.0: '>=0.7.2'
   http-proxy-middleware@>=3.0.0 <3.0.3: '>=3.0.3'
-  http-proxy-middleware@<2.0.7: '>=2.0.7'
+  http-proxy-middleware@<2.0.7: '>=3.0.5'
   send@<0.19.0: '>=0.19.1'
   serve-static@<1.16.0: '>=1.16.2'
   express@<4.20.0: '>=4.20.0'
@@ -9173,6 +9173,10 @@ packages:
     resolution: {integrity: sha512-usY0HG5nyDUwtqpiZdETNbmKtw3QQ1jwYFZ9wi5iHzX2BcILwQKtYDJPo7XHTsu5Z0B2Hj3W9NNnbd+AjFWjqg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
+  http-proxy-middleware@3.0.5:
+    resolution: {integrity: sha512-GLZZm1X38BPY4lkXA01jhwxvDoOkkXqjgVyUzVxiEK4iuRu03PZoYHhHRwxnfhQMDuaxi3vVri0YgSro/1oWqg==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
   http-proxy@1.18.1:
     resolution: {integrity: sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==}
     engines: {node: '>=8.0.0'}
@@ -11084,6 +11088,7 @@ packages:
   next@15.1.1:
     resolution: {integrity: sha512-SBZlcvdIxajw8//H3uOR1G3iu3jxsra/77m2ulRIxi3m89p+s3ACsoOXR49JEAbaun/DVoRJ9cPKq8eF/oNB5g==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -20047,7 +20052,7 @@ snapshots:
       chokidar: 3.6.0
       connect-history-api-fallback: 2.0.0
       express: 4.21.2
-      http-proxy-middleware: 3.0.3
+      http-proxy-middleware: 3.0.5
       mime-types: 2.1.35
       p-retry: 4.6.2
       webpack-dev-middleware: 7.4.2(webpack@5.97.1(esbuild@0.24.2))
@@ -25895,6 +25900,17 @@ snapshots:
       - supports-color
 
   http-proxy-middleware@3.0.3:
+    dependencies:
+      '@types/http-proxy': 1.17.15
+      debug: 4.4.0(supports-color@9.4.0)
+      http-proxy: 1.18.1(debug@4.4.0)
+      is-glob: 4.0.3
+      is-plain-object: 5.0.0
+      micromatch: 4.0.8
+    transitivePeerDependencies:
+      - supports-color
+
+  http-proxy-middleware@3.0.5:
     dependencies:
       '@types/http-proxy': 1.17.15
       debug: 4.4.0(supports-color@9.4.0)
@@ -33319,7 +33335,7 @@ snapshots:
       express: 4.21.2
       graceful-fs: 4.2.11
       html-entities: 2.4.0
-      http-proxy-middleware: 3.0.3
+      http-proxy-middleware: 3.0.5
       ipaddr.js: 2.1.0
       launch-editor: 2.8.0
       open: 10.1.0
@@ -33357,7 +33373,7 @@ snapshots:
       express: 4.21.2
       graceful-fs: 4.2.11
       html-entities: 2.4.0
-      http-proxy-middleware: 3.0.3
+      http-proxy-middleware: 3.0.5
       ipaddr.js: 2.1.0
       launch-editor: 2.8.0
       open: 10.1.0
