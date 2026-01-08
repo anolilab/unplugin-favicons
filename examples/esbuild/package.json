@@ -10,8 +10,8 @@
         "@anolilab/unplugin-favicons": "workspace:*"
     },
     "devDependencies": {
-        "esbuild": "^0.24.0",
-        "rimraf": "^6.0.1",
-        "typescript": "^5.7.2"
+        "esbuild": "^0.27.2",
+        "rimraf": "^6.1.2",
+        "typescript": "^5.9.3"
     }
 }
