@@ -348,6 +348,7 @@
         "onlyBuiltDependencies": [
             "esbuild",
             "lmdb",
+            "msgpackr-extract",
             "oxc-resolver",
             "sharp",
             "svelte-preprocess",
