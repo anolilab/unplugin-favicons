@@ -150,7 +150,7 @@
         "@sveltejs/kit": "^2.12.2",
         "@total-typescript/ts-reset": "^0.6.1",
         "@tsconfig/esm": "^1.0.5",
-        "@tsconfig/node18": "^18.2.4",
+        "@tsconfig/node20": "^20.1.0",
         "@tsconfig/strictest": "^2.0.6",
         "@types/cacache": "^17.0.2",
         "@types/node": "18.19.70",
