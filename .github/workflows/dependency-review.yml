@@ -21,16 +21,16 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@c95a14d0e5bab51a9f56296a4eb0e416910cd350" # v2.10.3
+              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11" # v4.1.1
+              uses: "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd" # v6.0.2
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Dependency Review"
-              uses: "actions/dependency-review-action@3b139cfc5fae8b618d3eae3675e383bb1769c019" # v4.5.0
+              uses: "actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294" # v5.0.0
