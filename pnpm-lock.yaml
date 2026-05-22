@@ -7201,7 +7201,7 @@ packages:
     resolution: {integrity: sha512-SNwdBeHyII+rWvee/bTnAYyO8vfVdcSTud4EIb6jcZ8inLeWucJE0DnxXQBjlQ5zlteuuvooGQy3LIyGxhvlOA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
-      webpack: '>=5.104.0'
+      webpack: '>=5.94.0'
 
   core-js-compat@3.49.0:
     resolution: {integrity: sha512-VQXt1jr9cBz03b331DFDCCP90b3fanciLkgiOoy8SBHy06gNf+vQ1A3WFLqG7I8TipYIKeYK9wxd0tUrvHcOZA==}
@@ -7269,7 +7269,7 @@ packages:
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
-      webpack: '>=5.104.0'
+      webpack: '>=5.94.0'
     peerDependenciesMeta:
       '@rspack/core':
         optional: true
@@ -9068,7 +9068,7 @@ packages:
     engines: {node: '>=10.13.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
-      webpack: '>=5.104.1'
+      webpack: '>=5.94.0'
     peerDependenciesMeta:
       '@rspack/core':
         optional: true
@@ -9913,7 +9913,7 @@ packages:
     peerDependencies:
       '@rspack/core': 0.x || 1.x
       less: ^3.5.0 || ^4.0.0
-      webpack: '>=5.104.0'
+      webpack: '>=5.94.0'
     peerDependenciesMeta:
       '@rspack/core':
         optional: true
@@ -11854,7 +11854,7 @@ packages:
     peerDependencies:
       '@rspack/core': 0.x || 1.x
       postcss: '>=8.5.10'
-      webpack: '>=5.104.0'
+      webpack: '>=5.94.0'
     peerDependenciesMeta:
       '@rspack/core':
         optional: true
@@ -13014,7 +13014,7 @@ packages:
     resolution: {integrity: sha512-k2Dur7CbSLcAH73sBcIkV5xjPV4SzqO1NJ7+XaQl8if3VODDUj3FNchNGpqgJSKbvUfJuhVdv8K2Eu8/TNl2eA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
-      webpack: '>=5.104.0'
+      webpack: '>=5.94.0'
 
   source-map-support@0.5.21:
     resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
@@ -14639,7 +14639,7 @@ packages:
     engines: {node: '>= 18.12.0'}
     hasBin: true
     peerDependencies:
-      webpack: '>=5.104.0'
+      webpack: '>=5.94.0'
       webpack-cli: '*'
     peerDependenciesMeta:
       webpack:
@@ -14664,7 +14664,7 @@ packages:
     engines: {node: '>= 12'}
     peerDependencies:
       html-webpack-plugin: '>= 5.0.0-beta.1 < 6'
-      webpack: '>=5.104.0'
+      webpack: '>=5.94.0'
     peerDependenciesMeta:
       html-webpack-plugin:
         optional: true
