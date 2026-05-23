@@ -67,7 +67,7 @@ overrides:
   http-proxy-middleware@>=3.0.0 <3.0.3: '>=3.0.3'
   http-proxy-middleware@<2.0.7: '>=2.0.9'
   immutable@>=5.0.0 <5.1.5: '>=5.1.5'
-  immutable@>=4.0.0-rc.1 <4.3.8: '>=4.3.8'
+  immutable@>=4.0.0-rc.1 <4.3.8: '>=5.1.5'
   ip-address@<=10.1.0: '>=10.1.1'
   js-yaml@>=4.0.0 <4.1.1: '>=4.1.1'
   load-tsconfig: ^0.2.5
@@ -9228,9 +9228,6 @@ packages:
     resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
-
-  immutable@5.0.3:
-    resolution: {integrity: sha512-P8IdPQHq3lA1xVeBRi5VPqUm5HDgKnx0Ru51wZz5mjxHr5n3RWhjIpOFU7ybkUxfB+5IToy+OLaHYDBIWsv+uw==}
 
   immutable@5.1.5:
     resolution: {integrity: sha512-t7xcm2siw+hlUM68I+UEOK+z84RzmN59as9DZ7P1l0994DKUWV7UXBMQZVxaoMSRQ+PBZbHCOoBt7a2wxOMt+A==}
@@ -25587,8 +25584,6 @@ snapshots:
   image-size@0.5.5:
     optional: true
 
-  immutable@5.0.3: {}
-
   immutable@5.1.5: {}
 
   import-fresh@3.3.1:
@@ -30146,7 +30141,7 @@ snapshots:
   sass@1.77.6:
     dependencies:
       chokidar: 3.6.0
-      immutable: 5.0.3
+      immutable: 5.1.5
       source-map-js: 1.2.1
 
   sass@1.80.7:
