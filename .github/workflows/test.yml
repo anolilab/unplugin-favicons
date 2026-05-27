@@ -14,5 +14,5 @@ jobs:
             node_versions: "[\"20\", \"22\", \"24\"]"
             os_matrix: "[\"ubuntu-latest\"]"
             extra_includes: "[{\"os\": \"macos-latest\", \"node\": \"20\"}, {\"os\": \"windows-latest\", \"node\": \"20\"}]"
-            test_command: "pnpm run build && pnpm run test:coverage"
+            test_command: "NODE_OPTIONS=\"--max-old-space-size=6144\" pnpm run build && NODE_OPTIONS=\"--max-old-space-size=6144\" pnpm run test:coverage"
             coverage: false
