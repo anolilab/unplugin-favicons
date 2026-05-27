@@ -97,7 +97,11 @@
     "scripts": {
         "audit": "audit-ci --config ./audit-ci.jsonc",
         "build": "packem build --development",
+        "build:affected:packages": "pnpm run build",
         "build:prod": "packem build --production",
+        "lint:affected:eslint": "pnpm run lint:eslint",
+        "lint:affected:package-json": "pnpm run lint:package-json",
+        "lint:affected:types": "pnpm run lint:types",
         "lint:eslint": "eslint . --max-warnings=0",
         "lint:eslint:fix": "pnpm run lint:eslint --fix",
         "lint:package-json": "publint",
