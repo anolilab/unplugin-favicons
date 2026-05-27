@@ -1,5 +1,5 @@
 name: "Tests"
-on:
+on: # yamllint disable-line rule:truthy
     push:
         branches: ["main"]
     pull_request:
@@ -11,8 +11,8 @@ jobs:
             contents: "read"
         uses: "anolilab/workflows/.github/workflows/test.yml@20b8733e71ebbb165d54fe8cede47e225985a58a" # v15.3.1+
         with:
-            node_versions: '["20", "22", "24"]'
-            os_matrix: '["ubuntu-latest"]'
+            node_versions: "[\"20\", \"22\", \"24\"]"
+            os_matrix: "[\"ubuntu-latest\"]"
             extra_includes: '[{"os": "macos-latest", "node": "20"}, {"os": "windows-latest", "node": "20"}]'
             test_command: "pnpm run build && pnpm run test:coverage"
             coverage: false
