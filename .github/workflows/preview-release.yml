@@ -26,6 +26,8 @@ jobs:
             issues: "write"
             checks: "write"
             pull-requests: "write"
+        env:
+            NODE_OPTIONS: "--max-old-space-size=8192"
 
         steps:
             - name: "Harden Runner"
