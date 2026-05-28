@@ -30,7 +30,7 @@ overrides:
   astro@<5.15.9: '>=5.18.1'
   astro@<6.1.10: '>=6.1.10'
   astro@<6.1.6: '>=6.1.10'
-  astro@<=5.15.6: '>=5.15.9'
+  astro@<=5.15.6: '>=5.18.2'
   body-parser@<1.20.3: '>=1.20.3'
   brace-expansion@>=1.0.0 <=1.1.11: '>=1.1.12'
   brace-expansion@<1.1.13: '>=1.1.13'
@@ -472,7 +472,7 @@ importers:
         specifier: workspace:*
         version: link:../..
       astro:
-        specifier: '>=5.15.9'
+        specifier: '>=5.18.2'
         version: 6.3.7(@types/node@25.9.1)(db0@0.3.4)(ioredis@5.10.1)(jiti@2.7.0)(less@4.2.2)(lightningcss@1.32.0)(rollup@4.60.4)(sass@1.85.0)(terser@5.48.0)(yaml@2.9.0)
 
   examples/esbuild:
@@ -18565,8 +18565,8 @@ snapshots:
       json-schema-typed: 8.0.2
       pkce-challenge: 5.0.1
       raw-body: 3.0.2
-      zod: 3.25.76
-      zod-to-json-schema: 3.25.2(zod@3.25.76)
+      zod: 4.4.3
+      zod-to-json-schema: 3.25.2(zod@4.4.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -18769,7 +18769,7 @@ snapshots:
 
   '@npmcli/fs@4.0.0':
     dependencies:
-      semver: 7.7.1
+      semver: 7.8.1
 
   '@npmcli/fs@6.0.0':
     dependencies:
@@ -18797,7 +18797,7 @@ snapshots:
       npm-pick-manifest: 10.0.0
       proc-log: 5.0.0
       promise-retry: 2.0.1
-      semver: 7.7.1
+      semver: 7.8.1
       which: 5.0.0
 
   '@npmcli/installed-package-contents@3.0.0':
@@ -18835,7 +18835,7 @@ snapshots:
       hosted-git-info: 8.1.0
       json-parse-even-better-errors: 4.0.0
       proc-log: 5.0.0
-      semver: 7.7.1
+      semver: 7.8.1
       validate-npm-package-license: 3.0.4
 
   '@npmcli/promise-spawn@7.0.2':
@@ -21363,7 +21363,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.59.1
       debug: 4.4.3
       minimatch: 10.2.5
-      semver: 7.7.4
+      semver: 7.8.1
       tinyglobby: 0.2.16
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
@@ -26307,7 +26307,7 @@ snapshots:
 
   is-bun-module@2.0.0:
     dependencies:
-      semver: 7.7.4
+      semver: 7.8.1
 
   is-callable@1.2.7: {}
 
@@ -28718,7 +28718,7 @@ snapshots:
       make-fetch-happen: 14.0.3
       nopt: 8.1.0
       proc-log: 5.0.0
-      semver: 7.7.1
+      semver: 7.8.1
       tar: 7.5.15
       tinyglobby: 0.2.16
       which: 5.0.0
@@ -28760,7 +28760,7 @@ snapshots:
   normalize-package-data@7.0.1:
     dependencies:
       hosted-git-info: 8.1.0
-      semver: 7.7.2
+      semver: 7.8.1
       validate-npm-package-license: 3.0.4
 
   normalize-package-data@8.0.0:
@@ -28787,7 +28787,7 @@ snapshots:
 
   npm-install-checks@7.1.2:
     dependencies:
-      semver: 7.7.1
+      semver: 7.8.1
 
   npm-normalize-package-bin@3.0.1: {}
 
@@ -33769,9 +33769,9 @@ snapshots:
       compress-commons: 6.0.2
       readable-stream: 4.7.0
 
-  zod-to-json-schema@3.25.2(zod@3.25.76):
+  zod-to-json-schema@3.25.2(zod@4.4.3):
     dependencies:
-      zod: 3.25.76
+      zod: 4.4.3
 
   zod@3.25.76: {}
 
