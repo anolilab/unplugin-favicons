@@ -26,6 +26,8 @@ jobs:
             issues: "write"
             checks: "write"
             pull-requests: "write"
+        env:
+            NODE_OPTIONS: "--max-old-space-size=8192"
 
         steps:
             - name: "Harden Runner"
@@ -49,8 +51,10 @@ jobs:
               uses: "anolilab/workflows/step/setup@main"
               with:
                   enable-nx-cache: false
-                  node-version: "18.x"
+                  node-version: "20.x"
                   cache-prefix: "preview-release"
+                  run-npm-audit: false
+                  run-signatures-audit: false
 
             - name: "Build"
               shell: "bash"
