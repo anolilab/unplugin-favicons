@@ -358,7 +358,7 @@ const unpluginFactory: UnpluginFactory<FaviconsIconsPluginOptions | FaviconsLogo
                 // @see https://github.com/withastro/astro/issues/7695
                 if (frontendFramework === "astro") {
                     Object.keys(bundle).forEach((key) => {
-                        const asset = bundle[key] as OutputChunk;
+                        const asset = bundle[key] as unknown as OutputChunk;
 
                         if (asset?.fileName?.includes(".astro")) {
                             asset.code = asset.code.replaceAll(/<link rel="icon".*?>/gu, "");

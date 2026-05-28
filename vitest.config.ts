@@ -17,7 +17,7 @@ export default defineConfig({
             exclude: ["__fixtures__/**", "__bench__/**", "scripts/**"],
         },
         environment: "node",
-        reporters: process.env["CI_PREFLIGHT"] ? ["basic", "github-actions"] : ["basic"],
+        reporters: process.env["CI_PREFLIGHT"] ? [["default", { summary: false }], "github-actions"] : [["default", { summary: false }]],
         sequence: {
             seed: VITEST_SEQUENCE_SEED,
         },
