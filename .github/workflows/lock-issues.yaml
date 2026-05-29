@@ -13,6 +13,6 @@ permissions:
 
 jobs:
     lock-closed:
-        uses: "anolilab/workflows/.github/workflows/lock-closed.yml@main"
+        uses: "anolilab/workflows/.github/workflows/lock-closed.yml@0a43f1373be806fe25f390a7119dfd7292c6850f" # main
         with:
             target-repo: "anolilab/unplugin-favicons"
