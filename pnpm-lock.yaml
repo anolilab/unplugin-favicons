@@ -30,7 +30,7 @@ overrides:
   astro@<5.15.9: '>=5.18.2'
   astro@<6.1.10: '>=6.1.10'
   astro@<6.1.6: '>=6.1.10'
-  astro@<=5.15.6: '>=5.18.2'
+  astro@<=5.15.6: '>=6.1.10'
   body-parser@<1.20.3: '>=1.20.3'
   brace-expansion@>=1.0.0 <=1.1.11: '>=1.1.12'
   brace-expansion@<1.1.13: '>=1.1.13'
@@ -473,7 +473,7 @@ importers:
         specifier: workspace:*
         version: link:../..
       astro:
-        specifier: '>=5.18.2'
+        specifier: '>=6.1.10'
         version: 6.3.7(@types/node@25.9.1)(db0@0.3.4)(ioredis@5.10.1)(jiti@2.7.0)(less@4.2.2)(lightningcss@1.32.0)(rollup@4.60.4)(sass@1.85.0)(terser@5.48.0)(yaml@2.9.0)
 
   examples/esbuild:
