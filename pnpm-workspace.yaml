@@ -1,4 +1,7 @@
 packages:
-    - examples/*
+  - examples/*
 
 minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  # Renovate security update: esbuild@0.28.1
+  - esbuild@0.28.1
