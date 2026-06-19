@@ -6,6 +6,6 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     stale-issues:
-        uses: "anolilab/workflows/.github/workflows/stale-issues.yml@main"
+        uses: "anolilab/workflows/.github/workflows/stale-issues.yml@acba5fb15ac98ad23dec1ad233e40e1bb79c1dae" # main
         with:
             target-repo: "anolilab/unplugin-favicons"
