@@ -1,4 +1,7 @@
 packages:
-    - examples/*
+  - examples/*
 
 minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  # Renovate security update: http-proxy-middleware@3.0.7
+  - http-proxy-middleware@3.0.7
