@@ -207,7 +207,7 @@
         "esbuild": "*",
         "favicons": "^7.2.0",
         "rollup": "^3.0.1",
-        "vite": "^8.0.16 ^8.0.16 ^8.0.16 ^8.0.16",
+        "vite": "^8.0.16",
         "webpack": "^4 || ^5"
     },
     "peerDependenciesMeta": {
