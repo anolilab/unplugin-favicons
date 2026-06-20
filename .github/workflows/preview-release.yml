@@ -51,7 +51,7 @@ jobs:
               uses: "anolilab/workflows/step/setup@acba5fb15ac98ad23dec1ad233e40e1bb79c1dae" # main
               with:
                   enable-nx-cache: false
-                  node-version: "20.x"
+                  node-version: "22.x"
                   cache-prefix: "preview-release"
                   run-npm-audit: false
                   run-signatures-audit: false
