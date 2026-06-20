@@ -1,15 +1,17 @@
 packages:
-    - examples/*
+  - examples/*
 
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
-    # Renovate security update: nuxt@4.4.7
-    - nuxt@4.4.7
-    # Renovate security update: vite@8.0.16
-    - vite@8.0.16
-    # Renovate security update: astro@6.4.6
-    - astro@6.4.6
-    # Renovate security update: http-proxy-middleware@3.0.7
-    - http-proxy-middleware@3.0.7
-    # Renovate security update: @babel/core@7.29.6
-    - "@babel/core@7.29.6"
+  # Renovate security update: nuxt@4.4.7
+  - nuxt@4.4.7
+  # Renovate security update: vite@8.0.16
+  - vite@8.0.16
+  # Renovate security update: astro@6.4.6
+  - astro@6.4.6
+  # Renovate security update: http-proxy-middleware@3.0.7
+  - http-proxy-middleware@3.0.7
+  # Renovate security update: @babel/core@7.29.6
+  - "@babel/core@7.29.6"
+  # Renovate security update: @angular/compiler@20.3.25
+  - "@angular/compiler@20.3.25"
