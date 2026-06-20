@@ -13,3 +13,5 @@ minimumReleaseAgeExclude:
     - http-proxy-middleware@3.0.7
     # Renovate security update: esbuild@0.28.1
     - esbuild@0.28.1
+    # Renovate security update: @angular/core@19.2.25
+    - "@angular/core@19.2.25"
