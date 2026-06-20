@@ -11,3 +11,5 @@ minimumReleaseAgeExclude:
     - astro@6.4.6
     # Renovate security update: http-proxy-middleware@3.0.7
     - http-proxy-middleware@3.0.7
+    # Renovate security update: esbuild@0.28.1
+    - esbuild@0.28.1
