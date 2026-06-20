@@ -1,4 +1,7 @@
 packages:
-    - examples/*
+  - examples/*
 
 minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  # Renovate security update: astro@6.4.6
+  - astro@6.4.6
