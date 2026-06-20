@@ -13,7 +13,7 @@
         "@anolilab/unplugin-favicons": "workspace:*"
     },
     "devDependencies": {
-        "nuxt": "^3.14.1592",
+        "nuxt": "^4.4.7",
         "rimraf": "^6.0.1",
         "typescript": "^5.7.2"
     }
