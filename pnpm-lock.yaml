@@ -69,7 +69,7 @@ overrides:
   immutable@>=5.0.0 <5.1.5: '>=5.1.5'
   immutable@>=4.0.0-rc.1 <4.3.8: '>=5.1.5'
   ip-address@<=10.1.0: '>=10.2.0'
-  js-yaml@>=4.0.0 <4.1.1: '>=4.1.1'
+  js-yaml@>=4.0.0 <4.1.1: '>=4.2.0'
   load-tsconfig: ^0.2.5
   lodash@>=4.0.0 <=4.17.23: '>=4.18.0'
   lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
@@ -135,14 +135,14 @@ overrides:
   svelte@<=5.53.4: '>=5.55.8'
   svelte@<=5.55.6: '>=5.55.7'
   svgo@>=3.0.0 <3.3.3: '>=3.3.3'
-  tar@<6.2.1: '>=7.4.4'
-  tar@<7.5.7: '>=7.5.7'
-  tar@<7.5.8: '>=7.5.8'
-  tar@<=7.5.10: '>=7.5.11'
-  tar@<=7.5.2: '>=7.5.3'
-  tar@<=7.5.3: '>=7.5.4'
-  tar@<=7.5.9: '>=7.5.10'
-  tar@=7.5.1: '>=7.5.2'
+  tar@<6.2.1: '>=7.5.16'
+  tar@<7.5.7: '>=7.5.16'
+  tar@<7.5.8: '>=7.5.16'
+  tar@<=7.5.10: '>=7.5.16'
+  tar@<=7.5.2: '>=7.5.16'
+  tar@<=7.5.3: '>=7.5.16'
+  tar@<=7.5.9: '>=7.5.16'
+  tar@=7.5.1: '>=7.5.16'
   tmp@<0.2.6: '>=0.2.6'
   tmp@<=0.2.3: '>=0.2.7'
   trim@<0.0.3: '>=1.0.1'
@@ -10497,6 +10497,10 @@ packages:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
+  js-yaml@4.2.0:
+    resolution: {integrity: sha512-ePWsvanv0DWuDRsW8dnt+R4jQ31SCRCQ7hhNcPXZPsoBZiemuZNYGf7adZdqX2D86j6rvKp3RpCxVTSb8WQlOw==}
+    hasBin: true
+
   jsdoc-type-pratt-parser@7.2.0:
     resolution: {integrity: sha512-dh140MMgjyg3JhJZY/+iEzW+NO5xR2gpbDFKHqotCmexElVntw7GjWjt511+C/Ef02RU5TKYrJo/Xlzk+OLaTw==}
     engines: {node: '>=20.0.0'}
@@ -14112,8 +14116,8 @@ packages:
   tar-stream@3.2.0:
     resolution: {integrity: sha512-ojzvCvVaNp6aOTFmG7jaRD0meowIAuPc3cMMhSgKiVWws1GyHbGd/xvnyuRKcKlMpt3qvxx6r0hreCNITP9hIg==}
 
-  tar@7.5.15:
-    resolution: {integrity: sha512-dzGK0boVlC4W5QFuQN1EFSl3bIDYsk7Tj40U6eIBnK2k/8ml7TZ5agbI5j5+qnoVcAA+rNtBml8SEiLxZpNqRQ==}
+  tar@7.5.16:
+    resolution: {integrity: sha512-56adEpPMouktRlBLXiaYFFzZ/3+JXa8P9n7WbR+ibIjtviN55mEaOkiysCnPnWm+7kkui1Dn8J9l+g6zV8731w==}
     engines: {node: '>=18'}
 
   taze@19.13.0:
@@ -18033,7 +18037,7 @@ snapshots:
       globals: 13.24.0
       ignore: 5.3.2
       import-fresh: 3.3.1
-      js-yaml: 4.1.1
+      js-yaml: 4.2.0
       minimatch: 3.1.5
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
@@ -18940,7 +18944,7 @@ snapshots:
       node-fetch: 2.7.0(encoding@0.1.13)
       nopt: 8.1.0
       semver: 7.8.5
-      tar: 7.5.15
+      tar: 7.5.16
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -23291,7 +23295,7 @@ snapshots:
       minipass-pipeline: 1.2.4
       p-map: 7.0.4
       ssri: 12.0.0
-      tar: 7.5.15
+      tar: 7.5.16
       unique-filename: 4.0.0
 
   cacache@21.0.0:
@@ -23811,7 +23815,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 4.1.1
+      js-yaml: 4.2.0
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 5.7.3
@@ -23820,7 +23824,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 4.1.1
+      js-yaml: 4.2.0
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 6.0.3
@@ -25259,7 +25263,7 @@ snapshots:
       imurmurhash: 0.1.4
       is-glob: 4.0.3
       is-path-inside: 3.0.3
-      js-yaml: 4.1.1
+      js-yaml: 4.2.0
       json-stable-stringify-without-jsonify: 1.0.1
       levn: 0.4.1
       lodash.merge: 4.6.2
@@ -27059,6 +27063,10 @@ snapshots:
   js-tokens@9.0.1: {}
 
   js-yaml@4.1.1:
+    dependencies:
+      argparse: 2.0.1
+
+  js-yaml@4.2.0:
     dependencies:
       argparse: 2.0.1
 
@@ -29166,7 +29174,7 @@ snapshots:
       nopt: 8.1.0
       proc-log: 5.0.0
       semver: 7.8.5
-      tar: 7.5.15
+      tar: 7.5.16
       tinyglobby: 0.2.17
       which: 5.0.0
     transitivePeerDependencies:
@@ -29842,7 +29850,7 @@ snapshots:
       promise-retry: 2.0.1
       sigstore: 3.1.0
       ssri: 12.0.0
-      tar: 7.5.15
+      tar: 7.5.16
     transitivePeerDependencies:
       - supports-color
 
@@ -32123,7 +32131,7 @@ snapshots:
       - bare-buffer
       - react-native-b4a
 
-  tar@7.5.15:
+  tar@7.5.16:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
