@@ -246,7 +246,7 @@
     },
     "pnpm": {
         "overrides": {
-            "@angular/common@<19.2.16": ">=19.2.25",
+            "@angular/common@<19.2.16": ">=20.3.25",
             "@angular/compiler@>=19.0.0-next.0 <19.2.20": ">=19.2.25",
             "@angular/compiler@>=19.0.0-next.0 <19.2.18": ">=19.2.25",
             "@angular/compiler@>=19.0.0-next.0 <19.2.17": ">=19.2.25",

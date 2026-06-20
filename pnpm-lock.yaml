@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@angular/common@<19.2.16': '>=19.2.25'
+  '@angular/common@<19.2.16': '>=20.3.25'
   '@angular/compiler@>=19.0.0-next.0 <19.2.20': '>=19.2.25'
   '@angular/compiler@>=19.0.0-next.0 <19.2.18': '>=19.2.25'
   '@angular/compiler@>=19.0.0-next.0 <19.2.17': '>=19.2.25'
@@ -418,7 +418,7 @@ importers:
         specifier: ^19.0.4
         version: 19.2.22(@angular/common@21.2.14(@angular/core@22.0.2(@angular/compiler@21.2.14)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@22.0.2(@angular/compiler@21.2.14)(rxjs@7.8.2)(zone.js@0.15.1))
       '@angular/common':
-        specifier: '>=19.2.25'
+        specifier: '>=20.3.25'
         version: 21.2.14(@angular/core@22.0.2(@angular/compiler@21.2.14)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/compiler':
         specifier: '>=19.2.25'
