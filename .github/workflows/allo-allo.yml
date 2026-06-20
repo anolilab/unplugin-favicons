@@ -13,7 +13,7 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     allo-allo:
-        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@main"
+        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@acba5fb15ac98ad23dec1ad233e40e1bb79c1dae" # main
         with:
             target-repo: "anolilab/unplugin-favicons"
             issue-welcome: >
