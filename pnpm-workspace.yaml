@@ -26,6 +26,8 @@ minimumReleaseAgeExclude:
     - "@babel/core@7.29.6"
     # Transitive patch resolved before its 24h release-age window; trusted utility, ages out shortly
     - semver@7.8.5
+    # Transitive patch resolved before its 24h release-age window; trusted utility, ages out shortly
+    - nanoid@3.3.14
 
 overrides:
     "@angular/common@<19.2.16": ">=19.2.25"
