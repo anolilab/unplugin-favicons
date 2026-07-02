@@ -49,7 +49,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/setup@acba5fb15ac98ad23dec1ad233e40e1bb79c1dae" # main
+              uses: "anolilab/workflows/step/setup@9c000ebdb7571f022d19752c1c38a57e61a63448" # main
               with:
                   node-version: "22.x"
                   cache-prefix: "semantic-release"
@@ -101,7 +101,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/setup@acba5fb15ac98ad23dec1ad233e40e1bb79c1dae" # main
+              uses: "anolilab/workflows/step/setup@9c000ebdb7571f022d19752c1c38a57e61a63448" # main
               with:
                   node-version: "22.x"
                   cache-prefix: "semantic-release"
