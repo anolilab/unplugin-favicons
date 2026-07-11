@@ -157,7 +157,7 @@
         "@tsconfig/node18": "^18.2.6",
         "@tsconfig/strictest": "^2.0.8",
         "@types/cacache": "^20.0.1",
-        "@types/node": "25.9.1",
+        "@types/node": "25.9.5",
         "@types/parse-author": "^2.0.3",
         "@types/parse5": "^7.0.0",
         "@types/ssri": "^7.1.5",
