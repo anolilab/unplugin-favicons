@@ -33,7 +33,7 @@ overrides:
   astro@<=5.15.6: '>=7.1.0'
   body-parser@<1.20.3: '>=2.3.0'
   brace-expansion@>=1.0.0 <=1.1.11: '>=3.0.6'
-  brace-expansion@<1.1.13: '>=3.0.6'
+  brace-expansion@<1.1.13: '>=4.0.1'
   braces@<3.0.3: '>=3.0.3'
   chrono-node@<2.2.4: '>=2.9.2'
   cookie@<0.7.0: '>=0.7.2'
@@ -238,7 +238,7 @@ importers:
     devDependencies:
       '@anolilab/commitlint-config':
         specifier: ^10.0.1
-        version: 10.1.0(@commitlint/cli@21.0.1(@types/node@25.9.1)(conventional-commits-parser@6.4.0)(typescript@6.0.3))(@types/node@25.9.1)(typescript@6.0.3)
+        version: 10.1.0(@commitlint/cli@21.0.1(@types/node@25.9.1)(typescript@6.0.3))(@types/node@25.9.1)(typescript@6.0.3)
       '@anolilab/eslint-config':
         specifier: ^27.0.2
         version: 27.0.10(@types/node@25.9.1)(@typescript-eslint/eslint-plugin@8.59.4(@typescript-eslint/parser@8.59.1(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/utils@8.59.4(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(eslint-plugin-i@2.29.1(@typescript-eslint/parser@8.59.1(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.0(jiti@2.7.0)))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.4.0(jiti@2.7.0)))(eslint-plugin-react@7.37.5(eslint@10.4.0(jiti@2.7.0)))(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)(vitest@4.1.7)(yaml@2.9.0)
@@ -262,7 +262,7 @@ importers:
         version: 7.28.6(@babel/core@7.29.7)(eslint@10.4.0(jiti@2.7.0))
       '@commitlint/cli':
         specifier: ^21.0.1
-        version: 21.0.1(@types/node@25.9.1)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
+        version: 21.0.1(@types/node@25.9.1)(typescript@6.0.3)
       '@commitlint/config-conventional':
         specifier: ^21.0.1
         version: 21.0.1
@@ -16055,9 +16055,9 @@ snapshots:
       rxjs: 7.8.2
       tslib: 2.8.1
 
-  '@anolilab/commitlint-config@10.1.0(@commitlint/cli@21.0.1(@types/node@25.9.1)(conventional-commits-parser@6.4.0)(typescript@6.0.3))(@types/node@25.9.1)(typescript@6.0.3)':
+  '@anolilab/commitlint-config@10.1.0(@commitlint/cli@21.0.1(@types/node@25.9.1)(typescript@6.0.3))(@types/node@25.9.1)(typescript@6.0.3)':
     dependencies:
-      '@commitlint/cli': 21.0.1(@types/node@25.9.1)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
+      '@commitlint/cli': 21.0.1(@types/node@25.9.1)(typescript@6.0.3)
       '@commitlint/config-conventional': 21.2.0
       '@commitlint/core': 21.2.1(@types/node@25.9.1)(typescript@6.0.3)
       commitizen: 4.3.2(@types/node@25.9.1)(typescript@6.0.3)
@@ -17276,12 +17276,12 @@ snapshots:
   '@colors/colors@1.5.0':
     optional: true
 
-  '@commitlint/cli@21.0.1(@types/node@25.9.1)(conventional-commits-parser@6.4.0)(typescript@6.0.3)':
+  '@commitlint/cli@21.0.1(@types/node@25.9.1)(typescript@6.0.3)':
     dependencies:
       '@commitlint/format': 21.0.1
       '@commitlint/lint': 21.0.1
       '@commitlint/load': 21.0.1(@types/node@25.9.1)(typescript@6.0.3)
-      '@commitlint/read': 21.0.1(conventional-commits-parser@6.4.0)
+      '@commitlint/read': 21.0.1
       '@commitlint/types': 21.0.1
       tinyexec: 1.1.2
       yargs: 18.0.0
@@ -17415,11 +17415,11 @@ snapshots:
       conventional-changelog-angular: 9.2.1
       conventional-commits-parser: 7.1.2
 
-  '@commitlint/read@21.0.1(conventional-commits-parser@6.4.0)':
+  '@commitlint/read@21.0.1':
     dependencies:
       '@commitlint/top-level': 21.0.1
       '@commitlint/types': 21.0.1
-      git-raw-commits: 5.0.1(conventional-commits-parser@6.4.0)
+      git-raw-commits: 5.0.1
       tinyexec: 1.1.2
     transitivePeerDependencies:
       - conventional-commits-filter
@@ -17485,13 +17485,11 @@ snapshots:
       conventional-commits-parser: 7.1.2
       picocolors: 1.1.1
 
-  '@conventional-changelog/git-client@2.7.0(conventional-commits-parser@6.4.0)':
+  '@conventional-changelog/git-client@2.7.0':
     dependencies:
       '@simple-libs/child-process-utils': 1.0.2
       '@simple-libs/stream-utils': 1.2.0
       semver: 7.8.5
-    optionalDependencies:
-      conventional-commits-parser: 6.4.0
 
   '@conventional-changelog/git-client@3.1.1':
     dependencies:
@@ -18330,6 +18328,12 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
+  '@jsonjoy.com/fs-core@4.57.2':
+    dependencies:
+      '@jsonjoy.com/fs-node-builtins': 4.57.2(tslib@2.8.1)
+      '@jsonjoy.com/fs-node-utils': 4.57.2
+      thingies: 2.6.0(tslib@2.8.1)
+
   '@jsonjoy.com/fs-core@4.57.2(tslib@2.6.3)':
     dependencies:
       '@jsonjoy.com/fs-node-builtins': 4.57.2(tslib@2.6.3)
@@ -18343,6 +18347,13 @@ snapshots:
       '@jsonjoy.com/fs-node-utils': 4.57.2(tslib@2.8.1)
       thingies: 2.6.0(tslib@2.8.1)
       tslib: 2.8.1
+
+  '@jsonjoy.com/fs-fsa@4.57.2':
+    dependencies:
+      '@jsonjoy.com/fs-core': 4.57.2
+      '@jsonjoy.com/fs-node-builtins': 4.57.2(tslib@2.8.1)
+      '@jsonjoy.com/fs-node-utils': 4.57.2
+      thingies: 2.6.0(tslib@2.8.1)
 
   '@jsonjoy.com/fs-fsa@4.57.2(tslib@2.6.3)':
     dependencies:
@@ -18370,9 +18381,9 @@ snapshots:
 
   '@jsonjoy.com/fs-node-to-fsa@4.57.2':
     dependencies:
-      '@jsonjoy.com/fs-fsa': 4.57.2(tslib@2.8.1)
+      '@jsonjoy.com/fs-fsa': 4.57.2
       '@jsonjoy.com/fs-node-builtins': 4.57.2(tslib@2.8.1)
-      '@jsonjoy.com/fs-node-utils': 4.57.2(tslib@2.8.1)
+      '@jsonjoy.com/fs-node-utils': 4.57.2
 
   '@jsonjoy.com/fs-node-to-fsa@4.57.2(tslib@2.6.3)':
     dependencies:
@@ -18388,6 +18399,10 @@ snapshots:
       '@jsonjoy.com/fs-node-utils': 4.57.2(tslib@2.8.1)
       tslib: 2.8.1
 
+  '@jsonjoy.com/fs-node-utils@4.57.2':
+    dependencies:
+      '@jsonjoy.com/fs-node-builtins': 4.57.2(tslib@2.8.1)
+
   '@jsonjoy.com/fs-node-utils@4.57.2(tslib@2.6.3)':
     dependencies:
       '@jsonjoy.com/fs-node-builtins': 4.57.2(tslib@2.6.3)
@@ -18400,10 +18415,10 @@ snapshots:
 
   '@jsonjoy.com/fs-node@4.57.2':
     dependencies:
-      '@jsonjoy.com/fs-core': 4.57.2(tslib@2.8.1)
+      '@jsonjoy.com/fs-core': 4.57.2
       '@jsonjoy.com/fs-node-builtins': 4.57.2(tslib@2.8.1)
-      '@jsonjoy.com/fs-node-utils': 4.57.2(tslib@2.8.1)
-      '@jsonjoy.com/fs-print': 4.57.2(tslib@2.8.1)
+      '@jsonjoy.com/fs-node-utils': 4.57.2
+      '@jsonjoy.com/fs-print': 4.57.2
       '@jsonjoy.com/fs-snapshot': 4.57.2
       glob-to-regex.js: 1.2.0(tslib@2.8.1)
       thingies: 2.6.0(tslib@2.8.1)
@@ -18430,6 +18445,11 @@ snapshots:
       thingies: 2.6.0(tslib@2.8.1)
       tslib: 2.8.1
 
+  '@jsonjoy.com/fs-print@4.57.2':
+    dependencies:
+      '@jsonjoy.com/fs-node-utils': 4.57.2
+      tree-dump: 1.1.0(tslib@2.8.1)
+
   '@jsonjoy.com/fs-print@4.57.2(tslib@2.6.3)':
     dependencies:
       '@jsonjoy.com/fs-node-utils': 4.57.2(tslib@2.6.3)
@@ -18445,9 +18465,9 @@ snapshots:
   '@jsonjoy.com/fs-snapshot@4.57.2':
     dependencies:
       '@jsonjoy.com/buffers': 17.67.0(tslib@2.8.1)
-      '@jsonjoy.com/fs-node-utils': 4.57.2(tslib@2.8.1)
-      '@jsonjoy.com/json-pack': 17.67.0(tslib@2.8.1)
-      '@jsonjoy.com/util': 17.67.0(tslib@2.8.1)
+      '@jsonjoy.com/fs-node-utils': 4.57.2
+      '@jsonjoy.com/json-pack': 17.67.0
+      '@jsonjoy.com/util': 17.67.0
 
   '@jsonjoy.com/fs-snapshot@4.57.2(tslib@2.6.3)':
     dependencies:
@@ -18464,6 +18484,17 @@ snapshots:
       '@jsonjoy.com/json-pack': 17.67.0(tslib@2.8.1)
       '@jsonjoy.com/util': 17.67.0(tslib@2.8.1)
       tslib: 2.8.1
+
+  '@jsonjoy.com/json-pack@1.21.0':
+    dependencies:
+      '@jsonjoy.com/base64': 1.1.2(tslib@2.8.1)
+      '@jsonjoy.com/buffers': 1.2.1(tslib@2.8.1)
+      '@jsonjoy.com/codegen': 1.0.0(tslib@2.8.1)
+      '@jsonjoy.com/json-pointer': 1.0.2
+      '@jsonjoy.com/util': 1.9.0
+      hyperdyperid: 1.2.0
+      thingies: 2.6.0(tslib@2.8.1)
+      tree-dump: 1.1.0(tslib@2.8.1)
 
   '@jsonjoy.com/json-pack@1.21.0(tslib@2.6.3)':
     dependencies:
@@ -18489,6 +18520,17 @@ snapshots:
       tree-dump: 1.1.0(tslib@2.8.1)
       tslib: 2.8.1
 
+  '@jsonjoy.com/json-pack@17.67.0':
+    dependencies:
+      '@jsonjoy.com/base64': 17.67.0(tslib@2.8.1)
+      '@jsonjoy.com/buffers': 17.67.0(tslib@2.8.1)
+      '@jsonjoy.com/codegen': 17.67.0(tslib@2.8.1)
+      '@jsonjoy.com/json-pointer': 17.67.0
+      '@jsonjoy.com/util': 17.67.0
+      hyperdyperid: 1.2.0
+      thingies: 2.6.0(tslib@2.8.1)
+      tree-dump: 1.1.0(tslib@2.8.1)
+
   '@jsonjoy.com/json-pack@17.67.0(tslib@2.6.3)':
     dependencies:
       '@jsonjoy.com/base64': 17.67.0(tslib@2.6.3)
@@ -18513,6 +18555,11 @@ snapshots:
       tree-dump: 1.1.0(tslib@2.8.1)
       tslib: 2.8.1
 
+  '@jsonjoy.com/json-pointer@1.0.2':
+    dependencies:
+      '@jsonjoy.com/codegen': 1.0.0(tslib@2.8.1)
+      '@jsonjoy.com/util': 1.9.0
+
   '@jsonjoy.com/json-pointer@1.0.2(tslib@2.6.3)':
     dependencies:
       '@jsonjoy.com/codegen': 1.0.0(tslib@2.6.3)
@@ -18525,6 +18572,10 @@ snapshots:
       '@jsonjoy.com/util': 1.9.0(tslib@2.8.1)
       tslib: 2.8.1
 
+  '@jsonjoy.com/json-pointer@17.67.0':
+    dependencies:
+      '@jsonjoy.com/util': 17.67.0
+
   '@jsonjoy.com/json-pointer@17.67.0(tslib@2.6.3)':
     dependencies:
       '@jsonjoy.com/util': 17.67.0(tslib@2.6.3)
@@ -18534,6 +18585,11 @@ snapshots:
     dependencies:
       '@jsonjoy.com/util': 17.67.0(tslib@2.8.1)
       tslib: 2.8.1
+
+  '@jsonjoy.com/util@1.9.0':
+    dependencies:
+      '@jsonjoy.com/buffers': 1.2.1(tslib@2.8.1)
+      '@jsonjoy.com/codegen': 1.0.0(tslib@2.8.1)
 
   '@jsonjoy.com/util@1.9.0(tslib@2.6.3)':
     dependencies:
@@ -18546,6 +18602,11 @@ snapshots:
       '@jsonjoy.com/buffers': 1.2.1(tslib@2.8.1)
       '@jsonjoy.com/codegen': 1.0.0(tslib@2.8.1)
       tslib: 2.8.1
+
+  '@jsonjoy.com/util@17.67.0':
+    dependencies:
+      '@jsonjoy.com/buffers': 17.67.0(tslib@2.8.1)
+      '@jsonjoy.com/codegen': 17.67.0(tslib@2.8.1)
 
   '@jsonjoy.com/util@17.67.0(tslib@2.6.3)':
     dependencies:
@@ -23497,7 +23558,7 @@ snapshots:
 
   commitlint@21.0.1(@types/node@25.9.1)(typescript@6.0.3):
     dependencies:
-      '@commitlint/cli': 21.0.1(@types/node@25.9.1)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
+      '@commitlint/cli': 21.0.1(@types/node@25.9.1)(typescript@6.0.3)
       '@commitlint/types': 21.0.1
     transitivePeerDependencies:
       - '@types/node'
@@ -25679,9 +25740,9 @@ snapshots:
       through2: 2.0.5
       traverse: 0.6.8
 
-  git-raw-commits@5.0.1(conventional-commits-parser@6.4.0):
+  git-raw-commits@5.0.1:
     dependencies:
-      '@conventional-changelog/git-client': 2.7.0(conventional-commits-parser@6.4.0)
+      '@conventional-changelog/git-client': 2.7.0
       meow: 13.2.0
     transitivePeerDependencies:
       - conventional-commits-filter
@@ -27797,16 +27858,16 @@ snapshots:
 
   memfs@4.57.2:
     dependencies:
-      '@jsonjoy.com/fs-core': 4.57.2(tslib@2.8.1)
-      '@jsonjoy.com/fs-fsa': 4.57.2(tslib@2.8.1)
+      '@jsonjoy.com/fs-core': 4.57.2
+      '@jsonjoy.com/fs-fsa': 4.57.2
       '@jsonjoy.com/fs-node': 4.57.2
       '@jsonjoy.com/fs-node-builtins': 4.57.2(tslib@2.8.1)
       '@jsonjoy.com/fs-node-to-fsa': 4.57.2
-      '@jsonjoy.com/fs-node-utils': 4.57.2(tslib@2.8.1)
-      '@jsonjoy.com/fs-print': 4.57.2(tslib@2.8.1)
+      '@jsonjoy.com/fs-node-utils': 4.57.2
+      '@jsonjoy.com/fs-print': 4.57.2
       '@jsonjoy.com/fs-snapshot': 4.57.2
-      '@jsonjoy.com/json-pack': 1.21.0(tslib@2.8.1)
-      '@jsonjoy.com/util': 1.9.0(tslib@2.8.1)
+      '@jsonjoy.com/json-pack': 1.21.0
+      '@jsonjoy.com/util': 1.9.0
       glob-to-regex.js: 1.2.0(tslib@2.8.1)
       thingies: 2.6.0(tslib@2.8.1)
       tree-dump: 1.1.0(tslib@2.8.1)
