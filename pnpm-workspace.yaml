@@ -32,6 +32,8 @@ minimumReleaseAgeExclude:
   - "@nuxt/devtools@3.3.1"
   # Renovate security update: postcss@8.5.18
   - postcss@8.5.18
+  # Renovate security update: next@15.5.23
+  - next@15.5.23
 
 overrides:
   "@angular/common@<19.2.16": ">=19.2.25"
@@ -125,7 +127,7 @@ overrides:
   "next@>=15.0.0 <15.1.2": ">=15.5.19"
   "next@>=14.2.0 <15.5.16": ">=15.5.19"
   "next@>=13.4.6 <15.5.16": ">=15.5.19"
-  "next@>=13.4.13 <15.5.16": ">=15.5.19"
+  "next@>=13.4.13 <15.5.16": ">=15.5.23"
   "next@>=13.4.0 <15.5.16": ">=15.5.19"
   "next@>=13.0.0 <15.5.16": ">=15.5.19"
   "next@>=13.0.0 <15.5.15": ">=15.5.19"
