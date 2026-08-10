@@ -43,6 +43,7 @@ minimumReleaseAgeExclude:
   - immutable@5.1.9
   - svgo@3.3.4
   - fast-uri@3.1.5
+  # Renovate security update: tar@7.5.22
   - tar@7.5.22
 
 overrides:
@@ -183,7 +184,7 @@ overrides:
   "tar@<=7.5.2": ">=7.5.22"
   "tar@<=7.5.3": ">=7.5.16"
   "tar@<=7.5.9": ">=7.5.16"
-  "tar@=7.5.1": ">=7.5.16"
+  "tar@=7.5.1": ">=7.5.22"
   "tmp@<0.2.6": ">=0.2.6"
   "tmp@<=0.2.3": ">=0.2.7"
   "trim@<0.0.3": ">=1.0.1"
