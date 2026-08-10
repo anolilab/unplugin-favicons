@@ -66,7 +66,7 @@ overrides:
   http-proxy-middleware@>=3.0.0 <3.0.4: '>=3.0.7'
   http-proxy-middleware@>=3.0.0 <3.0.3: '>=3.0.7'
   http-proxy-middleware@<2.0.7: '>=3.0.7'
-  immutable@>=5.0.0 <5.1.5: '>=5.1.5'
+  immutable@>=5.0.0 <5.1.5: '>=5.1.9'
   immutable@>=4.0.0-rc.1 <4.3.8: '>=5.1.9'
   ip-address@<=10.1.0: '>=10.2.2'
   js-yaml@>=4.0.0 <4.1.1: '>=4.3.1'
@@ -5176,7 +5176,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': ^3.0.0 || ^4.0.0-next.1 || ^5.0.0 || ^6.0.0-next.0 || ^7.0.0
       svelte: '>=5.55.7'
       typescript: ^5.3.3 || ^6.0.0
-      vite: '>=7.3.5'
+      vite: '>=6.4.3'
     peerDependenciesMeta:
       '@opentelemetry/api':
         optional: true
@@ -9450,9 +9450,6 @@ packages:
     resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
-
-  immutable@5.1.6:
-    resolution: {integrity: sha512-q1swsS8K7L8usSHuOqF2TAoCCkonYz0SG38wLAggaa4Wml70zixIvt2ql4coQ2C2B3hTjltJry4r6bULwgAXLQ==}
 
   immutable@5.1.9:
     resolution: {integrity: sha512-m8nVez3rwrgmWxtLMt1ZYXB2Lv7OKYn/disyxAlSDYAlKSlFoPPfIAmAM/M5xqL4m4C/wAPw7S2/CNaUii1Hxg==}
@@ -25598,8 +25595,6 @@ snapshots:
   image-size@0.5.5:
     optional: true
 
-  immutable@5.1.6: {}
-
   immutable@5.1.9: {}
 
   import-fresh@3.3.1:
@@ -30263,7 +30258,7 @@ snapshots:
   sass@1.85.0:
     dependencies:
       chokidar: 4.0.3
-      immutable: 5.1.6
+      immutable: 5.1.9
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.6
