@@ -135,14 +135,14 @@ overrides:
   svelte@<=5.53.4: '>=5.55.8'
   svelte@<=5.55.6: '>=5.55.7'
   svgo@>=3.0.0 <3.3.3: '>=3.3.4'
-  tar@<6.2.1: '>=7.5.16'
-  tar@<7.5.7: '>=7.5.16'
-  tar@<7.5.8: '>=7.5.16'
-  tar@<=7.5.10: '>=7.5.16'
+  tar@<6.2.1: '>=7.5.22'
+  tar@<7.5.7: '>=7.5.22'
+  tar@<7.5.8: '>=7.5.22'
+  tar@<=7.5.10: '>=7.5.22'
   tar@<=7.5.2: '>=7.5.22'
-  tar@<=7.5.3: '>=7.5.16'
-  tar@<=7.5.9: '>=7.5.16'
-  tar@=7.5.1: '>=7.5.16'
+  tar@<=7.5.3: '>=7.5.22'
+  tar@<=7.5.9: '>=7.5.22'
+  tar@=7.5.1: '>=7.5.22'
   tmp@<0.2.6: '>=0.2.6'
   tmp@<=0.2.3: '>=0.2.7'
   trim@<0.0.3: '>=1.0.1'
@@ -174,7 +174,7 @@ overrides:
   webpack@>=5.49.0 <5.104.0: '>=5.106.2'
   webpack@>=5.0.0-alpha.0 <5.94.0: '>=5.106.2'
   webpack-dev-middleware@<=5.3.3: '>=7.4.5'
-  webpack-dev-server@<=5.2.0: '>=5.2.1'
+  webpack-dev-server@<=5.2.0: '>=5.2.6'
   webpack-dev-server@<=5.2.3: '>=5.2.4'
   ws@>=8.0.0 <8.20.1: '>=8.20.1'
   ws@>=8.0.0 <8.17.1: '>=8.20.1'
@@ -13595,8 +13595,8 @@ packages:
   tar-stream@3.2.0:
     resolution: {integrity: sha512-ojzvCvVaNp6aOTFmG7jaRD0meowIAuPc3cMMhSgKiVWws1GyHbGd/xvnyuRKcKlMpt3qvxx6r0hreCNITP9hIg==}
 
-  tar@7.5.16:
-    resolution: {integrity: sha512-56adEpPMouktRlBLXiaYFFzZ/3+JXa8P9n7WbR+ibIjtviN55mEaOkiysCnPnWm+7kkui1Dn8J9l+g6zV8731w==}
+  tar@7.5.22:
+    resolution: {integrity: sha512-MFO/QzvtAOmJbkhOaCTvbGcFN9L9b+JunIsDwaKljSOdcLMea3NJ1k9Usz/rjdfSXTq4dfzfeS7W4p4YOAAHeA==}
     engines: {node: '>=18'}
 
   taze@19.13.0:
@@ -18015,7 +18015,7 @@ snapshots:
       node-fetch: 2.7.0(encoding@0.1.13)
       nopt: 8.1.0
       semver: 7.8.5
-      tar: 7.5.16
+      tar: 7.5.22
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -22408,7 +22408,7 @@ snapshots:
       minipass-pipeline: 1.2.4
       p-map: 7.0.4
       ssri: 12.0.0
-      tar: 7.5.16
+      tar: 7.5.22
       unique-filename: 4.0.0
 
   cacache@21.0.0:
@@ -28177,7 +28177,7 @@ snapshots:
       nopt: 8.1.0
       proc-log: 5.0.0
       semver: 7.8.5
-      tar: 7.5.16
+      tar: 7.5.22
       tinyglobby: 0.2.17
       which: 5.0.0
     transitivePeerDependencies:
@@ -28853,7 +28853,7 @@ snapshots:
       promise-retry: 2.0.1
       sigstore: 3.1.0
       ssri: 12.0.0
-      tar: 7.5.16
+      tar: 7.5.22
     transitivePeerDependencies:
       - supports-color
 
@@ -31135,7 +31135,7 @@ snapshots:
       - bare-buffer
       - react-native-b4a
 
-  tar@7.5.16:
+  tar@7.5.22:
     dependencies:
       '@isaacs/fs-minipass': 4.0.1
       chownr: 3.0.0
