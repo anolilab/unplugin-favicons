@@ -32,8 +32,8 @@ minimumReleaseAgeExclude:
   - "@nuxt/devtools@3.3.1"
   # Renovate security update: postcss@8.5.18
   - postcss@8.5.18
-  # Renovate security update: next@15.5.23
-  - next@15.5.23
+  # Renovate security update: next@15.5.23 || 16.3.0
+  - next@15.5.23 || 16.3.0
   - js-yaml@4.3.1
   - ip-address@10.2.2
   - undici@7.29.0
@@ -136,7 +136,7 @@ overrides:
   "next@>=15.0.0 <15.2.2": ">=15.5.23"
   "next@>=15.0.0 <15.1.6": ">=15.5.23"
   "next@>=15.0.0 <15.1.2": ">=15.5.23"
-  "next@>=14.2.0 <15.5.16": ">=15.5.23"
+  "next@>=14.2.0 <15.5.16": ">=16.3.0"
   "next@>=13.4.6 <15.5.16": ">=15.5.23"
   "next@>=13.4.13 <15.5.16": ">=15.5.23"
   "next@>=13.4.0 <15.5.16": ">=15.5.23"
