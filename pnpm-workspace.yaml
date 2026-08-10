@@ -38,7 +38,8 @@ minimumReleaseAgeExclude:
   - ip-address@10.2.2
   - undici@7.29.0
   - brace-expansion@1.1.18
-  # Renovate security update: immutable@5.1.9
+  - body-parser@1.20.6
+  - hono@4.12.34
   - immutable@5.1.9
 
 overrides:
@@ -68,7 +69,7 @@ overrides:
   "astro@<6.1.10": ">=6.4.6"
   "astro@<6.1.6": ">=6.4.6"
   "astro@<=5.15.6": ">=6.4.6"
-  "body-parser@<1.20.3": ">=1.20.3"
+  "body-parser@<1.20.3": ">=1.20.6"
   "brace-expansion@>=1.0.0 <=1.1.11": ">=1.1.18"
   "brace-expansion@<1.1.13": ">=1.1.18"
   "braces@<3.0.3": ">=3.0.3"
@@ -104,7 +105,7 @@ overrides:
   "http-proxy-middleware@>=3.0.0 <3.0.3": ">=3.0.7"
   "http-proxy-middleware@<2.0.7": ">=3.0.7"
   "immutable@>=5.0.0 <5.1.5": ">=5.1.9"
-  "immutable@>=4.0.0-rc.1 <4.3.8": ">=5.1.5"
+  "immutable@>=4.0.0-rc.1 <4.3.8": ">=5.1.9"
   "ip-address@<=10.1.0": ">=10.2.2"
   "js-yaml@>=4.0.0 <4.1.1": ">=4.3.1"
   load-tsconfig: "^0.2.5"
@@ -219,7 +220,7 @@ overrides:
   "zod@<=3.22.2": ">=3.25.76"
   "@babel/core@<=7.29.0": ">=7.29.1"
   "esbuild@>=0.27.3 <0.28.1": ">=0.28.1"
-  "hono@<4.12.25": ">=4.12.25"
+  "hono@<4.12.25": ">=4.12.34"
   "http-proxy-middleware@>=3.0.4 <3.0.7": ">=3.0.7"
   "http-proxy-middleware@>=0.16.0 <3.0.6": ">=3.0.7"
   "js-yaml@<=4.1.1": ">=4.3.1"
