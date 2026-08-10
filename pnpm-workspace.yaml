@@ -39,6 +39,7 @@ minimumReleaseAgeExclude:
   - undici@7.29.0
   - brace-expansion@1.1.18
   - body-parser@1.20.6
+  - hono@4.12.34
 
 overrides:
   "@angular/common@<19.2.16": ">=20.3.27"
@@ -218,7 +219,7 @@ overrides:
   "zod@<=3.22.2": ">=3.25.76"
   "@babel/core@<=7.29.0": ">=7.29.1"
   "esbuild@>=0.27.3 <0.28.1": ">=0.28.1"
-  "hono@<4.12.25": ">=4.12.25"
+  "hono@<4.12.25": ">=4.12.34"
   "http-proxy-middleware@>=3.0.4 <3.0.7": ">=3.0.7"
   "http-proxy-middleware@>=0.16.0 <3.0.6": ">=3.0.7"
   "js-yaml@<=4.1.1": ">=4.3.1"
