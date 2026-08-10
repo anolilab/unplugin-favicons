@@ -41,8 +41,7 @@ minimumReleaseAgeExclude:
   - body-parser@1.20.6
   - hono@4.12.34
   - immutable@5.1.9
-  # Renovate security update: svgo@4.0.2
-  - svgo@3.3.4 || 4.0.2
+  - svgo@3.3.4
   - fast-uri@3.1.5
   - tar@7.5.22
   - webpack-dev-server@5.2.6
@@ -74,9 +73,9 @@ overrides:
   "astro@<6.1.10": ">=6.4.8"
   "astro@<6.1.6": ">=6.4.8"
   "astro@<=5.15.6": ">=7.1.0"
-  "body-parser@<1.20.3": ">=1.20.6"
-  "brace-expansion@>=1.0.0 <=1.1.11": ">=1.1.18"
-  "brace-expansion@<1.1.13": ">=1.1.18"
+  "body-parser@<1.20.3": ">=2.3.0"
+  "brace-expansion@>=1.0.0 <=1.1.11": ">=2.1.4"
+  "brace-expansion@<1.1.13": ">=2.1.4"
   "braces@<3.0.3": ">=3.0.3"
   "chrono-node@<2.2.4": ">=2.9.1"
   "cookie@<0.7.0": ">=0.7.2"
