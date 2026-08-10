@@ -35,7 +35,8 @@ minimumReleaseAgeExclude:
   # Renovate security update: next@15.5.23
   - next@15.5.23
   - js-yaml@4.3.1
-  - ip-address@10.2.2
+  # Renovate security update: ip-address@10.5.0
+  - ip-address@10.2.2 || 10.5.0
   - undici@7.29.0
   - brace-expansion@1.1.18
   - body-parser@1.20.6
@@ -110,7 +111,7 @@ overrides:
   "http-proxy-middleware@<2.0.7": ">=3.0.7"
   "immutable@>=5.0.0 <5.1.5": ">=5.1.9"
   "immutable@>=4.0.0-rc.1 <4.3.8": ">=5.1.9"
-  "ip-address@<=10.1.0": ">=10.2.2"
+  "ip-address@<=10.1.0": ">=10.5.0"
   "js-yaml@>=4.0.0 <4.1.1": ">=4.3.1"
   load-tsconfig: "^0.2.5"
   "lodash@>=4.0.0 <=4.17.23": ">=4.18.0"
