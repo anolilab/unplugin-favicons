@@ -36,7 +36,8 @@ minimumReleaseAgeExclude:
   - next@15.5.23
   - js-yaml@4.3.1
   - ip-address@10.2.2
-  - undici@7.29.0
+  # Renovate security update: undici@8.10.0
+  - undici@7.29.0 || 8.10.0
   - brace-expansion@1.1.18
   - body-parser@1.20.6
   - hono@4.12.34
@@ -230,6 +231,6 @@ overrides:
   "js-yaml@<=4.1.1": ">=4.3.1"
   "launch-editor@<=2.14.0": ">=2.14.1"
   "piscina@<=4.9.2": ">=4.9.3"
-  "undici@>=7.0.0 <7.28.0": ">=7.29.0"
+  "undici@>=7.0.0 <7.28.0": ">=8.10.0"
   "vite@<=6.4.2": ">=6.4.3"
   "vite@>=7.0.0 <=7.3.4": ">=7.3.5"
