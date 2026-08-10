@@ -30,6 +30,8 @@ minimumReleaseAgeExclude:
   - nanoid@3.3.14
   # Renovate security update: @nuxt/devtools@3.3.1
   - "@nuxt/devtools@3.3.1"
+  # Renovate security update: postcss@8.5.18
+  - postcss@8.5.18
 
 overrides:
   "@angular/common@<19.2.16": ">=19.2.25"
@@ -144,7 +146,7 @@ overrides:
   "path-to-regexp@<0.1.12": ">=0.2.5"
   "path-to-regexp@<0.1.13": ">=0.2.5"
   "picomatch@>=4.0.0 <4.0.4": ">=4.0.4"
-  "postcss@<8.5.10": ">=8.5.10"
+  "postcss@<8.5.10": ">=8.5.18"
   "prismjs@<1.30.0": ">=1.30.0"
   "qs@>=6.7.0 <=6.14.1": ">=6.15.2"
   "qs@<6.14.1": ">=6.15.2"
