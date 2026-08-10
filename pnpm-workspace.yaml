@@ -38,6 +38,8 @@ minimumReleaseAgeExclude:
   - ip-address@10.2.2
   - undici@7.29.0
   - brace-expansion@1.1.18
+  # Renovate security update: tar@7.5.22
+  - tar@7.5.22
 
 overrides:
   "@angular/common@<19.2.16": ">=20.3.27"
@@ -174,7 +176,7 @@ overrides:
   "tar@<7.5.7": ">=7.5.16"
   "tar@<7.5.8": ">=7.5.16"
   "tar@<=7.5.10": ">=7.5.16"
-  "tar@<=7.5.2": ">=7.5.16"
+  "tar@<=7.5.2": ">=7.5.22"
   "tar@<=7.5.3": ">=7.5.16"
   "tar@<=7.5.9": ">=7.5.16"
   "tar@=7.5.1": ">=7.5.16"
