@@ -45,6 +45,7 @@ minimumReleaseAgeExclude:
     - fast-uri@3.1.5
     - tar@7.5.22
     - webpack-dev-server@5.2.6
+    - "@sveltejs/kit@2.70.2"
 
 overrides:
     "@angular/common@<19.2.16": ">=20.3.27"
