@@ -235,3 +235,22 @@ overrides:
   "undici@>=7.0.0 <7.28.0": ">=8.10.0"
   "vite@<=6.4.2": ">=6.4.3"
   "vite@>=7.0.0 <=7.3.4": ">=7.3.5"
+  "@sigstore/core@<=3.2.0": ">=3.2.1"
+  "sigstore@<=4.1.0": ">=4.1.1"
+  "brace-expansion@>=2.0.0 <2.1.4": ">=2.1.4"
+  "brace-expansion@>=3.0.0 <5.0.9": ">=5.0.9"
+  "@hono/node-server@<2.0.5": ">=2.0.5"
+  "svgo@>=4.0.0 <4.0.2": ">=4.0.2"
+  "sharp@<0.35.0": ">=0.35.0"
+  "postcss@<=8.5.22": ">=8.5.23"
+  "@sveltejs/kit@<=2.70.1": ">=2.70.2"
+  "@angular/common@>=20.0.0-next.0 <20.3.27": ">=20.3.27"
+  "@angular/compiler@>=20.0.0-next.0 <20.3.27": ">=20.3.27"
+  "undici@>=6.0.0 <6.28.0": ">=6.28.0"
+  "ip-address@<=10.3.0": ">=10.3.1"
+  "nanoid@<3.3.17": ">=3.3.18"
+
+auditConfig:
+  ignoreGhsas:
+    - GHSA-w3rx-r6r6-pgpr
+    - GHSA-5p2g-fcmc-qvqq
