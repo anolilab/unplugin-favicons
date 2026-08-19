@@ -1,3 +1,253 @@
+## [4.0.0](https://github.com/anolilab/unplugin-favicons/compare/v3.0.0...v4.0.0) (2026-08-19)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+
+* chore: merge renovate update against main
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+* chore: merge renovate update against main
+* **deps:** updated dependencies to major versions
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+### Bug Fixes
+
+* **build:** resolve pnpm audit advisories ([60384be](https://github.com/anolilab/unplugin-favicons/commit/60384be1ab6f489cfa1582f4a2515ee0b1e697b6))
+* **deps:** update angular monorepo to >=21.2.19 ([#433](https://github.com/anolilab/unplugin-favicons/issues/433)) ([d36dfe9](https://github.com/anolilab/unplugin-favicons/commit/d36dfe973c719fd81f875ece62f45fabbdc9f6b3))
+* **deps:** update anolilab/workflows digest to 7d86f54 ([#292](https://github.com/anolilab/unplugin-favicons/issues/292)) ([b23dcf1](https://github.com/anolilab/unplugin-favicons/commit/b23dcf1298be30f5250aefd881cb1cc2d6865c2a))
+* **deps:** update astro monorepo to >=7.1.6 ([#434](https://github.com/anolilab/unplugin-favicons/issues/434)) ([b20afcc](https://github.com/anolilab/unplugin-favicons/commit/b20afcc33adfb0da3e255a3a2d98b5b1e7004f59))
+* **deps:** update babel monorepo (patch) ([#294](https://github.com/anolilab/unplugin-favicons/issues/294)) ([f02eeb2](https://github.com/anolilab/unplugin-favicons/commit/f02eeb2389e5ddc020bbce08de9d21f372c2b8f5))
+* **deps:** update dependency @angular/common@<19.2.16 to v20 [security] ([#361](https://github.com/anolilab/unplugin-favicons/issues/361)) ([2977531](https://github.com/anolilab/unplugin-favicons/commit/29775312615948a31cf1cfecca78d4bfd5325bff))
+* **deps:** update dependency @angular/compiler@>=19.0.0-next.0 <19.2.17 to v20 [security] ([#362](https://github.com/anolilab/unplugin-favicons/issues/362)) ([a8fe1c8](https://github.com/anolilab/unplugin-favicons/commit/a8fe1c8fe7ee0dc30bbb7b006cd2dea3bca5b0f7))
+* **deps:** update dependency @angular/compiler@>=19.0.0-next.0 <19.2.18 to v20 [security] ([#363](https://github.com/anolilab/unplugin-favicons/issues/363)) ([5b5d10b](https://github.com/anolilab/unplugin-favicons/commit/5b5d10b19d039f2b86627f83bdbeef691060dd04))
+* **deps:** update dependency @angular/compiler@>=19.0.0-next.0 <19.2.20 to v20 [security] ([#364](https://github.com/anolilab/unplugin-favicons/issues/364)) ([e100192](https://github.com/anolilab/unplugin-favicons/commit/e1001923bc8765239d592e2c6938eda0ceceb1ee))
+* **deps:** update dependency @babel/core to ^7.29.7 ([#435](https://github.com/anolilab/unplugin-favicons/issues/435)) ([4ab1585](https://github.com/anolilab/unplugin-favicons/commit/4ab15851882fe6a4eceb4d58ce1be56bf2f20d29))
+* **deps:** update dependency @nuxt/devtools@<2.6.4 to v3 [security] ([#373](https://github.com/anolilab/unplugin-favicons/issues/373)) ([98a78a1](https://github.com/anolilab/unplugin-favicons/commit/98a78a164c24681745644cc910c7818536e314c0))
+* **deps:** update dependency @rspack/core to ^2.0.8 ([#436](https://github.com/anolilab/unplugin-favicons/issues/436)) ([1f007d7](https://github.com/anolilab/unplugin-favicons/commit/1f007d74d393a2602003c2c68cab8658f940e306))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#329](https://github.com/anolilab/unplugin-favicons/issues/329)) ([0d58b0d](https://github.com/anolilab/unplugin-favicons/commit/0d58b0d0d812ccdbf314dc8cb87a426f96d992a9))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#411](https://github.com/anolilab/unplugin-favicons/issues/411)) ([b17988b](https://github.com/anolilab/unplugin-favicons/commit/b17988b61692e59ca05ab21f77f162ef654f82a8))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#418](https://github.com/anolilab/unplugin-favicons/issues/418)) ([c0784eb](https://github.com/anolilab/unplugin-favicons/commit/c0784eb5dc6e60172aa28fc7e7e3904f1fad0180))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#421](https://github.com/anolilab/unplugin-favicons/issues/421)) ([6c402e7](https://github.com/anolilab/unplugin-favicons/commit/6c402e7a86564e6dd52ff1f7b5c0058c0147d00c))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#425](https://github.com/anolilab/unplugin-favicons/issues/425)) ([13ad0ea](https://github.com/anolilab/unplugin-favicons/commit/13ad0ea1abf397ff070c7e173767b6a57a3a6124))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#426](https://github.com/anolilab/unplugin-favicons/issues/426)) ([a360ce6](https://github.com/anolilab/unplugin-favicons/commit/a360ce625c855739fb96fc5805df360bcad19acb))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#427](https://github.com/anolilab/unplugin-favicons/issues/427)) ([e84bce2](https://github.com/anolilab/unplugin-favicons/commit/e84bce24c3fa40befb27c8574c1dc1449683c33f))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#428](https://github.com/anolilab/unplugin-favicons/issues/428)) ([35d65b3](https://github.com/anolilab/unplugin-favicons/commit/35d65b3276d69382324c070d4417e7821d6fcc21))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#429](https://github.com/anolilab/unplugin-favicons/issues/429)) ([bc9cf64](https://github.com/anolilab/unplugin-favicons/commit/bc9cf644a59eedd60149362e36a43080cf165a5f))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#430](https://github.com/anolilab/unplugin-favicons/issues/430)) ([0d650bf](https://github.com/anolilab/unplugin-favicons/commit/0d650bfd3248f69b9a2b200b50a8614c0da85319))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#431](https://github.com/anolilab/unplugin-favicons/issues/431)) ([5ba4fd5](https://github.com/anolilab/unplugin-favicons/commit/5ba4fd560fc188037d0d71519dc539d70edb7688))
+* **deps:** update dependency @sveltejs/kit to v2.70.2 [security] ([#432](https://github.com/anolilab/unplugin-favicons/issues/432)) ([1a2bc7c](https://github.com/anolilab/unplugin-favicons/commit/1a2bc7c3868a4cd4bb251e66637b3239881963b8))
+* **deps:** update dependency @sveltejs/kit@<=2.57.0 to >=2.70.2 [security] ([#330](https://github.com/anolilab/unplugin-favicons/issues/330)) ([b0a4bfd](https://github.com/anolilab/unplugin-favicons/commit/b0a4bfdefe3a9f6157933faa1a7dc14a4bdef256))
+* **deps:** update dependency @sveltejs/kit@>=2.0.0 <2.20.6 to >=2.70.2 [security] ([#331](https://github.com/anolilab/unplugin-favicons/issues/331)) ([885ca56](https://github.com/anolilab/unplugin-favicons/commit/885ca568b29fa799df16bc52447f476781d34a63))
+* **deps:** update dependency astro@<=5.15.6 to v7 [security] ([#299](https://github.com/anolilab/unplugin-favicons/issues/299)) ([390e511](https://github.com/anolilab/unplugin-favicons/commit/390e5110757e9cbf97d9f22ae191e5156a2deffc))
+* **deps:** update dependency astro@<5.14.3 to >=6.4.8 [security] ([#300](https://github.com/anolilab/unplugin-favicons/issues/300)) ([4b3efa8](https://github.com/anolilab/unplugin-favicons/commit/4b3efa89bde484fed7d011a7896c27b8eae04621))
+* **deps:** update dependency astro@<5.15.8 to >=6.4.8 [security] ([#301](https://github.com/anolilab/unplugin-favicons/issues/301)) ([aededa5](https://github.com/anolilab/unplugin-favicons/commit/aededa5e570fecc3afa0a7b96e47ad7b69146bbf))
+* **deps:** update dependency astro@<5.15.8 to v7 [security] ([#412](https://github.com/anolilab/unplugin-favicons/issues/412)) ([1b66e60](https://github.com/anolilab/unplugin-favicons/commit/1b66e6043ab5246798a6a64ba0f24b0cb0eb6d03))
+* **deps:** update dependency astro@<5.15.9 to >=6.4.8 [security] ([#302](https://github.com/anolilab/unplugin-favicons/issues/302)) ([21b224a](https://github.com/anolilab/unplugin-favicons/commit/21b224ac54e898a45f90b11e27aeecdeb1beb7aa))
+* **deps:** update dependency astro@<5.15.9 to v7 [security] ([#413](https://github.com/anolilab/unplugin-favicons/issues/413)) ([c20e6c6](https://github.com/anolilab/unplugin-favicons/commit/c20e6c67555863e5241aff63b2ce5e69760d237e))
+* **deps:** update dependency astro@<6.1.10 to >=6.4.8 [security] ([#304](https://github.com/anolilab/unplugin-favicons/issues/304)) ([b1c879a](https://github.com/anolilab/unplugin-favicons/commit/b1c879a1d74218b2cc2f272ef3ce7e5e68b0182d))
+* **deps:** update dependency astro@<6.1.10 to v7 [security] ([#415](https://github.com/anolilab/unplugin-favicons/issues/415)) ([78e66eb](https://github.com/anolilab/unplugin-favicons/commit/78e66eba201b9d09d4e6e5e7bdd96b2c1f7f6a96))
+* **deps:** update dependency astro@<6.1.6 to >=6.4.8 [security] ([#303](https://github.com/anolilab/unplugin-favicons/issues/303)) ([ef232a0](https://github.com/anolilab/unplugin-favicons/commit/ef232a0eb083e592da9f548032e252848186c1a7))
+* **deps:** update dependency astro@<6.1.6 to v7 [security] ([#414](https://github.com/anolilab/unplugin-favicons/issues/414)) ([c2f36b5](https://github.com/anolilab/unplugin-favicons/commit/c2f36b5175ac2d94dedbede95efde49c0185bf28))
+* **deps:** update dependency astro@>=2.10.10 <5.18.1 to >=6.4.8 [security] ([#305](https://github.com/anolilab/unplugin-favicons/issues/305)) ([51eae66](https://github.com/anolilab/unplugin-favicons/commit/51eae66ed7372ffe85584a96099802b6a519b259))
+* **deps:** update dependency astro@>=2.10.10 <5.18.1 to v7 [security] ([#403](https://github.com/anolilab/unplugin-favicons/issues/403)) ([1ea12e9](https://github.com/anolilab/unplugin-favicons/commit/1ea12e90249c9a90e14169e417e2ae360915945e))
+* **deps:** update dependency astro@>=2.16.0 <5.15.5 to >=6.4.8 [security] ([#306](https://github.com/anolilab/unplugin-favicons/issues/306)) ([4fd07f6](https://github.com/anolilab/unplugin-favicons/commit/4fd07f60dc3b9ac0af4731bf5f3910db309b3b28))
+* **deps:** update dependency astro@>=2.16.0 <5.15.5 to v7 [security] ([#404](https://github.com/anolilab/unplugin-favicons/issues/404)) ([3a51ad0](https://github.com/anolilab/unplugin-favicons/commit/3a51ad0f48a1d5038b9e2dfaace497254eaccbbe))
+* **deps:** update dependency astro@>=5.0.0-alpha.0 <5.13.2 to >=6.4.8 [security] ([#307](https://github.com/anolilab/unplugin-favicons/issues/307)) ([ac1639c](https://github.com/anolilab/unplugin-favicons/commit/ac1639cbdbc8cc0041c93805d808724637fc3331))
+* **deps:** update dependency astro@>=5.0.0-alpha.0 <5.13.2 to v7 [security] ([#405](https://github.com/anolilab/unplugin-favicons/issues/405)) ([f883968](https://github.com/anolilab/unplugin-favicons/commit/f8839689cf1ad9f65aafe7ef2402fe9cfe91ffbc))
+* **deps:** update dependency body-parser@<1.20.3 to >=1.20.6 [security] ([#311](https://github.com/anolilab/unplugin-favicons/issues/311)) ([310a672](https://github.com/anolilab/unplugin-favicons/commit/310a67205f7d8133f76c1cfa19697e1439dcf2ac))
+* **deps:** update dependency body-parser@<1.20.3 to v2 [security] ([#408](https://github.com/anolilab/unplugin-favicons/issues/408)) ([19e3663](https://github.com/anolilab/unplugin-favicons/commit/19e3663e6ce2afcdac6fdb05d4b3dfb1d60e346a))
+* **deps:** update dependency brace-expansion@<1.1.13 to >=1.1.18 [security] ([#309](https://github.com/anolilab/unplugin-favicons/issues/309)) ([1e4f0f5](https://github.com/anolilab/unplugin-favicons/commit/1e4f0f50396c4d0d229d1ffa302e20ff087948af))
+* **deps:** update dependency brace-expansion@<1.1.13 to v2 [security] ([#406](https://github.com/anolilab/unplugin-favicons/issues/406)) ([3fc16d8](https://github.com/anolilab/unplugin-favicons/commit/3fc16d80f4743d4b714f47786c89fde9a3c2ceec))
+* **deps:** update dependency brace-expansion@<1.1.13 to v3 [security] ([#416](https://github.com/anolilab/unplugin-favicons/issues/416)) ([ca94d94](https://github.com/anolilab/unplugin-favicons/commit/ca94d94be972a9316e2584650d6143d4b7f5d0e5))
+* **deps:** update dependency brace-expansion@<1.1.13 to v4 [security] ([#419](https://github.com/anolilab/unplugin-favicons/issues/419)) ([c1a4004](https://github.com/anolilab/unplugin-favicons/commit/c1a4004f5f506efd0f419c91f49fad5f1d9d66b7))
+* **deps:** update dependency brace-expansion@<1.1.13 to v5 [security] ([#422](https://github.com/anolilab/unplugin-favicons/issues/422)) ([007be58](https://github.com/anolilab/unplugin-favicons/commit/007be58eff92b78f002768377eb52ee3e65136b5))
+* **deps:** update dependency brace-expansion@>=1.0.0 <=1.1.11 to >=1.1.18 [security] ([#310](https://github.com/anolilab/unplugin-favicons/issues/310)) ([ff22c18](https://github.com/anolilab/unplugin-favicons/commit/ff22c18b531b43f8adfc633df9626ee19e8406f6))
+* **deps:** update dependency brace-expansion@>=1.0.0 <=1.1.11 to v2 [security] ([#407](https://github.com/anolilab/unplugin-favicons/issues/407)) ([c34bcda](https://github.com/anolilab/unplugin-favicons/commit/c34bcdaf968c8a8f693b43de86592d99a67e6f6f))
+* **deps:** update dependency brace-expansion@>=1.0.0 <=1.1.11 to v3 [security] ([#417](https://github.com/anolilab/unplugin-favicons/issues/417)) ([78f61f9](https://github.com/anolilab/unplugin-favicons/commit/78f61f9f525539d127480c8e8d2c175432eac0fe))
+* **deps:** update dependency brace-expansion@>=1.0.0 <=1.1.11 to v4 [security] ([#420](https://github.com/anolilab/unplugin-favicons/issues/420)) ([2464bd7](https://github.com/anolilab/unplugin-favicons/commit/2464bd752079552b10ea4146b008ac50bc31cbb3))
+* **deps:** update dependency brace-expansion@>=1.0.0 <=1.1.11 to v5 [security] ([#423](https://github.com/anolilab/unplugin-favicons/issues/423)) ([1801dbe](https://github.com/anolilab/unplugin-favicons/commit/1801dbe1815bfafef12d9b63b9261a83d2358569))
+* **deps:** update dependency fast-uri@<=3.1.0 to >=3.1.5 [security] ([#316](https://github.com/anolilab/unplugin-favicons/issues/316)) ([305bff7](https://github.com/anolilab/unplugin-favicons/commit/305bff7f3ad13d88b6611bc01804a3bb4c5bd6b4))
+* **deps:** update dependency fast-uri@<=3.1.1 to >=3.1.5 [security] ([#317](https://github.com/anolilab/unplugin-favicons/issues/317)) ([f17b009](https://github.com/anolilab/unplugin-favicons/commit/f17b0091b653b5c25864e09e2294a483c65f38b9))
+* **deps:** update dependency hono@<4.12.25 to >=4.12.34 [security] ([#312](https://github.com/anolilab/unplugin-favicons/issues/312)) ([812ee1c](https://github.com/anolilab/unplugin-favicons/commit/812ee1c2c67d571c11466facf87180eac3aecd4d))
+* **deps:** update dependency immutable@>=4.0.0-rc.1 <4.3.8 to >=5.1.9 [security] ([#314](https://github.com/anolilab/unplugin-favicons/issues/314)) ([28a49b5](https://github.com/anolilab/unplugin-favicons/commit/28a49b5aab820dc01b1ffd65f5f8d975f42b70eb))
+* **deps:** update dependency immutable@>=5.0.0 <5.1.5 to >=5.1.9 [security] ([#315](https://github.com/anolilab/unplugin-favicons/issues/315)) ([95a7cdf](https://github.com/anolilab/unplugin-favicons/commit/95a7cdf3a7b15e873fcdf169a82d6db7767891f4))
+* **deps:** update dependency ip-address@<=10.1.0 to >=10.2.2 [security] ([#366](https://github.com/anolilab/unplugin-favicons/issues/366)) ([9d6f81e](https://github.com/anolilab/unplugin-favicons/commit/9d6f81e7d9d4f715766d5b9976f85e0784a6df8a))
+* **deps:** update dependency ip-address@<=10.1.0 to >=10.5.0 [security] ([#399](https://github.com/anolilab/unplugin-favicons/issues/399)) ([cabff7e](https://github.com/anolilab/unplugin-favicons/commit/cabff7e5a0b01d3a54fdba83c3b6c842cca963d7))
+* **deps:** update dependency js-yaml@<=4.1.1 to >=4.3.1 [security] ([#332](https://github.com/anolilab/unplugin-favicons/issues/332)) ([59ebe41](https://github.com/anolilab/unplugin-favicons/commit/59ebe4114dd39681a82f4377d80bf81982af7345))
+* **deps:** update dependency js-yaml@>=4.0.0 <4.1.1 to >=4.3.1 [security] ([#333](https://github.com/anolilab/unplugin-favicons/issues/333)) ([0720f4c](https://github.com/anolilab/unplugin-favicons/commit/0720f4c68e29af5c69991092f4a9dfac20b5a9ce))
+* **deps:** update dependency nanoid@<3.3.8 to >=3.3.18 [security] ([#375](https://github.com/anolilab/unplugin-favicons/issues/375)) ([bec65e0](https://github.com/anolilab/unplugin-favicons/commit/bec65e0bc050487ed70641ec5429ee80b5e31922))
+* **deps:** update dependency next@>=10.0.0 <15.5.10 to >=15.5.23 [security] ([#336](https://github.com/anolilab/unplugin-favicons/issues/336)) ([b14de33](https://github.com/anolilab/unplugin-favicons/commit/b14de3345b10e66460edaa27f4988d75287fb298))
+* **deps:** update dependency next@>=10.0.0 <15.5.10 to v16 [security] ([#383](https://github.com/anolilab/unplugin-favicons/issues/383)) ([5f2c9f4](https://github.com/anolilab/unplugin-favicons/commit/5f2c9f41d5756b01b28cfe96ab8fd801919ebcc1))
+* **deps:** update dependency next@>=10.0.0 <15.5.14 to >=15.5.23 [security] ([#337](https://github.com/anolilab/unplugin-favicons/issues/337)) ([c08c1d3](https://github.com/anolilab/unplugin-favicons/commit/c08c1d3921a2cd59d65c20c5d1fcaf18b6de35ef))
+* **deps:** update dependency next@>=10.0.0 <15.5.14 to v16 [security] ([#384](https://github.com/anolilab/unplugin-favicons/issues/384)) ([398f463](https://github.com/anolilab/unplugin-favicons/commit/398f463f58ae8b37b10b74aef5ef831df60ad8b4))
+* **deps:** update dependency next@>=10.0.0 <15.5.16 to >=15.5.23 [security] ([#338](https://github.com/anolilab/unplugin-favicons/issues/338)) ([32902ae](https://github.com/anolilab/unplugin-favicons/commit/32902ae74b6bdce45de424c223dc4140119ca8a9))
+* **deps:** update dependency next@>=12.2.0 <15.5.16 to >=15.5.23 [security] ([#339](https://github.com/anolilab/unplugin-favicons/issues/339)) ([95794be](https://github.com/anolilab/unplugin-favicons/commit/95794be49fb93874c0d1a3e3a59049c24409ebf9))
+* **deps:** update dependency next@>=13.0.0 <15.5.15 to >=15.5.23 [security] ([#340](https://github.com/anolilab/unplugin-favicons/issues/340)) ([446ac42](https://github.com/anolilab/unplugin-favicons/commit/446ac42ad03df5940a766ae887d3353568cd0464))
+* **deps:** update dependency next@>=13.0.0 <15.5.16 to >=15.5.23 [security] ([#341](https://github.com/anolilab/unplugin-favicons/issues/341)) ([fe1bf79](https://github.com/anolilab/unplugin-favicons/commit/fe1bf79bcb666100b64fda3a5cdd920b78f78131))
+* **deps:** update dependency next@>=13.4.0 <15.5.16 to >=15.5.23 [security] ([#342](https://github.com/anolilab/unplugin-favicons/issues/342)) ([6795985](https://github.com/anolilab/unplugin-favicons/commit/679598577a7ccf14ab1e3ac11f66f906f879c947))
+* **deps:** update dependency next@>=13.4.0 <15.5.16 to v16 [security] ([#381](https://github.com/anolilab/unplugin-favicons/issues/381)) ([6ba9b17](https://github.com/anolilab/unplugin-favicons/commit/6ba9b1761e4f3bd2666bb9330ffdebba8540417c))
+* **deps:** update dependency next@>=13.4.13 <15.5.16 to >=15.5.23 [security] ([#344](https://github.com/anolilab/unplugin-favicons/issues/344)) ([03724c5](https://github.com/anolilab/unplugin-favicons/commit/03724c5f0c0d0c6aaf43087992e2f0146fd27e77))
+* **deps:** update dependency next@>=13.4.13 <15.5.16 to v16 [security] ([#386](https://github.com/anolilab/unplugin-favicons/issues/386)) ([83e2c6a](https://github.com/anolilab/unplugin-favicons/commit/83e2c6a686cf9749aee468ea9b72af066d868ead))
+* **deps:** update dependency next@>=13.4.6 <15.5.16 to >=15.5.23 [security] ([#343](https://github.com/anolilab/unplugin-favicons/issues/343)) ([c9aa1b8](https://github.com/anolilab/unplugin-favicons/commit/c9aa1b8fa71d36b1ed53770a526e6f8915a1dffe))
+* **deps:** update dependency next@>=13.4.6 <15.5.16 to v16 [security] ([#385](https://github.com/anolilab/unplugin-favicons/issues/385)) ([ceddf47](https://github.com/anolilab/unplugin-favicons/commit/ceddf47cee12afd1bc5b8f23501aa728f5159072))
+* **deps:** update dependency next@>=14.2.0 <15.5.16 to >=15.5.23 [security] ([#345](https://github.com/anolilab/unplugin-favicons/issues/345)) ([7c12d4a](https://github.com/anolilab/unplugin-favicons/commit/7c12d4a84709662665d84f12a26740f4d3acc140))
+* **deps:** update dependency next@>=14.2.0 <15.5.16 to v16 [security] ([#387](https://github.com/anolilab/unplugin-favicons/issues/387)) ([051039f](https://github.com/anolilab/unplugin-favicons/commit/051039fd425b681d8a2996bfb2574ba1da993cdc))
+* **deps:** update dependency next@>=15.0.0 <=15.4.4 to >=15.5.23 [security] ([#346](https://github.com/anolilab/unplugin-favicons/issues/346)) ([b63b535](https://github.com/anolilab/unplugin-favicons/commit/b63b535baf0d0c1a75f0f06e78f810059446ad60))
+* **deps:** update dependency next@>=15.0.0 <=15.4.4 to v16 [security] ([#388](https://github.com/anolilab/unplugin-favicons/issues/388)) ([da58d8b](https://github.com/anolilab/unplugin-favicons/commit/da58d8ba422bfe55b44d3df412a30e94e0c44ea8))
+* **deps:** update dependency next@>=15.0.0 <15.1.2 to >=15.5.23 [security] ([#347](https://github.com/anolilab/unplugin-favicons/issues/347)) ([358ceaf](https://github.com/anolilab/unplugin-favicons/commit/358ceaf679ca3ba6677f6acf879de5d2a7f1d069))
+* **deps:** update dependency next@>=15.0.0 <15.1.2 to v16 [security] ([#389](https://github.com/anolilab/unplugin-favicons/issues/389)) ([013ca1c](https://github.com/anolilab/unplugin-favicons/commit/013ca1c76abf65039d9fc2c964ab2650450cabec))
+* **deps:** update dependency next@>=15.0.0 <15.1.6 to >=15.5.23 [security] ([#348](https://github.com/anolilab/unplugin-favicons/issues/348)) ([3c861ba](https://github.com/anolilab/unplugin-favicons/commit/3c861ba7fe11f9d2abb8f4ac958e7307ef63dd4e))
+* **deps:** update dependency next@>=15.0.0 <15.1.6 to v16 [security] ([#390](https://github.com/anolilab/unplugin-favicons/issues/390)) ([823d871](https://github.com/anolilab/unplugin-favicons/commit/823d8710fcb8bdc20044aaeb86167fd4523548d4))
+* **deps:** update dependency next@>=15.0.0 <15.2.2 to >=15.5.23 [security] ([#349](https://github.com/anolilab/unplugin-favicons/issues/349)) ([1457d9f](https://github.com/anolilab/unplugin-favicons/commit/1457d9f49100910c30ab84bffb69604f0a376b52))
+* **deps:** update dependency next@>=15.0.0 <15.2.2 to v16 [security] ([#391](https://github.com/anolilab/unplugin-favicons/issues/391)) ([2593ec4](https://github.com/anolilab/unplugin-favicons/commit/2593ec42bdef1f5a3302ba13259fa63602c1dcef))
+* **deps:** update dependency next@>=15.0.0 <15.2.3 to >=15.5.23 [security] ([#350](https://github.com/anolilab/unplugin-favicons/issues/350)) ([f0d43fd](https://github.com/anolilab/unplugin-favicons/commit/f0d43fdc696304e40b03972cd252334a3eda0293))
+* **deps:** update dependency next@>=15.0.0 <15.2.3 to v16 [security] ([#392](https://github.com/anolilab/unplugin-favicons/issues/392)) ([4e6d492](https://github.com/anolilab/unplugin-favicons/commit/4e6d492c30594ba59622cd88b54edf5dd388e40a))
+* **deps:** update dependency next@>=15.0.0 <15.5.16 to >=15.5.23 [security] ([#351](https://github.com/anolilab/unplugin-favicons/issues/351)) ([a8a04c3](https://github.com/anolilab/unplugin-favicons/commit/a8a04c34eaf8a9cd2d96506c9c17480c79da993f))
+* **deps:** update dependency next@>=15.0.0-canary.0 <15.4.7 to >=15.5.23 [security] ([#352](https://github.com/anolilab/unplugin-favicons/issues/352)) ([a310acc](https://github.com/anolilab/unplugin-favicons/commit/a310accf75fddef5a1ea46f7636a3e00f747d494))
+* **deps:** update dependency next@>=15.0.4-canary.51 <15.1.8 to >=15.5.23 [security] ([#353](https://github.com/anolilab/unplugin-favicons/issues/353)) ([a0a1766](https://github.com/anolilab/unplugin-favicons/commit/a0a1766263946f1acf6bc160583c3aa85404a5e0))
+* **deps:** update dependency next@>=15.1.0-canary.0 <15.1.9 to >=15.5.23 [security] ([#354](https://github.com/anolilab/unplugin-favicons/issues/354)) ([c631912](https://github.com/anolilab/unplugin-favicons/commit/c631912ee5fc3dc0069adc517191a5880898d83b))
+* **deps:** update dependency next@>=15.1.1-canary.0 <15.1.10 to >=15.5.23 [security] ([#355](https://github.com/anolilab/unplugin-favicons/issues/355)) ([afe9af6](https://github.com/anolilab/unplugin-favicons/commit/afe9af6c3510a47a8862a6e379a952273e0c0344))
+* **deps:** update dependency next@>=15.1.1-canary.0 <15.1.12 to >=15.5.23 [security] ([#356](https://github.com/anolilab/unplugin-favicons/issues/356)) ([028e577](https://github.com/anolilab/unplugin-favicons/commit/028e577807a5ebe206e52f0e0e8d195242218433))
+* **deps:** update dependency next@>=9.5.0 <15.5.13 to >=15.5.23 [security] ([#335](https://github.com/anolilab/unplugin-favicons/issues/335)) ([3a409d6](https://github.com/anolilab/unplugin-favicons/commit/3a409d657a42296e2ac9b23d39d76bb01db53d39))
+* **deps:** update dependency next@>=9.5.0 <15.5.13 to v16 [security] ([#382](https://github.com/anolilab/unplugin-favicons/issues/382)) ([b53de81](https://github.com/anolilab/unplugin-favicons/commit/b53de81b4f6599755e4fc77a0f9d39c4349d3738))
+* **deps:** update dependency nuxt@>=3.0.0 <3.16.0 to >=4.4.8 [security] ([#369](https://github.com/anolilab/unplugin-favicons/issues/369)) ([17a7659](https://github.com/anolilab/unplugin-favicons/commit/17a7659c74841df22a529a27b58a175dd7799078))
+* **deps:** update dependency nuxt@>=3.0.0 <3.16.0 to >=4.5.2 [security] ([#400](https://github.com/anolilab/unplugin-favicons/issues/400)) ([5accda0](https://github.com/anolilab/unplugin-favicons/commit/5accda0f617d209fae7a2052e9d9f9228267c68f))
+* **deps:** update dependency nuxt@>=3.1.0 <=3.21.5 to >=4.4.8 [security] ([#370](https://github.com/anolilab/unplugin-favicons/issues/370)) ([3e3006f](https://github.com/anolilab/unplugin-favicons/commit/3e3006f5ee6f0889aa9aa95867449e9c1ce6134e))
+* **deps:** update dependency nuxt@>=3.1.0 <=3.21.5 to >=4.5.2 [security] ([#401](https://github.com/anolilab/unplugin-favicons/issues/401)) ([9b56a6e](https://github.com/anolilab/unplugin-favicons/commit/9b56a6ed66c2ca29b63bb04d3f277ee543b2fbee))
+* **deps:** update dependency nuxt@>=3.4.3 <=3.21.5 to >=4.4.8 [security] ([#371](https://github.com/anolilab/unplugin-favicons/issues/371)) ([b8ec514](https://github.com/anolilab/unplugin-favicons/commit/b8ec51496f0cc78d9f59a34e2c034b34da846a90))
+* **deps:** update dependency nuxt@>=3.4.3 <=3.21.5 to >=4.5.2 [security] ([#402](https://github.com/anolilab/unplugin-favicons/issues/402)) ([825a509](https://github.com/anolilab/unplugin-favicons/commit/825a509410cac35c366118354646dc468b31ceaf))
+* **deps:** update dependency nuxt@>=3.6.0 <3.19.0 to >=4.4.8 [security] ([#372](https://github.com/anolilab/unplugin-favicons/issues/372)) ([513f91e](https://github.com/anolilab/unplugin-favicons/commit/513f91e977f4881c3ea8b22199d811a9fb8fc128))
+* **deps:** update dependency postcss@<8.5.10 to >=8.5.18 [security] ([#358](https://github.com/anolilab/unplugin-favicons/issues/358)) ([938be88](https://github.com/anolilab/unplugin-favicons/commit/938be88a2fe67f1163ab7ee053491f26896cf703))
+* **deps:** update dependency postcss@<8.5.10 to >=8.5.26 [security] ([#376](https://github.com/anolilab/unplugin-favicons/issues/376)) ([14935a6](https://github.com/anolilab/unplugin-favicons/commit/14935a6552aebf8cc1e41e60bdfd87edcc088d42))
+* **deps:** update dependency svgo@>=3.0.0 <3.3.3 to >=3.3.4 [security] ([#313](https://github.com/anolilab/unplugin-favicons/issues/313)) ([b7745dd](https://github.com/anolilab/unplugin-favicons/commit/b7745ddef429a3913650da2ddd4919d8ef109311))
+* **deps:** update dependency svgo@>=3.0.0 <3.3.3 to v4 [security] ([#409](https://github.com/anolilab/unplugin-favicons/issues/409)) ([6c4d8e0](https://github.com/anolilab/unplugin-favicons/commit/6c4d8e04aadf725356c058ec9e0f6c21591c379a))
+* **deps:** update dependency tar@<=7.5.10 to >=7.5.22 [security] ([#321](https://github.com/anolilab/unplugin-favicons/issues/321)) ([2a0d62a](https://github.com/anolilab/unplugin-favicons/commit/2a0d62a95d1eef4f5f41012197b432a6abb4f0e7))
+* **deps:** update dependency tar@<=7.5.2 to >=7.5.22 [security] ([#318](https://github.com/anolilab/unplugin-favicons/issues/318)) ([5cab03e](https://github.com/anolilab/unplugin-favicons/commit/5cab03e06789f6d8b38ec32cc255705d6bd93c8b))
+* **deps:** update dependency tar@<=7.5.3 to >=7.5.22 [security] ([#319](https://github.com/anolilab/unplugin-favicons/issues/319)) ([57cb914](https://github.com/anolilab/unplugin-favicons/commit/57cb914a1a73ad654ede147835f4542298e9eab3))
+* **deps:** update dependency tar@<=7.5.9 to >=7.5.22 [security] ([#320](https://github.com/anolilab/unplugin-favicons/issues/320)) ([3e7262b](https://github.com/anolilab/unplugin-favicons/commit/3e7262be83d08439143eaa3040dfa9f6f460ef0f))
+* **deps:** update dependency tar@<6.2.1 to >=7.5.22 [security] ([#322](https://github.com/anolilab/unplugin-favicons/issues/322)) ([60dcad8](https://github.com/anolilab/unplugin-favicons/commit/60dcad89769218f9ffacd45c9f6f90c80d473e73))
+* **deps:** update dependency tar@<7.5.7 to >=7.5.22 [security] ([#323](https://github.com/anolilab/unplugin-favicons/issues/323)) ([58b7381](https://github.com/anolilab/unplugin-favicons/commit/58b738179807afd6d1b589b1bbb0e600b54073ed))
+* **deps:** update dependency tar@<7.5.8 to >=7.5.22 [security] ([#324](https://github.com/anolilab/unplugin-favicons/issues/324)) ([21d91ae](https://github.com/anolilab/unplugin-favicons/commit/21d91aef2baa77317d026c0791616b1941c4b7d6))
+* **deps:** update dependency tar@=7.5.1 to >=7.5.22 [security] ([#325](https://github.com/anolilab/unplugin-favicons/issues/325)) ([89bb7a6](https://github.com/anolilab/unplugin-favicons/commit/89bb7a6f4d0d7c7f0e2e489a2315f57e3d2b9957))
+* **deps:** update dependency undici@>=7.0.0 <7.28.0 to >=7.29.0 [security] ([#367](https://github.com/anolilab/unplugin-favicons/issues/367)) ([2c5c65c](https://github.com/anolilab/unplugin-favicons/commit/2c5c65c1c0e914981ebf84c3938e497603fc1255))
+* **deps:** update dependency undici@>=7.0.0 <7.28.0 to v8 [security] ([#410](https://github.com/anolilab/unplugin-favicons/issues/410)) ([87970b6](https://github.com/anolilab/unplugin-favicons/commit/87970b63304564259874372c6463d8a79daf3779))
+* **deps:** update dependency webpack-dev-server@<=5.2.0 to >=5.2.6 [security] ([#326](https://github.com/anolilab/unplugin-favicons/issues/326)) ([3d30b78](https://github.com/anolilab/unplugin-favicons/commit/3d30b78102c215374c7bae726fc9ffda11c3f486))
+* **deps:** update dependency webpack-dev-server@<=5.2.3 to >=5.2.6 [security] ([#327](https://github.com/anolilab/unplugin-favicons/issues/327)) ([be5a7e9](https://github.com/anolilab/unplugin-favicons/commit/be5a7e9f8927ff4158148aecd2deb3ab260a25e1))
+* **deps:** update patch updates ([#297](https://github.com/anolilab/unplugin-favicons/issues/297)) ([ddf53ab](https://github.com/anolilab/unplugin-favicons/commit/ddf53abab60b87caa271603a0de96ed18c3f9b68))
+
+### Miscellaneous Chores
+
+* **deps:** lock file maintenance ([b120570](https://github.com/anolilab/unplugin-favicons/commit/b120570543b5753741a89161857b624a08347cea))
+* format pnpm-workspace.yaml with prettier ([#424](https://github.com/anolilab/unplugin-favicons/issues/424)) ([fd3caa3](https://github.com/anolilab/unplugin-favicons/commit/fd3caa3a84a5f9f317478995c81b6dc38e726748))
+
 ## [3.0.0](https://github.com/anolilab/unplugin-favicons/compare/v2.0.0...v3.0.0) (2026-06-20)
 
 ### ⚠ BREAKING CHANGES
