@@ -184,7 +184,7 @@
         "is-ci": "^4.1.0",
         "lint-staged": "^16.4.0",
         "pkg-pr-new": "^0.0.87",
-        "prettier": "^3.8.3",
+        "prettier": "^3.8.5",
         "publint": "^0.3.23",
         "read-pkg": "10.1.0",
         "rimraf": "^6.1.3",
