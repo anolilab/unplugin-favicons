@@ -47,6 +47,8 @@ minimumReleaseAgeExclude:
   - webpack-dev-server@5.2.6
   # Renovate security update: @sveltejs/kit@2.70.2
   - "@sveltejs/kit@2.70.2"
+  # Renovate security update: qs@6.16.0
+  - qs@6.16.0
 
 overrides:
   "@angular/common@<19.2.16": ">=20.3.27"
@@ -163,7 +165,7 @@ overrides:
   "picomatch@>=4.0.0 <4.0.4": ">=4.0.5"
   "postcss@<8.5.10": ">=8.5.26"
   "prismjs@<1.30.0": ">=1.30.0"
-  "qs@>=6.7.0 <=6.14.1": ">=6.15.3"
+  "qs@>=6.7.0 <=6.14.1": ">=6.16.0"
   "qs@<6.14.1": ">=6.15.3"
   "rollup@>=4.0.0 <4.59.0": ">=4.59.0"
   "rollup@>=4.0.0 <4.22.4": ">=4.22.4"
