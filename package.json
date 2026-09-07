@@ -194,7 +194,7 @@
         "sort-package-json": "^3.6.1",
         "taze": "^19.13.0",
         "textlint": "^15.7.1",
-        "type-fest": "^5.6.0",
+        "type-fest": "^5.8.0",
         "typescript": "^6.0.3",
         "vite": "^8.0.14",
         "vitest": "^4.1.7",

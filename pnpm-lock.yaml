@@ -425,8 +425,8 @@ importers:
         specifier: ^15.7.1
         version: 15.7.1
       type-fest:
-        specifier: ^5.6.0
-        version: 5.6.0
+        specifier: ^5.8.0
+        version: 5.8.0
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -14187,10 +14187,6 @@ packages:
   type-fest@4.41.0:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
-
-  type-fest@5.6.0:
-    resolution: {integrity: sha512-8ZiHFm91orbSAe2PSAiSVBVko18pbhbiB3U9GglSzF/zCGkR+rxpHx6sEMCUm4kxY4LjDIUGgCfUMtwfZfjfUA==}
-    engines: {node: '>=20'}
 
   type-fest@5.8.0:
     resolution: {integrity: sha512-YGYEVz3Fm5iy/AybuA0oyNFq7H4CgQNfRp/qfe8nurE1kuCeNm3/vfm9X4Mtl+qLyaKJUh5xrFZwogr41SMjYA==}
@@ -28912,7 +28908,7 @@ snapshots:
       '@nuxt/nitro-server': 4.5.2(309aab5d6392ca6d3839c5bfebe6f486)
       '@nuxt/schema': 4.5.2
       '@nuxt/telemetry': 2.8.0(@nuxt/kit@4.5.2(magic-string@1.1.0)(magicast@0.5.4)(rolldown@1.2.3)(unplugin@3.3.0(@rspack/core@2.1.10)(esbuild@0.28.1)(rolldown@1.2.3)(rollup@4.60.4)(vite@8.2.1(@types/node@26.0.0)(esbuild@0.28.1)(jiti@2.7.0)(less@4.2.2)(sass@1.85.0)(terser@5.48.0)(yaml@2.9.0))(webpack@5.109.2(cssnano@8.0.5(postcss@8.5.26))(esbuild@0.28.1)(lightningcss@1.33.0)(postcss@8.5.26))))
-      '@nuxt/vite-builder': 4.5.2(0ee26aebbf3524d99c53964a2cdf61fe)
+      '@nuxt/vite-builder': 4.5.2(93b33dc9e2188a8ef5154ba120cf782c)
       '@unhead/vue': 3.3.1(@oxc-project/types@0.143.0)(@rspack/core@2.1.10)(esbuild@0.28.1)(lightningcss@1.33.0)(rolldown@1.2.3)(rollup@4.60.4)(vite@8.2.1(@types/node@26.0.0)(esbuild@0.28.1)(jiti@2.7.0)(less@4.2.2)(sass@1.85.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.41(typescript@5.7.3))(webpack@5.109.2(cssnano@8.0.5(postcss@8.5.26))(esbuild@0.28.1)(lightningcss@1.33.0)(postcss@8.5.26))
       '@vue/shared': 3.5.41
       chokidar: 5.0.0
@@ -30077,7 +30073,7 @@ snapshots:
       '@types/normalize-package-data': 2.4.4
       normalize-package-data: 8.0.0
       parse-json: 8.3.0
-      type-fest: 5.6.0
+      type-fest: 5.8.0
       unicorn-magic: 0.4.0
 
   read-pkg@7.1.0:
@@ -32088,10 +32084,6 @@ snapshots:
   type-fest@3.13.1: {}
 
   type-fest@4.41.0: {}
-
-  type-fest@5.6.0:
-    dependencies:
-      tagged-tag: 1.0.0
 
   type-fest@5.8.0:
     dependencies:
