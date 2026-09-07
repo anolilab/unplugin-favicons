@@ -1,3 +1,19 @@
+## [4.0.1](https://github.com/anolilab/unplugin-favicons/compare/v4.0.0...v4.0.1) (2026-09-07)
+
+### Bug Fixes
+
+* **deps:** resync lockfile with workspace overrides ([6038170](https://github.com/anolilab/unplugin-favicons/commit/60381707c8b02c4322c9513c190ffdda96623179))
+* **deps:** update angular monorepo ([#453](https://github.com/anolilab/unplugin-favicons/issues/453)) ([26c1acd](https://github.com/anolilab/unplugin-favicons/commit/26c1acd9720a0d537bff0bc3c0e82359733fa997))
+* **deps:** update astro monorepo to >=7.2.10 ([#454](https://github.com/anolilab/unplugin-favicons/issues/454)) ([540df3c](https://github.com/anolilab/unplugin-favicons/commit/540df3c9dffa4af1504a9fd0b565b22c41367ca6))
+
+### Miscellaneous Chores
+
+* **deps:** combine all pending renovate updates ([#452](https://github.com/anolilab/unplugin-favicons/issues/452)) ([4f2cee1](https://github.com/anolilab/unplugin-favicons/commit/4f2cee13e60aa677e4d2154037faaad7b931f42e))
+
+### Continuous Integration
+
+* satisfy eslint and yamllint in repo config files ([b9042ec](https://github.com/anolilab/unplugin-favicons/commit/b9042ec37faaa0cc9b017334a38f8bcefeafd632))
+
 ## [4.0.0](https://github.com/anolilab/unplugin-favicons/compare/v3.0.0...v4.0.0) (2026-08-19)
 
 ### ⚠ BREAKING CHANGES
