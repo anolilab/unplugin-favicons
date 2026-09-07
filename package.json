@@ -162,7 +162,7 @@
         "@types/parse5": "^7.0.0",
         "@types/ssri": "^7.1.5",
         "@visulima/packem": "^1.28.3",
-        "@vitest/coverage-v8": "^4.1.7",
+        "@vitest/coverage-v8": "^4.1.10",
         "audit-ci": "^7.1.0",
         "caniuse-lite": "^1.0.30001809",
         "commitizen": "^4.3.2",
