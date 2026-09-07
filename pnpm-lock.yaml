@@ -5,13 +5,13 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@angular/common@<19.2.16': '>=20.3.27'
-  '@angular/compiler@>=19.0.0-next.0 <19.2.20': '>=20.3.27'
-  '@angular/compiler@>=19.0.0-next.0 <19.2.18': '>=20.3.27'
-  '@angular/compiler@>=19.0.0-next.0 <19.2.17': '>=20.3.27'
+  '@angular/common@<19.2.16': '>=20.3.30'
+  '@angular/compiler@>=19.0.0-next.0 <19.2.20': '>=20.3.30'
+  '@angular/compiler@>=19.0.0-next.0 <19.2.18': '>=20.3.30'
+  '@angular/compiler@>=19.0.0-next.0 <19.2.17': '>=20.3.30'
   '@angular/core@>=19.0.0-next.0 <=19.2.18': '>=19.2.25'
-  '@angular/core@>=19.0.0-next.0 <19.2.20': '>=21.2.19'
-  '@angular/core@>=19.0.0-next.0 <19.2.18': '>=21.2.19'
+  '@angular/core@>=19.0.0-next.0 <19.2.20': '>=21.2.22'
+  '@angular/core@>=19.0.0-next.0 <19.2.18': '>=21.2.22'
   '@babel/plugin-transform-modules-systemjs@>=7.12.0 <=7.29.3': '>=7.29.8'
   '@babel/runtime@<7.26.10': '>=7.26.10'
   '@babel/traverse@<7.23.2': '>=7.25.9'
@@ -23,14 +23,14 @@ overrides:
   '@sveltejs/kit@<=2.57.0': '>=2.70.2'
   ajv@>=7.0.0-alpha.0 <8.18.0: '>=8.20.0'
   ajv@<6.14.0: '>=6.15.0'
-  astro@>=5.0.0-alpha.0 <5.13.2: '>=7.2.0'
-  astro@>=2.16.0 <5.15.5: '>=7.2.0'
-  astro@>=2.10.10 <5.18.1: '>=7.2.0'
+  astro@>=5.0.0-alpha.0 <5.13.2: '>=7.2.10'
+  astro@>=2.16.0 <5.15.5: '>=7.2.10'
+  astro@>=2.10.10 <5.18.1: '>=7.2.10'
   astro@<5.14.3: '>=7.1.6'
-  astro@<5.15.8: '>=7.2.0'
-  astro@<5.15.9: '>=7.2.0'
-  astro@<6.1.10: '>=7.2.0'
-  astro@<6.1.6: '>=7.2.0'
+  astro@<5.15.8: '>=7.2.10'
+  astro@<5.15.9: '>=7.2.10'
+  astro@<6.1.10: '>=7.2.10'
+  astro@<6.1.6: '>=7.2.10'
   astro@<=5.15.6: '>=7.1.6'
   body-parser@<1.20.3: '>=2.3.0'
   brace-expansion@>=1.0.0 <=1.1.11: '>=5.0.9'
@@ -202,8 +202,8 @@ overrides:
   sharp@<0.35.0: '>=0.35.0'
   postcss@<=8.5.22: '>=8.5.26'
   '@sveltejs/kit@<=2.70.1': '>=2.70.2'
-  '@angular/common@>=20.0.0-next.0 <20.3.27': '>=20.3.27'
-  '@angular/compiler@>=20.0.0-next.0 <20.3.27': '>=20.3.27'
+  '@angular/common@>=20.0.0-next.0 <20.3.27': '>=20.3.30'
+  '@angular/compiler@>=20.0.0-next.0 <20.3.27': '>=20.3.30'
   undici@>=6.0.0 <6.28.0: '>=6.28.0'
   ip-address@<=10.3.0: '>=10.3.1'
   nanoid@<3.3.17: '>=3.3.18'
@@ -448,13 +448,13 @@ importers:
         specifier: ^19.0.4
         version: 19.2.25(@angular/common@22.1.5(@angular/core@22.1.5(@angular/compiler@22.1.5)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@22.1.5(@angular/compiler@22.1.5)(rxjs@7.8.2)(zone.js@0.15.1))
       '@angular/common':
-        specifier: '>=20.3.27'
+        specifier: '>=20.3.30'
         version: 22.1.5(@angular/core@22.1.5(@angular/compiler@22.1.5)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/compiler':
-        specifier: '>=20.3.27'
+        specifier: '>=20.3.30'
         version: 22.1.5
       '@angular/core':
-        specifier: '>=21.2.19'
+        specifier: '>=21.2.22'
         version: 22.1.5(@angular/compiler@22.1.5)(rxjs@7.8.2)(zone.js@0.15.1)
       '@angular/forms':
         specifier: ^19.0.4
@@ -932,7 +932,7 @@ packages:
     resolution: {integrity: sha512-kMcuTUxDcnTa+JF9SaxdY+b6pkGjtefxGp/VYblSbvlzQ1rVX4wH4V9LHHyXsTOxRRNGqRJ01g0Enhq1iA19mQ==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
-      '@angular/compiler': '>=20.3.27'
+      '@angular/compiler': '>=20.3.30'
       '@angular/compiler-cli': ^19.0.0 || ^19.2.0-next.0
       '@angular/localize': ^19.0.0 || ^19.2.0-next.0
       '@angular/platform-server': ^19.0.0 || ^19.2.0-next.0
