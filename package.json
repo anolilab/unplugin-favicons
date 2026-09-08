@@ -193,7 +193,7 @@
         "semantic-release": "^25.0.9",
         "sort-package-json": "^3.6.1",
         "taze": "^19.13.0",
-        "textlint": "^15.7.1",
+        "textlint": "^15.8.0",
         "type-fest": "^5.8.0",
         "typescript": "^6.0.3",
         "vite": "^8.0.16",
