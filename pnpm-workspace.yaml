@@ -50,6 +50,8 @@ minimumReleaseAgeExclude:
   - "@sveltejs/kit@2.70.2"
   # Renovate security update: qs@6.16.0
   - qs@6.16.0
+  # Renovate security update: devalue@5.9.3
+  - devalue@5.9.3
 
 overrides:
   "@angular/common@<19.2.16": ">=20.3.32"
@@ -90,7 +92,7 @@ overrides:
   "defu@<=6.1.4": ">=6.1.7"
   "devalue@>=5.1.0 <5.6.2": ">=5.8.2"
   "devalue@>=4.0.0 <5.6.4": ">=5.8.2"
-  "devalue@<5.3.2": ">=5.8.2"
+  "devalue@<5.3.2": ">=5.9.3"
   "devalue@<5.6.4": ">=5.8.2"
   "devalue@<=5.6.2": ">=5.8.2"
   "diff@>=6.0.0 <8.0.3": ">=8.0.4"
