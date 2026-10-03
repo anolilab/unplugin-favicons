@@ -50,6 +50,8 @@ minimumReleaseAgeExclude:
   - "@sveltejs/kit@2.70.2"
   # Renovate security update: qs@6.16.0
   - qs@6.16.0
+  # Renovate security update: webpack-dev-middleware@7.4.6
+  - webpack-dev-middleware@7.4.6
 
 overrides:
   "@angular/common@<19.2.16": ">=20.3.32"
@@ -222,7 +224,7 @@ overrides:
   "webpack@>=5.49.0 <=5.104.0": ">=5.106.2"
   "webpack@>=5.49.0 <5.104.0": ">=5.106.2"
   "webpack@>=5.0.0-alpha.0 <5.94.0": ">=5.106.2"
-  "webpack-dev-middleware@<=5.3.3": ">=7.4.5"
+  "webpack-dev-middleware@<=5.3.3": ">=7.4.6"
   "webpack-dev-server@<=5.2.0": ">=5.2.6"
   "webpack-dev-server@<=5.2.3": ">=5.2.6"
   "ws@>=8.0.0 <8.20.1": ">=8.20.1"
