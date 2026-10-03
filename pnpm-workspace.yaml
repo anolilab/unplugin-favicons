@@ -37,7 +37,8 @@ minimumReleaseAgeExclude:
   - js-yaml@4.3.1
   - ip-address@10.2.2
   - undici@7.29.0
-  - brace-expansion@1.1.18 || 4.0.1 || 5.0.9
+  # Renovate security update: brace-expansion@5.0.12
+  - brace-expansion@1.1.18 || 4.0.1 || 5.0.9 || 5.0.12
   - body-parser@1.20.6
   - hono@4.12.34
   - immutable@5.1.9
@@ -242,7 +243,7 @@ overrides:
   "vite@>=7.0.0 <=7.3.4": ">=7.3.6"
   "@sigstore/core@<=3.2.0": ">=3.2.1"
   "sigstore@<=4.1.0": ">=4.1.1"
-  "brace-expansion@>=2.0.0 <2.1.4": ">=2.1.4"
+  "brace-expansion@>=2.0.0 <2.1.4": ">=5.0.12"
   "brace-expansion@>=3.0.0 <5.0.9": ">=5.0.9"
   "@hono/node-server@<2.0.5": ">=2.0.5"
   "svgo@>=4.0.0 <4.0.2": ">=4.0.2"
