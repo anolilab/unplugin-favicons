@@ -18,8 +18,8 @@ minimumReleaseAgeExclude:
   - nuxt@4.4.7 || 4.5.1
   # Renovate security update: vite@8.0.16
   - vite@8.0.16
-  # Renovate security update: astro@6.4.6
-  - astro@6.4.6
+  # Renovate security update: astro@6.4.6 || 7.2.8
+  - astro@6.4.6 || 7.2.8
   # Renovate security update: http-proxy-middleware@3.0.7
   - http-proxy-middleware@3.0.7
   # Renovate security update: @babel/core@7.29.6
@@ -32,8 +32,8 @@ minimumReleaseAgeExclude:
   - "@nuxt/devtools@3.3.1"
   # Renovate security update: postcss@8.5.18
   - postcss@8.5.18
-  # Renovate security update: next@15.5.23
-  - next@15.5.23
+  # Renovate security update: next@15.5.23 || 15.5.24
+  - next@15.5.23 || 15.5.24
   - js-yaml@4.3.1
   - ip-address@10.2.2
   - undici@7.29.0
@@ -42,8 +42,8 @@ minimumReleaseAgeExclude:
   - hono@4.12.34
   - immutable@5.1.9
   - svgo@3.3.4
-  # Renovate security update: fast-uri@3.1.7
-  - fast-uri@3.1.5 || 3.1.7
+  # Renovate security update: fast-uri@3.1.7 || 4.1.5
+  - fast-uri@3.1.5 || 3.1.7 || 4.1.5
   - tar@7.5.22
   - webpack-dev-server@5.2.6
   # Renovate security update: @sveltejs/kit@2.70.2
@@ -52,13 +52,13 @@ minimumReleaseAgeExclude:
   - qs@6.16.0
 
 overrides:
-  "@angular/common@<19.2.16": ">=20.3.30"
-  "@angular/compiler@>=19.0.0-next.0 <19.2.20": ">=20.3.30"
-  "@angular/compiler@>=19.0.0-next.0 <19.2.18": ">=20.3.30"
-  "@angular/compiler@>=19.0.0-next.0 <19.2.17": ">=20.3.30"
+  "@angular/common@<19.2.16": ">=20.3.32"
+  "@angular/compiler@>=19.0.0-next.0 <19.2.20": ">=20.3.32"
+  "@angular/compiler@>=19.0.0-next.0 <19.2.18": ">=20.3.32"
+  "@angular/compiler@>=19.0.0-next.0 <19.2.17": ">=20.3.32"
   "@angular/core@>=19.0.0-next.0 <=19.2.18": ">=19.2.25"
-  "@angular/core@>=19.0.0-next.0 <19.2.20": ">=21.2.22"
-  "@angular/core@>=19.0.0-next.0 <19.2.18": ">=21.2.22"
+  "@angular/core@>=19.0.0-next.0 <19.2.20": ">=21.2.24"
+  "@angular/core@>=19.0.0-next.0 <19.2.18": ">=21.2.24"
   "@babel/plugin-transform-modules-systemjs@>=7.12.0 <=7.29.3": ">=7.29.8"
   "@babel/runtime@<7.26.10": ">=7.26.10"
   "@babel/traverse@<7.23.2": ">=7.25.9"
@@ -73,12 +73,12 @@ overrides:
   "astro@>=5.0.0-alpha.0 <5.13.2": ">=7.2.10"
   "astro@>=2.16.0 <5.15.5": ">=7.2.10"
   "astro@>=2.10.10 <5.18.1": ">=7.2.10"
-  "astro@<5.14.3": ">=7.1.6"
+  "astro@<5.14.3": ">=7.2.8"
   "astro@<5.15.8": ">=7.2.10"
   "astro@<5.15.9": ">=7.2.10"
   "astro@<6.1.10": ">=7.2.10"
   "astro@<6.1.6": ">=7.2.10"
-  "astro@<=5.15.6": ">=7.1.6"
+  "astro@<=5.15.6": ">=7.2.8"
   "body-parser@<1.20.3": ">=2.3.0"
   "brace-expansion@>=1.0.0 <=1.1.11": ">=5.0.9"
   "brace-expansion@<1.1.13": ">=5.0.9"
@@ -98,7 +98,7 @@ overrides:
   "esbuild@<=0.24.2": ">=0.28.1"
   "express@<4.20.0": ">=4.22.2"
   "fast-uri@<=3.1.0": ">=3.1.7"
-  "fast-uri@<=3.1.1": ">=3.1.5"
+  "fast-uri@<=3.1.1": ">=4.1.5"
   "flatted@<3.4.0": ">=3.4.4"
   "flatted@<=3.4.1": ">=3.4.4"
   "follow-redirects@<1.15.4": ">=1.16.0"
@@ -131,13 +131,13 @@ overrides:
   "nanoid@>=4.0.0 <5.0.9": ">=5.1.16"
   "nanoid@<3.3.8": ">=3.3.18"
   "next@>=9.5.0 <15.5.13": ">=16.3.0"
-  "next@>=15.1.1-canary.0 <15.1.12": ">=15.5.23"
+  "next@>=15.1.1-canary.0 <15.1.12": ">=15.5.24"
   "next@>=15.1.1-canary.0 <15.1.10": ">=15.5.23"
   "next@>=15.1.0-canary.0 <15.1.9": ">=15.5.23"
   "next@>=15.0.4-canary.51 <15.1.8": ">=15.5.23"
   "next@>=15.0.0-canary.0 <15.4.7": ">=15.5.23"
   "next@>=15.0.0 <=15.4.4": ">=16.3.0"
-  "next@>=15.0.0 <15.5.16": ">=15.5.23"
+  "next@>=15.0.0 <15.5.16": ">=15.5.24"
   "next@>=15.0.0 <15.2.3": ">=16.3.0"
   "next@>=15.0.0 <15.2.2": ">=16.3.0"
   "next@>=15.0.0 <15.1.6": ">=16.3.0"
@@ -146,7 +146,7 @@ overrides:
   "next@>=13.4.6 <15.5.16": ">=16.3.0"
   "next@>=13.4.13 <15.5.16": ">=16.3.0"
   "next@>=13.4.0 <15.5.16": ">=16.3.0"
-  "next@>=13.0.0 <15.5.16": ">=15.5.23"
+  "next@>=13.0.0 <15.5.16": ">=15.5.24"
   "next@>=13.0.0 <15.5.15": ">=15.5.23"
   "next@>=12.2.0 <15.5.16": ">=15.5.23"
   "next@>=10.0.0 <15.5.16": ">=15.5.23"
@@ -165,7 +165,7 @@ overrides:
   "path-to-regexp@<0.1.12": ">=0.2.5"
   "path-to-regexp@<0.1.13": ">=0.2.5"
   "picomatch@>=4.0.0 <4.0.4": ">=4.0.5"
-  "postcss@<8.5.10": ">=8.5.26"
+  "postcss@<8.5.10": ">=8.5.28"
   "pacote@<21.5.1": ">=21.5.1"
   "prismjs@<1.30.0": ">=1.30.0"
   "qs@>=6.7.0 <=6.14.1": ">=6.15.3"
@@ -247,10 +247,10 @@ overrides:
   "@hono/node-server@<2.0.5": ">=2.0.5"
   "svgo@>=4.0.0 <4.0.2": ">=4.0.2"
   "sharp@<0.35.0": ">=0.35.0"
-  "postcss@<=8.5.22": ">=8.5.26"
+  "postcss@<=8.5.22": ">=8.5.28"
   "@sveltejs/kit@<=2.70.1": ">=2.70.2"
-  "@angular/common@>=20.0.0-next.0 <20.3.27": ">=20.3.30"
-  "@angular/compiler@>=20.0.0-next.0 <20.3.27": ">=20.3.30"
+  "@angular/common@>=20.0.0-next.0 <20.3.27": ">=20.3.32"
+  "@angular/compiler@>=20.0.0-next.0 <20.3.27": ">=20.3.32"
   "undici@>=6.0.0 <6.28.0": ">=6.28.0"
   "ip-address@<=10.3.0": ">=10.3.1"
   "nanoid@<3.3.17": ">=3.3.18"
