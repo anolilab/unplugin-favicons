@@ -206,7 +206,7 @@
         "@rspack/cli": "^1.1.8",
         "esbuild": "*",
         "favicons": "^7.2.0",
-        "rollup": "^3.0.1",
+        "rollup": "^4.63.5",
         "vite": "^8.0.16",
         "webpack": "^4 || ^5"
     },
