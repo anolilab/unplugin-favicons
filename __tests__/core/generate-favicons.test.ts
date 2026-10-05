@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unused-modules
 import { join } from "node:path";
 
 import { favicons } from "favicons";
@@ -8,35 +7,39 @@ import generateFavicons from "../../src/core/generate/generate-favicons";
 
 const { mockedFavicons, mockedGetCacheResponse, mockedPutCacheResponse } = vi.hoisted(() => {
     return {
+        // The fixtures intentionally use partial shapes; typing these mocks to the
+        // real signatures would force a rewrite of the test data, not the behaviour.
+        // eslint-disable-next-line vitest/require-mock-type-parameters
         mockedFavicons: vi.fn(),
+        // eslint-disable-next-line vitest/require-mock-type-parameters
         mockedGetCacheResponse: vi.fn(),
+        // eslint-disable-next-line vitest/require-mock-type-parameters
         mockedPutCacheResponse: vi.fn(),
     };
 });
 
-vi.mock("favicons", () => {
+vi.mock(import("favicons"), () => {
     return {
         favicons: mockedFavicons,
     };
 });
 
-vi.mock("../../src/core/generate/put-cache-response", () => {
+vi.mock(import("../../src/core/generate/put-cache-response"), () => {
     return {
         default: mockedPutCacheResponse,
     };
 });
 
-vi.mock("../../src/core/generate/get-cache-response", () => {
+vi.mock(import("../../src/core/generate/get-cache-response"), () => {
     return {
         default: mockedGetCacheResponse,
     };
 });
 
-// eslint-disable-next-line unicorn/prefer-module
 const logoPath = join(__dirname, "..", "..", "__fixtures__", "assets", "logo.png");
-// eslint-disable-next-line unicorn/prefer-module
+
 const logo1Path = join(__dirname, "..", "..", "__fixtures__", "assets", "logo_1.png");
-// eslint-disable-next-line unicorn/prefer-module
+
 const logo2Path = join(__dirname, "..", "..", "__fixtures__", "assets", "logo_2.png");
 
 describe("generateFavicons", () => {
@@ -44,7 +47,7 @@ describe("generateFavicons", () => {
         expect.assertions(2);
 
         const options = { logo: logoPath };
-        const response = { files: [], html: [], images: [] };
+        const response = { files: [], html: [], htmlTags: [], images: [] };
 
         mockedFavicons.mockResolvedValue(response);
 
@@ -58,7 +61,8 @@ describe("generateFavicons", () => {
         expect.assertions(2);
 
         const options = { icons: { android: { source: logoPath } } };
-        const response = { files: [], html: [], images: [] };
+        const response = { files: [], html: [], htmlTags: [], images: [] };
+
         mockedFavicons.mockResolvedValue(response);
 
         const result = await generateFavicons(options);
@@ -71,7 +75,7 @@ describe("generateFavicons", () => {
         expect.assertions(1);
 
         const options = { cache: true, logo: logoPath };
-        const response = { files: [], html: [], images: [] };
+        const response = { files: [], html: [], htmlTags: [], images: [] };
 
         mockedFavicons.mockResolvedValue(response);
 
@@ -86,7 +90,7 @@ describe("generateFavicons", () => {
         expect.assertions(2);
 
         const options = { cache: true, logo: logoPath };
-        const cachedResponse = { files: [], html: [], images: [] };
+        const cachedResponse = { files: [], html: [], htmlTags: [], images: [] };
 
         mockedPutCacheResponse.mockResolvedValue(() => {});
         mockedGetCacheResponse.mockResolvedValue(cachedResponse);
@@ -125,6 +129,7 @@ describe("generateFavicons", () => {
         expect.assertions(1);
 
         const options = { logo: "invalid/path/to/logo.png" };
+
         mockedFavicons.mockRejectedValue(new Error("Invalid path"));
 
         await expect(generateFavicons(options)).rejects.toThrow("no such file or directory");

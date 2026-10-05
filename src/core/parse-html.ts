@@ -7,12 +7,11 @@ import findEmittedFile from "./utils/find-emitted-file";
 
 /**
  * Provided an array of EmittedFile objects and an array of HTML strings
- * returned by `favicons`, updates the href attributes in each <link> node to
+ * returned by `favicons`, updates the href attributes in each &lt;link> node to
  * contain the resolved file name produced by Vite rather than the original
  * input filename. Returns an array of HtmlTagDescriptor objects that may be
  * returned by `transformHtml`.
- *
- * See: https://vitejs.dev/guide/api-plugin.html#transformindexhtml
+ * @see https://vitejs.dev/guide/api-plugin.html#transformindexhtml
  */
 const parseHtml = (emittedFiles: EmittedFile[], fragments: string[], base = "/"): HtmlTagDescriptor[] =>
     fragments.flatMap((fragment) => {
@@ -41,7 +40,7 @@ const parseHtml = (emittedFiles: EmittedFile[], fragments: string[], base = "/")
                             attribute.value = `${base}${correspondingFile.resolvedName}`;
                         } else {
                             // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-                            throw new Error(`Unable to find a corresponding file for href: ${attribute.value}`);
+                            throw new Error(`Unable to find a corresponding file for href: ${String(attribute.value)}`);
                         }
                     }
 
@@ -54,9 +53,9 @@ const parseHtml = (emittedFiles: EmittedFile[], fragments: string[], base = "/")
                     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                     attrs: Object.fromEntries(mappedAttributes),
                     fragment: originalFragment,
-                    injectTo: "head",
+                    injectTo: "head" as const,
                     tag: childNode.nodeName,
-                } as HtmlTagDescriptor;
+                };
             })
             .filter(Boolean);
     });

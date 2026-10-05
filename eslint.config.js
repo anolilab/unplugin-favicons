@@ -19,5 +19,10 @@ export default createConfig({
         ".lintstagedrc.js",
         "README.md",
         ".github",
+        // Owned by other tools: reformatting these breaks pnpm's own parser,
+        // and audit-ci.jsonc is a list of GHSA advisory ids, not secrets.
+        "pnpm-workspace.yaml",
+        "codecov.yml",
+        "audit-ci.jsonc",
     ],
 });

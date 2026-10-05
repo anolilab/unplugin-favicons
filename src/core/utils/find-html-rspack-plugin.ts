@@ -6,6 +6,8 @@ const findHtmlRspackPlugin = (compilation: RspackCompilation): HtmlRspackPlugin 
         compiler: { options },
     } = compilation;
 
+    // `plugins` entries can be null/undefined at runtime, despite the type.
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     const Plugin = options.plugins.find((p) => p?.constructor?.name === "HtmlRspackPlugin")?.constructor;
 
     if (Plugin === undefined) {

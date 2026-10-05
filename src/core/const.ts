@@ -18,8 +18,8 @@ export const DEFAULT_ICON_OPTIONS = {
 };
 
 export const DEFAULT_FAVICONS_OPTIONS = {
-    appShortName: undefined, // Your application's short_name. `string`. Optional. If not set, appName will be used
     appleStatusBarStyle: "black-translucent", // Style for Apple status bar: "black-translucent", "default", "black". `string`
+    appShortName: undefined, // Your application's short_name. `string`. Optional. If not set, appName will be used
     background: "#fff", // Background colour for flattened icons. `string`
     dir: "auto", // Primary text direction for name, short_name, and description
     display: "standalone", // Preferred display mode: "fullscreen", "standalone", "minimal-ui" or "browser". `string`

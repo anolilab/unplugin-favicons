@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unused-modules
 import { describe, expect, it } from "vitest";
 
 import formatDuration from "../../../src/core/utils/format-duration";
