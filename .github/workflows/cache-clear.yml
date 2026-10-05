@@ -8,6 +8,6 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     cleanup-branch-cache:
-        uses: "anolilab/workflows/.github/workflows/cleanup-branch-cache.yml@7d86f5451bc5e671c0910428ee71e79ebadaf94e" # main
+        uses: "anolilab/workflows/.github/workflows/cleanup-branch-cache.yml@7d86f5451bc5e671c0910428ee71e79ebadaf94e" # v20.1.3
         with:
             target-repo: "anolilab/unplugin-favicons"

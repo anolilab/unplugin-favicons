@@ -11,9 +11,14 @@ on: # yamllint disable-line rule:truthy
             - "opened"
             - "closed"
 
+permissions:
+    contents: "read" # to read the repository
+    issues: "write" # for the shared workflow to comment on and label issues
+    pull-requests: "write" # for the shared workflow to comment on and label pull requests
+
 jobs:
     allo-allo:
-        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@7d86f5451bc5e671c0910428ee71e79ebadaf94e" # main
+        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@7d86f5451bc5e671c0910428ee71e79ebadaf94e" # v20.1.3
         with:
             target-repo: "anolilab/unplugin-favicons"
             issue-welcome: >
