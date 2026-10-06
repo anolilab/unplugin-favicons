@@ -136,7 +136,7 @@ overrides:
   "minimatch@<3.1.4": ">=3.1.5"
   "nanoid@>=4.0.0 <5.0.9": ">=5.1.16"
   "nanoid@<3.3.8": ">=3.3.19"
-  "next@>=9.5.0 <15.5.13": ">=16.3.6"
+  "next@>=9.5.0 <15.5.13": ">=16.3.8"
   # GHSA-vcvr-r3jv-pc5j (critical), vulnerable >=16.2.0 <16.3.6. The selectors
   # below that floor at >=16.3.0 land inside that window.
   "next@>=16.0.0 <16.3.6": ">=16.3.8"
