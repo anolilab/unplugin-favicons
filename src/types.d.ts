@@ -26,19 +26,21 @@ type FaviconsIconsOptions = {
 interface BaseFaviconsPluginOptions {
     /**
      * Whether to cache generated assets for faster subsequent builds.
-     *
      * @default `true`
      */
     cache?: boolean;
+
     /**
      * Inject html links/metadata -- set to `false` to generate a webapp.html` file.
      * @default true
      */
     inject?: boolean;
+
     /**
      * Output Path for the favicon images & files, relative to the Vite assets directory
      */
     outputPath?: string;
+
     /**
      * The root of the project from which you want to load metadata
      * @default process.cwd()
@@ -51,9 +53,10 @@ type FaviconsConfig = Partial<FaviconOptions>;
 export interface FaviconsLogoPluginOptions extends BaseFaviconsPluginOptions {
     /**
      * `Favicons` configuration options
-     *  - [See `favicons` documentation](https://github.com/itgalaxy/favicons)
+     * - [See `favicons` documentation](https://github.com/itgalaxy/favicons)
      */
     favicons?: FaviconsConfig;
+
     /**
      * Your source logo (Will default to )
      * @default "assets/logo.png"
@@ -64,9 +67,10 @@ export interface FaviconsLogoPluginOptions extends BaseFaviconsPluginOptions {
 export interface FaviconsIconsPluginOptions extends BaseFaviconsPluginOptions, ReadonlyDeep<FaviconOptions> {
     /**
      * `Favicons` configuration options
-     *  - [See `favicons` documentation](https://github.com/itgalaxy/favicons)
+     * - [See `favicons` documentation](https://github.com/itgalaxy/favicons)
      */
     favicons?: Omit<FaviconsConfig, "icons">;
+
     /**
      * Options for rendering supported icon types. Keys should be supported icon
      * types from `favicons` and values should be an object containing a `source`
@@ -77,7 +81,7 @@ export interface FaviconsIconsPluginOptions extends BaseFaviconsPluginOptions, R
 
 export interface JobConfig {
     config: FaviconOptions["icons"][this["iconType"]];
-    iconType: keyof FaviconOptions["icons"] | "logo";
+    iconType: keyof NonNullable<FaviconOptions["icons"]> | "logo";
     source: string;
 }
 
@@ -129,6 +133,7 @@ export interface HtmlTagDescriptor {
     attrs?: Record<string, boolean | string | undefined>;
     children?: HtmlTagDescriptor[] | string;
     fragment: string;
+
     /**
      * default: 'head-prepend'
      */

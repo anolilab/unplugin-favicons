@@ -1,13 +1,13 @@
-// eslint-disable-next-line import/no-unused-modules
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import Oracle from "../../../src/core/utils/oracle"; // You'll need a mocking library to mock the imports
 
 const { findPackageJsonSync } = vi.hoisted(() => {
+    // eslint-disable-next-line vitest/require-mock-type-parameters
     return { findPackageJsonSync: vi.fn() };
 });
 
-vi.mock("@visulima/package", async (importOriginal) => {
+vi.mock(import("@visulima/package"), async (importOriginal) => {
     // eslint-disable-next-line @typescript-eslint/naming-convention,no-underscore-dangle,@typescript-eslint/no-explicit-any,@typescript-eslint/no-unsafe-assignment
     const module_ = (await importOriginal()) as any;
 

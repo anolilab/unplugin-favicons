@@ -13,14 +13,15 @@ import getCacheResponse from "./get-cache-response";
 import putCacheResponse from "./put-cache-response";
 
 /**
- * @private
- *
  * Provided a `FaviconsPluginOptions` object, returns an array of
  * [source, FaviconOptions] tuples, each representing a distinct `favicons` job
  * to run.
  */
 const mapOptionsToJobs = (options: FaviconsIconsPluginOptions): JobConfig[] => {
-    const { icons: notUsed, ...others } = (options.favicons ?? {}) as FaviconOptions;
+    const others = { ...options.favicons } as Partial<FaviconOptions>;
+
+    // `icons` is supplied per job below, so drop any inherited value.
+    Reflect.deleteProperty(others, "icons");
 
     // eslint-disable-next-line unicorn/no-array-reduce
     return Object.entries(options.icons).reduce<JobConfig[]>((jobs, [iconType, sourceAndIconOptions]) => {
@@ -37,8 +38,6 @@ const mapOptionsToJobs = (options: FaviconsIconsPluginOptions): JobConfig[] => {
 };
 
 /**
- * @private
- *
  * Provided an array of `FaviconResponse` objects from each job, merges them
  * into a single `FaviconResponse` object.
  */
@@ -58,11 +57,22 @@ const reduceResponses = (responses: FaviconResponse[]) =>
                 response.html.push(html);
             });
 
+            // Responses restored from cache predate `htmlTags` (favicons 7.3),
+            // so the runtime shape can lag behind the type.
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+            currentResponse.htmlTags?.forEach((htmlTag) => {
+                response.htmlTags.push(htmlTag);
+            });
+
             return response;
         },
         {
             files: [],
             html: [],
+            // `htmlTags` was added in favicons 7.3. Responses restored from cache
+            // (or produced by older versions) may not carry it, so it is optional
+            // here. HTML injection is built from `html`, not `htmlTags`.
+            htmlTags: [],
             images: [],
         },
     );
@@ -76,6 +86,9 @@ const generateFavicons = async (options: FaviconsIconsPluginOptions | FaviconsLo
     // incoming configuration into a list of jobs we will need to run.
     const jobConfigs: JobConfig[] = [];
 
+    // The two option shapes are not a discriminated union, so `icons` is
+    // present on the type but absent at runtime for logo-only options.
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if ((options as FaviconsIconsPluginOptions).icons && !(options as FaviconsLogoPluginOptions).logo) {
         jobConfigs.push(...mapOptionsToJobs(options as FaviconsIconsPluginOptions));
     } else {
@@ -128,7 +141,6 @@ const generateFavicons = async (options: FaviconsIconsPluginOptions | FaviconsLo
     });
 
     // Merge each response into a single `FaviconsResponse`.
-    // eslint-disable-next-line compat/compat
     return reduceResponses(await Promise.all(jobs));
 };
 

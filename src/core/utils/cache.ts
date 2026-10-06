@@ -59,7 +59,7 @@ export const get = async (key: SsriData, { logLabel }: CacheOptions): Promise<Bu
             if (String(error?.message).includes("No cache entry")) {
                 consola.debug(`${fullLogLabel} ${colorize("yellow", "Cache miss.")}`);
             } else {
-                consola.error(`${fullLogLabel} ${error}`);
+                consola.error(`${fullLogLabel} ${String(error)}`);
             }
         }
 

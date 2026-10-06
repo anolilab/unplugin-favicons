@@ -11,28 +11,28 @@ export default class Oracle {
         try {
             const readPackage = findPackageJsonSync(startingPath);
 
-            this.packageJson = readPackage?.packageJson;
+            this.packageJson = readPackage.packageJson;
         } catch {
             /* empty */
         }
     }
 
     /**
-     * Tries to guess the name from package.json
+     * Tries to guess the name from package.json.
      */
     public guessAppName(): StringOrUndefined {
         return this.packageJson?.name;
     }
 
     /**
-     * Tries to guess the description from package.json
+     * Tries to guess the description from package.json.
      */
     public guessDescription(): StringOrUndefined {
         return this.packageJson?.description;
     }
 
     /**
-     * Tries to guess the developer {name, email, url} from package.json
+     * Tries to guess the developer {name, email, url} from package.json.
      */
     public guessDeveloper(): { email?: StringOrUndefined; name?: StringOrUndefined; url?: StringOrUndefined } {
         if (this.packageJson?.author !== undefined) {
@@ -40,11 +40,13 @@ export default class Oracle {
                 return parseAuthor(this.packageJson.author);
             }
 
+            // Parsed package.json can contain an explicit null despite the type.
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, sonarjs/different-types-comparison
             if (typeof this.packageJson.author === "object" && this.packageJson.author !== null) {
                 return {
-                    email: this.packageJson.author?.email,
+                    email: this.packageJson.author.email,
                     name: this.packageJson.author.name,
-                    url: this.packageJson.author?.url,
+                    url: this.packageJson.author.url,
                 };
             }
         }
@@ -56,11 +58,13 @@ export default class Oracle {
                 return parseAuthor(maintainer);
             }
 
+            // Parsed package.json can contain an explicit null despite the type.
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, sonarjs/different-types-comparison
             if (typeof maintainer === "object" && maintainer !== null) {
                 return {
-                    email: maintainer?.email,
+                    email: maintainer.email,
                     name: maintainer.name,
-                    url: maintainer?.url,
+                    url: maintainer.url,
                 };
             }
         }
@@ -73,7 +77,7 @@ export default class Oracle {
     }
 
     /**
-     * Tries to guess the version from package.json
+     * Tries to guess the version from package.json.
      */
     public guessVersion(): StringOrUndefined {
         return this.packageJson?.version;

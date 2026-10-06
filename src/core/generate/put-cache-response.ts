@@ -5,8 +5,6 @@ import { put as cachePut } from "../utils/cache";
 import consola from "../utils/consola";
 
 /**
- * @private
- *
  * Caches the provided `FaviconResponse` using the provided cache key.
  *
  * Note: Because `cacache` only allows for the serialization of strings and
@@ -22,7 +20,6 @@ const putCacheResponse = async (cacheKey: string, response: FaviconResponse, lab
 
     // Write images to cache as individual entities and add all other metadata to
     // the new response.
-    // eslint-disable-next-line compat/compat
     const imagesPromise = Promise.all(
         response.images.map(async (image) => {
             const { contents, ...meta } = image;
@@ -38,7 +35,6 @@ const putCacheResponse = async (cacheKey: string, response: FaviconResponse, lab
 
     // Write files to cache as individual entities and add all other metadata to
     // the new response.
-    // eslint-disable-next-line compat/compat
     const filesPromise = Promise.all(
         response.files.map(async (file) => {
             const { contents, ...meta } = file;
@@ -61,7 +57,6 @@ const putCacheResponse = async (cacheKey: string, response: FaviconResponse, lab
     const serializedResponse = JSON.stringify(serializableResponse);
     const responsePromise = cachePut(cacheKey, serializedResponse, { logLabel: label ?? "" });
 
-    // eslint-disable-next-line compat/compat
     await Promise.all([filesPromise, imagesPromise, responsePromise]);
 };
 

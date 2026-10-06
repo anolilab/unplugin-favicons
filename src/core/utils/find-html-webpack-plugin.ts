@@ -6,14 +6,17 @@ import type { Compilation as WebpackCompilation } from "webpack";
 
 const require = Module.createRequire(import.meta.url);
 
-/** Return the currently used html-webpack-plugin location */
+const INCOMPATIBLE_VERSION_MESSAGE = `This @anolilab/unplugin-favicons version is not compatible with your current HtmlWebpackPlugin version.
+Please upgrade to HtmlWebpackPlugin >= 5`;
+
+/** Return the currently used html-webpack-plugin location. */
 const getHtmlWebpackPluginVersion = (): string => {
     try {
         const location = require.resolve("html-webpack-plugin/package.json");
-        // eslint-disable-next-line import/no-dynamic-require,@typescript-eslint/no-unsafe-assignment,security/detect-non-literal-require
+        // eslint-disable-next-line import/no-dynamic-require,@typescript-eslint/no-unsafe-assignment
         const { version } = require(location);
 
-        return `found html-webpack-plugin ${version} at ${location}`;
+        return `found html-webpack-plugin ${String(version)} at ${location}`;
     } catch {
         return "html-webpack-plugin not found";
     }
@@ -22,6 +25,8 @@ const getHtmlWebpackPluginVersion = (): string => {
 const findHtmlWebpackPlugin = (compilation: RspackCompilation | WebpackCompilation): HtmlWebpackPlugin | undefined => {
     const { compiler } = compilation;
 
+    // `plugins` entries can be null/undefined at runtime, despite the type.
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     const Plugin = compiler.options.plugins.find((p) => p?.constructor?.name === "HtmlWebpackPlugin")?.constructor;
 
     if (Plugin === undefined) {
@@ -32,16 +37,7 @@ const findHtmlWebpackPlugin = (compilation: RspackCompilation | WebpackCompilati
         return Plugin as unknown as HtmlWebpackPlugin;
     }
 
-    compilation.errors.push(
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        new compiler.webpack.WebpackError(
-            `${
-                "This @anolilab/unplugin-favicons version is not compatible with your current HtmlWebpackPlugin version.\n" +
-                "Please upgrade to HtmlWebpackPlugin >= 5\n"
-            }${getHtmlWebpackPluginVersion()}`,
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ) as any,
-    );
+    compilation.errors.push(new compiler.webpack.WebpackError(`${INCOMPATIBLE_VERSION_MESSAGE}\n${getHtmlWebpackPluginVersion()}`));
 
     return undefined;
 };
