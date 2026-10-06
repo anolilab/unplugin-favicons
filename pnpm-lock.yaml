@@ -226,7 +226,7 @@ importers:
   .:
     dependencies:
       '@rspack/cli':
-        specifier: ^1.1.8
+        specifier: ^1.7.12
         version: 1.7.12(@rspack/core@2.2.8(@swc/helpers@0.5.23))(webpack@5.110.3(cssnano@8.0.10(postcss@8.5.28))(esbuild@0.28.2)(lightningcss@1.33.0)(postcss@8.5.28))
       '@visulima/find-cache-dir':
         specifier: ^2.0.7
