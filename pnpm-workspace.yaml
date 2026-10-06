@@ -50,6 +50,8 @@ minimumReleaseAgeExclude:
   - "@sveltejs/kit@2.70.2"
   # Renovate security update: qs@6.16.0
   - qs@6.16.0
+  # Renovate security update: simple-git@4.0.1
+  - simple-git@4.0.1
 
 overrides:
   "@angular/common@<19.2.16": ">=20.3.33"
@@ -186,7 +188,7 @@ overrides:
   "serialize-javascript@>=5.0.0 <7.0.5": ">=7.0.7"
   "serialize-javascript@<=7.0.2": ">=7.0.7"
   "serve-static@<1.16.0": ">=1.16.3"
-  "simple-git@>=3.15.0 <3.32.3": ">=3.36.0"
+  "simple-git@>=3.15.0 <3.32.3": ">=4.0.1"
   "simple-git@<3.32.0": ">=3.36.0"
   "simple-git@<3.36.0": ">=3.36.0"
   "svelte@<=5.51.4": ">=5.55.10"
