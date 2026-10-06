@@ -275,6 +275,12 @@ overrides:
   "serialize-javascript@>=6.0.2 <7.1.2": ">=7.1.2"
   "nanoid@<3.3.17": ">=3.3.19"
 
+  "@simple-git/argv-parser@<2.0.1": ">=2.0.1"
+  compression@<1.8.2: ">=1.8.2"
+  proxy-addr@>=1.1.0 <2.0.8: ">=2.0.8"
+  simple-git@>=3.0.0 <4.0.1: ">=4.0.1"
+  smol-toml@<=1.8.0: ">=1.8.1"
+  source-map-js@<1.2.2: ">=1.2.2"
 auditConfig:
   ignoreGhsas:
     - GHSA-w3rx-r6r6-pgpr
@@ -287,3 +293,5 @@ auditConfig:
     # 1.4.0 is the latest published version. Only reached through Nuxt's build-time nitro
     # chain, never in the shipped plugin output.
     - GHSA-86w9-cpqp-85rv
+    # katex fix is 0.18.2 but micromark-extension-math (dev-only eslint markdown) needs ^0.16.0.
+    - GHSA-238p-pmpm-9mq7
