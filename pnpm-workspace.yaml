@@ -281,6 +281,8 @@ overrides:
   simple-git@>=3.0.0 <4.0.1: ">=4.0.2"
   smol-toml@<=1.8.0: ">=1.8.1"
   source-map-js@<1.2.2: ">=1.2.2"
+  shell-quote@>=1.8.4 <1.11.0: ">=1.11.0"
+  sharp@<0.35.5: ">=0.35.5"
 auditConfig:
   ignoreGhsas:
     - GHSA-w3rx-r6r6-pgpr
