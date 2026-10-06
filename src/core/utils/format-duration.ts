@@ -17,10 +17,10 @@ const formatDuration = (ms: number): string => {
         .filter((value) => value[1] !== 0)
         .map((value) => {
             if (value[0] === "ms") {
-                return `${value[1]} ${value[0]}`;
+                return `${String(value[1])} ${value[0]}`;
             }
 
-            return `${value[1]} ${value[1] === 1 ? value[0] : `${value[0]}s`}`;
+            return `${String(value[1])} ${value[1] === 1 ? value[0] : `${value[0]}s`}`;
         })
         .join(", ");
 };

@@ -3,10 +3,10 @@
     "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node18/tsconfig", "@tsconfig/esm/tsconfig"],
     "display": "Node 18",
     "compilerOptions": {
-        "isolatedModules": true,
-        "noUnusedParameters": false,
+        "types": ["vite/client", "node"],
         "exactOptionalPropertyTypes": false,
-        "types": ["vite/client", "node"]
+        "noUnusedParameters": false,
+        "isolatedModules": true
     },
     "include": ["src/**/*", "__tests__/**/*", "packem.config.ts"],
     "exclude": ["**/dist", "**/node_modules", "examples/**"]
