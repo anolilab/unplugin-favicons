@@ -54,16 +54,16 @@ minimumReleaseAgeExclude:
   - simple-git@4.0.1
 
 overrides:
-  "@angular/common@<19.2.16": ">=20.3.33"
-  "@angular/compiler@>=19.0.0-next.0 <19.2.20": ">=20.3.33"
-  "@angular/compiler@>=19.0.0-next.0 <19.2.18": ">=20.3.33"
-  "@angular/compiler@>=19.0.0-next.0 <19.2.17": ">=20.3.33"
-  "@angular/core@>=19.0.0-next.0 <=19.2.18": ">=19.2.25"
+  "@angular/common@<19.2.16": ">=22.2.1"
+  "@angular/compiler@>=19.0.0-next.0 <19.2.20": ">=22.2.1"
+  "@angular/compiler@>=19.0.0-next.0 <19.2.18": ">=22.2.1"
+  "@angular/compiler@>=19.0.0-next.0 <19.2.17": ">=22.2.1"
+  "@angular/core@>=19.0.0-next.0 <=19.2.18": ">=22.2.1"
   # GHSA-ff3f-86qr-9cv3 affects @angular/router <=19.2.25, and 19.2.25 is the last
   # 19.x release, so router has to move to the major @angular/core resolves to.
   "@angular/router@<=19.2.25": ">=22.2.1"
-  "@angular/core@>=19.0.0-next.0 <19.2.20": ">=21.2.25"
-  "@angular/core@>=19.0.0-next.0 <19.2.18": ">=21.2.25"
+  "@angular/core@>=19.0.0-next.0 <19.2.20": ">=22.2.1"
+  "@angular/core@>=19.0.0-next.0 <19.2.18": ">=22.2.1"
   "@babel/plugin-transform-modules-systemjs@>=7.12.0 <=7.29.3": ">=7.29.8"
   "@babel/runtime@<7.26.10": ">=7.29.7"
   "@babel/traverse@<7.23.2": ">=7.29.8"
@@ -261,8 +261,8 @@ overrides:
   "sharp@<0.35.0": ">=0.35.5"
   "postcss@<=8.5.22": ">=8.5.28"
   "@sveltejs/kit@<=2.70.1": ">=2.70.3"
-  "@angular/common@>=20.0.0-next.0 <20.3.27": ">=20.3.33"
-  "@angular/compiler@>=20.0.0-next.0 <20.3.27": ">=20.3.33"
+  "@angular/common@>=20.0.0-next.0 <20.3.27": ">=22.2.1"
+  "@angular/compiler@>=20.0.0-next.0 <20.3.27": ">=22.2.1"
   "undici@>=6.0.0 <6.28.0": ">=6.28.1"
   "ip-address@<=10.3.0": ">=10.3.1"
   # GHSA-h3mg-xc3c-68pw, GHSA-j6r3-76f7-8jcv: vulnerable <=10.7.0.
