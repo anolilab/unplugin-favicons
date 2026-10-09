@@ -23,12 +23,12 @@ jobs:
 
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
+              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
               with:
                   egress-policy: "audit"
 
             - name: "Wait for tests to succeed"
-              uses: "lewagon/wait-on-check-action@96d9100b431964d10e0136aff8b9ccb92470505e" # v1.8.0
+              uses: "lewagon/wait-on-check-action@369769072fe522a3a8a85c03c96af1e5242a1994" # v1.9.1
               timeout-minutes: 20
               with:
                   ref: "${{ github.event.pull_request.head.sha || github.sha }}"
@@ -38,7 +38,7 @@ jobs:
                   allowed-conclusions: "success,neutral,skipped" # all other checks must pass, being skipped or cancelled is not sufficient
 
             - name: "Git checkout"
-              uses: "actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10" # v6.0.3
+              uses: "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803" # v6.1.0
               with:
                   fetch-depth: 0
                   persist-credentials: false
@@ -49,7 +49,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/setup@7d86f5451bc5e671c0910428ee71e79ebadaf94e" # v20.1.3
+              uses: "anolilab/workflows/step/setup@1641a17797e6e1dc3eaf9b462c3c0dae91ab071d" # v20.2.12
               with:
                   node-version: "22.x"
                   cache-prefix: "semantic-release"
@@ -85,12 +85,12 @@ jobs:
 
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
+              uses: "step-security/harden-runner@351661ca32ac09a36dc5ee2d536e3128f2a3c8ed" # v2.22.0
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10" # v6.0.3
+              uses: "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803" # v6.1.0
               with:
                   fetch-depth: 0
                   persist-credentials: false
@@ -101,7 +101,7 @@ jobs:
 
             - name: "Setup resources and environment"
               id: "setup"
-              uses: "anolilab/workflows/step/setup@7d86f5451bc5e671c0910428ee71e79ebadaf94e" # v20.1.3
+              uses: "anolilab/workflows/step/setup@1641a17797e6e1dc3eaf9b462c3c0dae91ab071d" # v20.2.12
               with:
                   node-version: "22.x"
                   cache-prefix: "semantic-release"
