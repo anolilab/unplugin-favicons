@@ -196,7 +196,7 @@
         "textlint": "^15.8.0",
         "type-fest": "^5.10.0",
         "typescript": "^6.0.3",
-        "vite": "^8.0.16",
+        "vite": "^8.3.3",
         "vitest": "^4.1.11",
         "webpack": "^5.107.2"
     },
@@ -207,7 +207,7 @@
         "esbuild": "*",
         "favicons": "^7.2.0",
         "rollup": "^3.0.1",
-        "vite": "^8.0.16",
+        "vite": "^8.3.3",
         "webpack": "^4 || ^5"
     },
     "peerDependenciesMeta": {
