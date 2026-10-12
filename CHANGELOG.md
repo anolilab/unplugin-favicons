@@ -1,3 +1,113 @@
+## [5.0.0](https://github.com/anolilab/unplugin-favicons/compare/v4.0.1...v5.0.0) (2026-10-12)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+* **deps:** updated dependencies to major versions
+* **deps:** updated dependencies to major versions
+
+* fix(deps): update dependency simple-git@<3.36.0 to v4 [security]
+* **deps:** updated dependencies to major versions
+
+* fix(deps): update dependency simple-git@>=3.15.0 <3.32.3 to v4 [security]
+* **deps:** updated dependencies to major versions
+
+* fix(deps): update angular monorepo to >=20.3.33
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update dependency next@>=9.5.0 <15.5.13 to >=16.3.8
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update secretlint monorepo to ^13.0.7
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update unhead monorepo to >=2.1.17
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update astro monorepo to >=7.3.5
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update babel monorepo
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): combine open Renovate updates
+
+Combines the open Renovate PRs (babel/astro/unhead monorepos, simple-git v4
+security x3, next security, nextjs/angular monorepos, secretlint, patch updates)
+and restores the audit gate: overrides for @simple-git/argv-parser, simple-git,
+compression, proxy-addr, smol-toml, source-map-js; ignore katex (no compatible
+fix). pnpm audit --audit-level=moderate exits 0; tests pass.
+* **deps:** updated dependencies to major versions
+
+* fix(deps): update dependency fast-uri@<=3.1.1 to v4 [security]
+* **deps:** updated dependencies to major versions
+
+* fix(deps): update dependency @rspack/core to ^2.2.8
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update dependency eslint-plugin-mdx to ^3.8.1
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update dependency rollup to ^4.63.5
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update eslint
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* chore(deps): consolidate dependency updates across the workspace
+
+Raise every manifest entry to the highest version requested by the pending
+update branches, then re-resolve the lockfile so it satisfies the pinned
+release-age and trust policy.
+
+### Bug Fixes
+
+* **ci:** repin zizmor, stop persisting the token, scope allo-allo permissions ([#523](https://github.com/anolilab/unplugin-favicons/issues/523)) ([68fb2c5](https://github.com/anolilab/unplugin-favicons/commit/68fb2c5004f816d83d0b9915f46f7518f98aab4b))
+* **deps:** clear moderate pnpm audit findings ([#524](https://github.com/anolilab/unplugin-favicons/issues/524)) ([1941ac1](https://github.com/anolilab/unplugin-favicons/commit/1941ac1bf6d70079d2a235fe6cc61277df80aecc))
+* **deps:** combine open Renovate updates ([#546](https://github.com/anolilab/unplugin-favicons/issues/546)) ([a6f879f](https://github.com/anolilab/unplugin-favicons/commit/a6f879f2a2fcb0471acf52cb812130d6fd5a63f2))
+* **deps:** combine open Renovate updates ([#551](https://github.com/anolilab/unplugin-favicons/issues/551)) ([32e1bcc](https://github.com/anolilab/unplugin-favicons/commit/32e1bccd0df1b05bb6674ed93b4bce63710b01f8))
+* **deps:** update dependency @types/node to v25.9.9 ([5d45598](https://github.com/anolilab/unplugin-favicons/commit/5d4559897e3816c789dde18e2c7bf8b43502f2dd))
+* **deps:** update dependency lodash@>=4.0.0 <=4.17.22 to >=4.18.1 ([3ff1f49](https://github.com/anolilab/unplugin-favicons/commit/3ff1f49cadae3b68fb646efac4e3b3b4db654ebe))
+* **deps:** update github-actions ([6cda071](https://github.com/anolilab/unplugin-favicons/commit/6cda0712e80a194302e4116bc1382f50a2c06d8f))
+* **deps:** update nuxtjs monorepo ([33dcd5f](https://github.com/anolilab/unplugin-favicons/commit/33dcd5fc1e3e63f0c68da74be11b5caf95aa7c66))
+* **deps:** update patch updates ([08fbb16](https://github.com/anolilab/unplugin-favicons/commit/08fbb16db9be019b567a6323aa93b083bdd71927))
+* **deps:** update rollup ([c77c5d4](https://github.com/anolilab/unplugin-favicons/commit/c77c5d40f925a2a7675ad2a02daa106a755926fc))
+* **deps:** update vite to ^8.3.3 ([2e8ca11](https://github.com/anolilab/unplugin-favicons/commit/2e8ca11704b70553a61d3db6e7d5874460a54947))
+* **lint:** resolve pre-existing eslint and type errors ([#539](https://github.com/anolilab/unplugin-favicons/issues/539)) ([eb61cbc](https://github.com/anolilab/unplugin-favicons/commit/eb61cbcea8eab1b273adce3e3345c17150b4c720))
+
+### Miscellaneous Chores
+
+* **deps:** combine open Renovate dependency updates ([#538](https://github.com/anolilab/unplugin-favicons/issues/538)) ([6bb2efb](https://github.com/anolilab/unplugin-favicons/commit/6bb2efbd09b346be3d4aa5a84df6b1fbdc8cb22f))
+* **deps:** combine open Renovate updates into renovate/combined ([1340adc](https://github.com/anolilab/unplugin-favicons/commit/1340adcf18d849ac5b5966a41deca0a9ac218d09))
+* **deps:** consolidate pending dependency updates ([#479](https://github.com/anolilab/unplugin-favicons/issues/479)) ([96c626d](https://github.com/anolilab/unplugin-favicons/commit/96c626d44de1d8bd5ddf462e27191d0472d872c9))
+* **deps:** fix handlebars audit vulnerability ([8610ec9](https://github.com/anolilab/unplugin-favicons/commit/8610ec937526811c20c17408726f279c773392ba))
+* **deps:** merge renovate branch github-actions ([a9496be](https://github.com/anolilab/unplugin-favicons/commit/a9496be41d7e5b30937c5737c21c2563f29233af))
+* **deps:** merge renovate branch lodash-monorepo ([642f0eb](https://github.com/anolilab/unplugin-favicons/commit/642f0ebda5f51b18c7e7cc6da48fb00b8a750db0))
+* **deps:** merge renovate branch major-21-angular-monorepo ([50c34ad](https://github.com/anolilab/unplugin-favicons/commit/50c34ad7f2caeebe413b1425543e5221d8b90793))
+* **deps:** merge renovate branch major-22-angular-monorepo ([07856cc](https://github.com/anolilab/unplugin-favicons/commit/07856cc456e3479eb00c66c54f18df4bebd8c049))
+* **deps:** merge renovate branch nuxtjs-monorepo ([3e48523](https://github.com/anolilab/unplugin-favicons/commit/3e485232833f1f8056fdd99b0a551305be0e4ae7))
+* **deps:** merge renovate branch patch-patch-updates ([52d3fba](https://github.com/anolilab/unplugin-favicons/commit/52d3fba57b70003a37bd105d200349087879cdee))
+* **deps:** merge renovate branch patch-types ([daac487](https://github.com/anolilab/unplugin-favicons/commit/daac48763d58dee4c2bd324f6718d66c594949e6))
+* **deps:** merge renovate branch rollup ([c18d1b5](https://github.com/anolilab/unplugin-favicons/commit/c18d1b54d4d060c8e352f663ffc23147a03d9f3b))
+* **deps:** merge renovate branch vite ([f26488e](https://github.com/anolilab/unplugin-favicons/commit/f26488e7c4f0155289c31b0f0d609ce38add60e4))
+* **deps:** sync lockfile overrides with workspace ([3544421](https://github.com/anolilab/unplugin-favicons/commit/35444212dd7e5b8df8e96330e07e9df94628c259))
+* **deps:** update angular monorepo to v21 ([4d353b7](https://github.com/anolilab/unplugin-favicons/commit/4d353b70d24476074947f669f26715b5a6641691))
+* **deps:** update angular monorepo to v22 ([83ec324](https://github.com/anolilab/unplugin-favicons/commit/83ec32463ac14151374bc081d78057ae3932188f))
+
+### Continuous Integration
+
+* label pull requests by author trust and size ([#563](https://github.com/anolilab/unplugin-favicons/issues/563)) ([28b1f41](https://github.com/anolilab/unplugin-favicons/commit/28b1f41889f81902229ff1c0974636d8c1f9dcfc))
+
 ## [4.0.1](https://github.com/anolilab/unplugin-favicons/compare/v4.0.0...v4.0.1) (2026-09-07)
 
 ### Bug Fixes
