@@ -136,11 +136,11 @@
         "unplugin": "^3.4.0"
     },
     "devDependencies": {
-        "@anolilab/commitlint-config": "^10.1.3",
+        "@anolilab/commitlint-config": "^10.1.5",
         "@anolilab/eslint-config": "^27.0.10",
         "@anolilab/lint-staged-config": "^11.1.3",
         "@anolilab/prettier-config": "^10.0.3",
-        "@anolilab/semantic-release-preset": "^13.4.32",
+        "@anolilab/semantic-release-preset": "^13.4.34",
         "@anolilab/textlint-config": "^13.0.6",
         "@babel/core": "^7.29.7",
         "@babel/eslint-parser": "7.29.9",
@@ -164,7 +164,7 @@
         "@visulima/packem": "^1.28.3",
         "@vitest/coverage-v8": "^4.1.10",
         "audit-ci": "^7.1.0",
-        "caniuse-lite": "^1.0.30001814",
+        "caniuse-lite": "^1.0.30001815",
         "commitizen": "^4.3.2",
         "commitlint": "^21.0.2",
         "conventional-changelog-conventionalcommits": "9.3.1",
