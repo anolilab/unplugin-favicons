@@ -1,3 +1,9 @@
+## [5.0.1](https://github.com/anolilab/unplugin-favicons/compare/v5.0.0...v5.0.1) (2026-10-13)
+
+### Bug Fixes
+
+* **deps:** update minor updates ([8b320d5](https://github.com/anolilab/unplugin-favicons/commit/8b320d59a567a882f0c2f12d5de053b660a04ae9))
+
 ## [5.0.0](https://github.com/anolilab/unplugin-favicons/compare/v4.0.1...v5.0.0) (2026-10-12)
 
 ### ⚠ BREAKING CHANGES
