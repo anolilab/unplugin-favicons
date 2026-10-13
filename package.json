@@ -201,8 +201,8 @@
         "webpack": "^5.111.1"
     },
     "peerDependencies": {
-        "@nuxt/kit": "^3",
-        "@nuxt/schema": "^3",
+        "@nuxt/kit": "^3.21.11",
+        "@nuxt/schema": "^3.21.11",
         "@rspack/cli": "^1.7.12",
         "esbuild": "*",
         "favicons": "^7.3.1",
