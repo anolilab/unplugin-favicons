@@ -1,3 +1,31 @@
+## [5.0.2](https://github.com/anolilab/unplugin-favicons/compare/v5.0.1...v5.0.2) (2026-10-13)
+
+### Bug Fixes
+
+* **deps:** update astro monorepo to >=7.3.8 ([d816e78](https://github.com/anolilab/unplugin-favicons/commit/d816e7871f25428892481312de56faf6bb32100e))
+* **deps:** update babel monorepo to >=7.29.10 ([19125eb](https://github.com/anolilab/unplugin-favicons/commit/19125ebd7c99c1d87838565a0c497f61d2ab0d33))
+* **deps:** update dependency @angular/router@<=19.2.25 to >=22.2.2 ([898f0e4](https://github.com/anolilab/unplugin-favicons/commit/898f0e4a561dfe4f66792c3d893f22eaae21d7ca))
+* **deps:** update dependency lodash@>=4.0.0 <=4.17.22 to >=4.18.1 ([b23f65e](https://github.com/anolilab/unplugin-favicons/commit/b23f65ea928be1447c0529f04a692fc59de5c4d3))
+* **deps:** update dependency prettier to ^3.9.10 ([448e026](https://github.com/anolilab/unplugin-favicons/commit/448e026c77e7f0cd2eb5dd5404a748588faf8191))
+* **deps:** update nextjs monorepo to >=16.4.0 ([79d8e4f](https://github.com/anolilab/unplugin-favicons/commit/79d8e4f9e1fd334117a6f12bfea24321b83d966a))
+* **deps:** update nuxtjs monorepo ([c815342](https://github.com/anolilab/unplugin-favicons/commit/c815342057f73a9889ce3bd13f1ee34a2b6cbbc9))
+* **deps:** update nuxtjs monorepo to ^4.6.1 ([a31ad8f](https://github.com/anolilab/unplugin-favicons/commit/a31ad8f8374ed72461173d2267f541b7551fb52b))
+* **deps:** update patch updates ([0c2dc0f](https://github.com/anolilab/unplugin-favicons/commit/0c2dc0fd79054cd55339d21be2be3901295d715b))
+
+### Miscellaneous Chores
+
+* **deps:** combine open Renovate updates into renovate/combined ([a3c6620](https://github.com/anolilab/unplugin-favicons/commit/a3c6620abf25c8d8cdea5655b8372b3a310ec44a))
+* **deps:** merge renovate branch lodash-monorepo ([b5e01fb](https://github.com/anolilab/unplugin-favicons/commit/b5e01fbab60d4b3642eb2fb14d4f7b5ef350936c))
+* **deps:** merge renovate branch nextjs-monorepo ([aeee123](https://github.com/anolilab/unplugin-favicons/commit/aeee123385568928ef47b5b8d55b83a54dcf9558))
+* **deps:** merge renovate branch nuxtjs-monorepo ([3360441](https://github.com/anolilab/unplugin-favicons/commit/33604419b43379321429ff3c6f056353d49f28d0))
+* **deps:** merge renovate branch patch-angular-monorepo ([205dd20](https://github.com/anolilab/unplugin-favicons/commit/205dd20bc3075d9d619e6fd9e46e1cd042842a82))
+* **deps:** merge renovate branch patch-astro-monorepo ([92b4357](https://github.com/anolilab/unplugin-favicons/commit/92b43577f83f85b1160b2e326ed96151db9bae8d))
+* **deps:** merge renovate branch patch-babel-monorepo ([fe8c3a7](https://github.com/anolilab/unplugin-favicons/commit/fe8c3a7c3f09d657688b6d9fdabbe3198c4d35fb))
+* **deps:** merge renovate branch patch-nuxtjs-monorepo ([304e9d2](https://github.com/anolilab/unplugin-favicons/commit/304e9d2067fee06ff864fd123b75db89e786b0fd))
+* **deps:** merge renovate branch patch-patch-updates ([0e2f3be](https://github.com/anolilab/unplugin-favicons/commit/0e2f3bebc7583a8fe3e6e5245e373ae17634a353))
+* **deps:** merge renovate branch patch-prettier ([ff09fb2](https://github.com/anolilab/unplugin-favicons/commit/ff09fb2cd59922930d77dbb83640dcc7280d3850))
+* **deps:** sync lockfile / audit fixes for combined update ([ea8fea7](https://github.com/anolilab/unplugin-favicons/commit/ea8fea7fe1756a17cd4699b7cdac05357b2cfa3b))
+
 ## [5.0.1](https://github.com/anolilab/unplugin-favicons/compare/v5.0.0...v5.0.1) (2026-10-13)
 
 ### Bug Fixes
