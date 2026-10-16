@@ -1,7 +1,7 @@
 import { createConfig } from "@anolilab/eslint-config";
 
 /** @type {import("@anolilab/eslint-config").PromiseFlatConfigComposer} */
-export default createConfig({
+const config = await createConfig({
     ignores: [
         "dist",
         "node_modules",
@@ -26,3 +26,17 @@ export default createConfig({
         "audit-ci.jsonc",
     ],
 });
+
+export default [
+    ...config,
+    {
+        // `@typescript-eslint`'s `unbound-method` rule (re-exported as
+        // `vitest/unbound-method`) crashes under TypeScript 6 with "Cannot read
+        // properties of undefined (reading 'flatMap')" while walking destructured
+        // `vi.hoisted()`/mock members (@typescript-eslint 8.x does not support TS 6).
+        // Disable it until that combination is supported again.
+        rules: {
+            "vitest/unbound-method": "off",
+        },
+    },
+];
