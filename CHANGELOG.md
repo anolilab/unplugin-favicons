@@ -1,3 +1,46 @@
+## [6.0.0](https://github.com/anolilab/unplugin-favicons/compare/v5.0.2...v6.0.0) (2026-10-16)
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** updated dependencies to major versions
+
+* chore(deps): update angular monorepo to v22
+* **deps:** updated dependencies to major versions
+
+* chore(deps): update babel monorepo to v8
+* **deps:** updated dependencies to major versions
+
+* chore(deps): update dependency @angular/core@>=19.0.0-next.0 <=19.2.18 to v20
+* **deps:** updated dependencies to major versions
+
+* chore(deps): regenerate lockfile
+
+* fix(deps): update dependency next@>=15.0.0-canary.0 <15.4.7 to >=15.5.28 [security]
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update dependency next@>=15.0.4-canary.51 <15.1.8 to >=15.5.28 [security]
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update dependency next@>=15.1.0-canary.0 <15.1.9 to >=15.5.28 [security]
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* fix(deps): update dependency next@>=15.1.1-canary.0 <15.1.10 to >=15.5.28 [security]
+
+Signed-off-by: Renovate Bot <bot@renovateapp.com>
+
+* chore(deps): regenerate lockfile
+
+* fix(deps): bound ajv<6 override to <7 to keep ajv 6 consumers on ajv 6
+
+* chore(lint): disable crashing vitest/unbound-method rule (TS6 x @typescript-eslint)
+
+### Miscellaneous Chores
+
+* **deps:** combine open Renovate updates (8 PRs) ([#579](https://github.com/anolilab/unplugin-favicons/issues/579)) ([71c5e34](https://github.com/anolilab/unplugin-favicons/commit/71c5e34f19bf599d5b1ac0c9414f4e69d1aba109))
+
 ## [5.0.2](https://github.com/anolilab/unplugin-favicons/compare/v5.0.1...v5.0.2) (2026-10-13)
 
 ### Bug Fixes
