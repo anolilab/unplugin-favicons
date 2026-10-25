@@ -148,7 +148,7 @@ overrides:
   # GHSA-vcvr-r3jv-pc5j (critical), vulnerable >=16.2.0 <16.3.6. The selectors
   # below that floor at >=16.3.0 land inside that window.
   "next@>=16.0.0 <16.3.6": ">=16.4.1"
-  "next@>=15.1.1-canary.0 <15.1.12": ">=15.5.27"
+  "next@>=15.1.1-canary.0 <15.1.12": ">=15.5.28"
   "next@>=15.1.1-canary.0 <15.1.10": ">=15.5.28"
   "next@>=15.1.0-canary.0 <15.1.9": ">=15.5.28"
   "next@>=15.0.4-canary.51 <15.1.8": ">=15.5.28"
