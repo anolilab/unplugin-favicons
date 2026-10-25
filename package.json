@@ -151,7 +151,7 @@
         "@rspack/core": "^2.2.8",
         "@rspack/plugin-html": "^0.5.8",
         "@secretlint/secretlint-rule-preset-recommend": "^13.0.7",
-        "@sveltejs/kit": "^2.70.3",
+        "@sveltejs/kit": "^3.0.0",
         "@total-typescript/ts-reset": "^0.6.1",
         "@tsconfig/esm": "^1.0.5",
         "@tsconfig/node18": "^18.2.7",
