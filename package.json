@@ -197,7 +197,7 @@
         "type-fest": "^5.10.0",
         "typescript": "^6.0.3",
         "vite": "^8.3.5",
-        "vitest": "^4.1.11",
+        "vitest": "^4.1.12",
         "webpack": "^5.111.1"
     },
     "peerDependencies": {
