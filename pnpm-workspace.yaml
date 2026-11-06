@@ -52,6 +52,8 @@ minimumReleaseAgeExclude:
   - qs@6.16.0
   # Renovate security update: simple-git@4.0.1
   - simple-git@4.0.1
+  # Renovate security update: glob@13.0.7
+  - glob@13.0.7
 
 overrides:
   "@angular/common@<19.2.16": ">=22.2.3"
@@ -116,7 +118,7 @@ overrides:
   "follow-redirects@<1.15.4": ">=1.16.1"
   "follow-redirects@<=1.15.11": ">=1.16.1"
   "follow-redirects@<=1.15.5": ">=1.16.1"
-  "glob@>=11.0.0 <11.1.0": ">=11.1.0"
+  "glob@>=11.0.0 <11.1.0": ">=13.0.7"
   "got@<11.8.5": ">=14.6.6"
   "h3@<1.15.6": ">=1.15.11"
   "h3@<1.15.9": ">=1.15.11"
