@@ -146,8 +146,8 @@
         "@babel/eslint-parser": "8.0.7",
         "@commitlint/cli": "^21.2.4",
         "@commitlint/config-conventional": "^21.2.4",
-        "@nuxt/kit": "^4.6.1",
-        "@nuxt/schema": "^4.6.1",
+        "@nuxt/kit": "^4.6.4",
+        "@nuxt/schema": "^4.6.4",
         "@rspack/core": "^2.2.9",
         "@rspack/plugin-html": "^0.5.8",
         "@secretlint/secretlint-rule-preset-recommend": "^13.0.7",
@@ -201,8 +201,8 @@
         "webpack": "^5.111.1"
     },
     "peerDependencies": {
-        "@nuxt/kit": "^4.6.1",
-        "@nuxt/schema": "^4.6.1",
+        "@nuxt/kit": "^4.6.4",
+        "@nuxt/schema": "^4.6.4",
         "@rspack/cli": "^1.7.12",
         "esbuild": "*",
         "favicons": "^7.3.1",
