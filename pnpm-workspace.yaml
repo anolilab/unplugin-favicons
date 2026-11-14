@@ -52,6 +52,8 @@ minimumReleaseAgeExclude:
   - qs@6.16.0
   # Renovate security update: simple-git@4.0.1
   - simple-git@4.0.1
+  # Renovate security update: @nuxt/schema@4.6.4
+  - "@nuxt/schema@4.6.4"
 
 overrides:
   "@angular/common@<19.2.16": ">=22.2.3"
