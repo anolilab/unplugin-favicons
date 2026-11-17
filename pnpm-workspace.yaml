@@ -32,8 +32,8 @@ minimumReleaseAgeExclude:
   - "@nuxt/devtools@3.3.1"
   # Renovate security update: postcss@8.5.18
   - postcss@8.5.18
-  # Renovate security update: next@15.5.23 || 15.5.24 || 15.5.27 || 15.5.28
-  - next@15.5.23 || 15.5.24 || 15.5.27 || 15.5.28
+  # Renovate security update: next@15.5.23 || 15.5.24 || 15.5.27 || 15.5.28 || 16.4.6
+  - next@15.5.23 || 15.5.24 || 15.5.27 || 15.5.28 || 16.4.6
   - js-yaml@4.3.1
   - ip-address@10.2.2
   - undici@7.29.0
@@ -147,7 +147,7 @@ overrides:
   "next@>=9.5.0 <15.5.13": ">=16.4.1"
   # GHSA-vcvr-r3jv-pc5j (critical), vulnerable >=16.2.0 <16.3.6. The selectors
   # below that floor at >=16.3.0 land inside that window.
-  "next@>=16.0.0 <16.3.6": ">=16.4.1"
+  "next@>=16.0.0 <16.3.6": ">=16.4.6"
   "next@>=15.1.1-canary.0 <15.1.12": ">=15.5.28"
   "next@>=15.1.1-canary.0 <15.1.10": ">=15.5.28"
   "next@>=15.1.0-canary.0 <15.1.9": ">=15.5.28"
